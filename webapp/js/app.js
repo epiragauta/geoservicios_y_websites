@@ -18,6 +18,13 @@ const departamentosWMS = L.tileLayer.wms(geoserverUrl, {
     attribution: 'IGAC - Instituto Geográfico Agustín Codazzi'
 }).addTo(map);
 
+// Agregar capa WMS de municipios
+const municipiosWMS = L.tileLayer.wms(geoserverUrl, {
+    layers: '7',
+    format: 'image/png',
+    transparent: true,
+    attribution: 'IGAC'
+});
 
 // Capas base
 const baseMaps = {
@@ -32,6 +39,7 @@ const baseMaps = {
 // Capas superpuestas
 const overlayMaps = {
     "Departamentos": departamentosWMS,
+    "Municipios": municipiosWMS
 };
 
 // Agregar control de capas
