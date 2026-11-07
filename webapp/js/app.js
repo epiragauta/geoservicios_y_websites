@@ -18,6 +18,33 @@ const departamentosWMS = L.tileLayer.wms(geoserverUrl, {
     attribution: 'IGAC - Instituto Geográfico Agustín Codazzi'
 }).addTo(map);
 
+// URL del servicio WFS
+const departamentosWFSUrl = '/datos/departamentos.geojson'; // Cambia esto a la URL de tu servicio WFS
+let departamentosGeoJSON; // Variable para almacenar la capa GeoJSON
+
+// Cargar y mostrar departamentos como GeoJSON
+fetch(departamentosWFSUrl)
+    .then(response => response.json())
+    .then(data => {
+        // Crear capa GeoJSON
+        departamentosGeoJSON = L.geoJSON(data, {
+            style: {
+                color: '#232323',
+                weight: 2,
+                fillColor: '#e8f881',
+                fillOpacity: 0.5
+            },
+            onEachFeature: onEachFeature
+        });
+
+        // Agregar al mapa
+        departamentosGeoJSON.addTo(map);
+
+        // Ajustar vista al extent de los datos
+        map.fitBounds(departamentosGeoJSON.getBounds());
+    })
+    .catch(error => console.error('Error cargando WFS:', error));
+
 // Agregar capa WMS de municipios
 const municipiosWMS = L.tileLayer.wms(geoserverUrl, {
     layers: '7',
@@ -39,6 +66,7 @@ const baseMaps = {
 // Capas superpuestas
 const overlayMaps = {
     "Departamentos": departamentosWMS,
+    /*"Departamentos (WFS)": departamentosGeoJSON, */
     "Municipios": municipiosWMS
 };
 
@@ -49,3 +77,46 @@ L.control.layers(baseMaps, overlayMaps, {
 
 // Agregar capa base por defecto
 baseMaps["OpenStreetMap"].addTo(map);
+
+function onEachFeature(feature, layer) {
+    // Popup al hacer clic
+    if (feature.properties) {
+        const popupContent = `
+            <strong>${feature.properties.dpto_cnmbr}</strong><br>
+            Código: ${feature.properties.dpto_ccdgo}
+        `;
+        layer.bindPopup(popupContent);
+    }
+
+    // Highlight al pasar el mouse
+    layer.on({
+        mouseover: highlightFeature,
+        mouseout: resetHighlight,
+        click: zoomToFeature
+    });
+}
+
+function highlightFeature(e) {
+    const layer = e.target;
+
+    layer.setStyle({
+        weight: 5,
+        color: '#666',
+        fillOpacity: 0.7
+    });
+
+    layer.bringToFront();
+}
+
+function resetHighlight(e) {
+    const layer = e.target;
+    layer.setStyle({
+        weight: 2,
+        color: '#232323',
+        fillOpacity: 0.5
+    });
+}
+
+function zoomToFeature(e) {
+    map.fitBounds(e.target.getBounds());
+}
