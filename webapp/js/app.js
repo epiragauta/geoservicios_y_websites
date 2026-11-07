@@ -38,7 +38,8 @@ fetch(departamentosWFSUrl)
         });
 
         // Agregar al mapa
-        departamentosGeoJSON.addTo(map);
+        departamentosGeoJSON.addTo(map);        
+        controlLayer.addOverlay(departamentosGeoJSON, "Departamentos (WFS)"); // Agregar al control de capas
 
         // Ajustar vista al extent de los datos
         map.fitBounds(departamentosGeoJSON.getBounds());
@@ -64,14 +65,13 @@ const baseMaps = {
 };
 
 // Capas superpuestas
-const overlayMaps = {
-    "Departamentos": departamentosWMS,
-    /*"Departamentos (WFS)": departamentosGeoJSON, */
+let overlayMaps = {
+    "Departamentos": departamentosWMS,    
     "Municipios": municipiosWMS
 };
 
 // Agregar control de capas
-L.control.layers(baseMaps, overlayMaps, {
+const controlLayer = L.control.layers(baseMaps, overlayMaps, {
     collapsed: false
 }).addTo(map);
 
