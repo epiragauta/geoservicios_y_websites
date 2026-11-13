@@ -19,7 +19,7 @@ const departamentosWMS = L.tileLayer.wms(geoserverUrl, {
 }).addTo(map);
 
 // URL del servicio WFS
-const departamentosWFSUrl = '/datos/departamentos.geojson'; // Cambia esto a la URL de tu servicio WFS
+const departamentosWFSUrl = 'datos/departamentos.geojson'; // Cambia esto a la URL de tu servicio WFS
 let departamentosGeoJSON; // Variable para almacenar la capa GeoJSON
 
 // Cargar y mostrar departamentos como GeoJSON
@@ -82,8 +82,10 @@ function onEachFeature(feature, layer) {
     // Popup al hacer clic
     if (feature.properties) {
         const popupContent = `
-            <strong>${feature.properties.dpto_cnmbr}</strong><br>
-            Código: ${feature.properties.dpto_ccdgo}
+            <div style="text-align: center;">
+                <h3>${feature.properties.dpto_cnmbr}</h3>
+                <p><strong>Código:</strong> ${feature.properties.dpto_ccdgo}</p>
+            </div>
         `;
         layer.bindPopup(popupContent);
     }
@@ -152,6 +154,7 @@ searchControl.onAdd = function (map) {
         <input type="text" id="search-input" placeholder="Buscar departamento...">
         <button id="search-button">Buscar</button>
     `;
+    L.DomEvent.disableClickPropagation(div);
     return div;
 };
 
@@ -162,45 +165,33 @@ document.addEventListener('DOMContentLoaded', function() {
     const searchButton = document.getElementById('search-button');
     const searchInput = document.getElementById('search-input');
 
-    searchButton.addEventListener('click', function() {
-        const searchText = searchInput.value.toLowerCase();
+    function buscar() {
+        const searchText = searchInput.value.trim().toLowerCase();
+        if (!searchText || !departamentosGeoJSON) return;
 
+        let encontrado = null;
         departamentosGeoJSON.eachLayer(function(layer) {
             const nombre = layer.feature.properties.dpto_cnmbr.toLowerCase();
-
-            if (nombre.includes(searchText)) {
-                map.fitBounds(layer.getBounds());
-                layer.openPopup();
+            if (!encontrado && nombre.includes(searchText)) {
+                encontrado = layer;
             }
         });
+
+        if (encontrado) {
+            map.fitBounds(encontrado.getBounds());
+            encontrado.openPopup();
+        } else {
+            alert('No se encontró el departamento: ' + searchInput.value);
+        }
+    }
+
+    searchButton.addEventListener('click', buscar);
+    searchInput.addEventListener('keydown', function(e) {
+        if (e.key === 'Enter') buscar();
     });
 });
 
-// Marcador simple
+// Marcador de Bogotá
 const bogotaMarker = L.marker([4.7110, -74.0721])
     .addTo(map)
     .bindPopup('<b>Bogotá D.C.</b><br>Capital de Colombia');
-
-// Marcador personalizado
-const customIcon = L.icon({
-    iconUrl: 'assets/images/marker-icon.png',
-    iconSize: [25, 41],
-    iconAnchor: [12, 41],
-    popupAnchor: [1, -34]
-});
-
-const marker = L.marker([4.7110, -74.0721], {icon: customIcon})
-    .addTo(map)
-    .bindPopup('Bogotá');
-
-const popupContent = `
-    <div style="text-align: center;">
-        <h3>${feature.properties.dpto_cnmbr}</h3>
-        <img src="assets/images/${feature.properties.dpto_ccdgo}.jpg" width="200">
-        <p><strong>Código:</strong> ${feature.properties.dpto_ccdgo}</p>
-        <p><strong>Área:</strong> ${feature.properties.area.toLocaleString()} km²</p>
-        <a href="#" onclick="zoomToDepartamento('${feature.properties.dpto_ccdgo}')">Ver detalle</a>
-    </div>
-`;
-
-layer.bindPopup(popupContent);
