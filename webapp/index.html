@@ -3,16 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mapa de Colombia - Departamentos y Municipios</title>
+    <title>Colombia - Departamentos y Municipios</title>
 
-    <!-- Leaflet CSS -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
 
-    <!-- Estilos personalizados -->
     <style>
-        body {
+        * {
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
             font-family: Arial, sans-serif;
         }
 
@@ -22,28 +24,44 @@
         }
 
         .info {
-            padding: 6px 8px;
+            padding: 10px;
             font: 14px/16px Arial, sans-serif;
             background: white;
-            background: rgba(255,255,255,0.8);
             box-shadow: 0 0 15px rgba(0,0,0,0.2);
             border-radius: 5px;
         }
 
         .info h4 {
             margin: 0 0 5px;
-            color: #777;
+            color: #333;
+        }
+
+        .legend {
+            line-height: 18px;
+            color: #555;
+        }
+
+        .legend i {
+            width: 18px;
+            height: 18px;
+            float: left;
+            margin-right: 8px;
+            opacity: 0.7;
+        }
+
+        .leaflet-control-layers {
+            border: 2px solid rgba(0,0,0,0.2);
+            border-radius: 5px;
         }
     </style>
 </head>
 <body>
-    <!-- Contenedor del mapa -->
     <div id="map"></div>
 
-    <!-- Leaflet JavaScript -->
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 
     <!-- Nuestra aplicación -->
     <script src="js/app.js"></script>
+    
 </body>
 </html>

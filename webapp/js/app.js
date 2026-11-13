@@ -120,3 +120,87 @@ function resetHighlight(e) {
 function zoomToFeature(e) {
     map.fitBounds(e.target.getBounds());
 }
+
+// Control de escala
+L.control.scale({
+    position: 'bottomleft',
+    metric: true,
+    imperial: false
+}).addTo(map);
+
+// Panel de información
+const info = L.control({position: 'topleft'});
+
+info.onAdd = function (map) {
+    this._div = L.DomUtil.create('div', 'info');
+    this._div.innerHTML = `
+        <h4>Colombia - Servicios Geográficos</h4>
+        <p>Visualización de departamentos y municipios</p>
+        <p><small>Datos: IGAC | Servidor: GeoServer</small></p>
+    `;
+    return this._div;
+};
+
+info.addTo(map);
+
+// Crear control de búsqueda
+const searchControl = L.control({position: 'topright'});
+
+searchControl.onAdd = function (map) {
+    const div = L.DomUtil.create('div', 'search-control');
+    div.innerHTML = `
+        <input type="text" id="search-input" placeholder="Buscar departamento...">
+        <button id="search-button">Buscar</button>
+    `;
+    return div;
+};
+
+searchControl.addTo(map);
+
+// Función de búsqueda
+document.addEventListener('DOMContentLoaded', function() {
+    const searchButton = document.getElementById('search-button');
+    const searchInput = document.getElementById('search-input');
+
+    searchButton.addEventListener('click', function() {
+        const searchText = searchInput.value.toLowerCase();
+
+        departamentosGeoJSON.eachLayer(function(layer) {
+            const nombre = layer.feature.properties.dpto_cnmbr.toLowerCase();
+
+            if (nombre.includes(searchText)) {
+                map.fitBounds(layer.getBounds());
+                layer.openPopup();
+            }
+        });
+    });
+});
+
+// Marcador simple
+const bogotaMarker = L.marker([4.7110, -74.0721])
+    .addTo(map)
+    .bindPopup('<b>Bogotá D.C.</b><br>Capital de Colombia');
+
+// Marcador personalizado
+const customIcon = L.icon({
+    iconUrl: 'assets/images/marker-icon.png',
+    iconSize: [25, 41],
+    iconAnchor: [12, 41],
+    popupAnchor: [1, -34]
+});
+
+const marker = L.marker([4.7110, -74.0721], {icon: customIcon})
+    .addTo(map)
+    .bindPopup('Bogotá');
+
+const popupContent = `
+    <div style="text-align: center;">
+        <h3>${feature.properties.dpto_cnmbr}</h3>
+        <img src="assets/images/${feature.properties.dpto_ccdgo}.jpg" width="200">
+        <p><strong>Código:</strong> ${feature.properties.dpto_ccdgo}</p>
+        <p><strong>Área:</strong> ${feature.properties.area.toLocaleString()} km²</p>
+        <a href="#" onclick="zoomToDepartamento('${feature.properties.dpto_ccdgo}')">Ver detalle</a>
+    </div>
+`;
+
+layer.bindPopup(popupContent);
