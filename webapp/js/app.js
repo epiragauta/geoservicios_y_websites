@@ -92,6 +92,109 @@ const controlLayer = L.control.layers(baseMaps, overlayMaps, {
 // Agregar capa base por defecto
 baseMaps["OpenStreetMap"].addTo(map);
 
+// ============================================================
+// Capas detalladas de La Guajira (cartografía base IGAC/DANE)
+// Datos recortados por departamento en datos/44_LA_GUAJIRA/.
+// Se cargan de forma diferida (lazy): solo se descarga el GeoJSON
+// cuando el usuario activa la capa en el control, porque algunas
+// (Drenaje, Curvas de Nivel, Vías) pesan varios MB.
+// ============================================================
+const guajiraDataDir = 'datos/44_LA_GUAJIRA/';
+
+const capasGuajira = [
+    {
+        file: 'Administrativo_P.geojson', label: 'Topónimos administrativos',
+        tipo: 'punto', color: '#c62828', radio: 4
+    },
+    {
+        file: 'Construccion_P.geojson', label: 'Construcciones',
+        tipo: 'punto', color: '#6d4c41', radio: 3
+    },
+    {
+        file: 'Costero_Insular.geojson', label: 'Costero / insular',
+        tipo: 'punto', color: '#00838f', radio: 4
+    },
+    {
+        file: 'Via.geojson', label: 'Vías',
+        tipo: 'linea', estilo: { color: '#e65100', weight: 1.5 }
+    },
+    {
+        file: 'Drenaje_Sencillo.geojson', label: 'Drenaje sencillo',
+        tipo: 'linea', estilo: { color: '#1e88e5', weight: 1 }
+    },
+    {
+        file: 'Curva_Nivel.geojson', label: 'Curvas de nivel',
+        tipo: 'linea', estilo: { color: '#8d6e63', weight: 0.8 }
+    },
+    {
+        file: 'Laguna.geojson', label: 'Lagunas',
+        tipo: 'poligono', estilo: { color: '#0277bd', weight: 1, fillColor: '#4fc3f7', fillOpacity: 0.5 }
+    },
+    {
+        file: 'Bosque.geojson', label: 'Bosques',
+        tipo: 'poligono', estilo: { color: '#1b5e20', weight: 1, fillColor: '#66bb6a', fillOpacity: 0.4 }
+    }
+];
+
+// Construye el contenido del popup a partir de los atributos más relevantes
+function popupGuajira(props) {
+    const campos = [
+        ['NOMBRE_GEO', 'Nombre'],
+        ['TIPO_VIA', 'Tipo de vía'],
+        ['ESTADO_SUP', 'Estado superficie'],
+        ['ESTADO_DRE', 'Estado drenaje'],
+        ['ALTURA_SOB', 'Altura (m)'],
+        ['TIPO_CURVA', 'Tipo de curva'],
+        ['CODIGO_USO', 'Código de uso'],
+        ['CODIGO_NOM', 'Código']
+    ];
+    const filas = campos
+        .filter(([k]) => props[k] !== undefined && props[k] !== null && props[k] !== '')
+        .map(([k, etiqueta]) => `<p style="margin:2px 0"><strong>${etiqueta}:</strong> ${props[k]}</p>`);
+    return filas.length ? `<div>${filas.join('')}</div>` : '<div>Sin atributos</div>';
+}
+
+// Carga (una sola vez) el GeoJSON de una capa dentro de su layerGroup
+function cargarCapaGuajira(cfg) {
+    fetch(guajiraDataDir + cfg.file)
+        .then(response => response.json())
+        .then(data => {
+            const capa = L.geoJSON(data, {
+                style: cfg.estilo,
+                pointToLayer: (feature, latlng) => L.circleMarker(latlng, {
+                    radius: cfg.radio || 4,
+                    color: cfg.color,
+                    fillColor: cfg.color,
+                    weight: 1,
+                    fillOpacity: 0.8
+                }),
+                onEachFeature: (feature, layer) => {
+                    if (feature.properties) {
+                        layer.bindPopup(popupGuajira(feature.properties));
+                    }
+                }
+            });
+            capa.addTo(cfg._group);
+        })
+        .catch(error => console.error('Error cargando capa ' + cfg.file + ':', error));
+}
+
+// Registrar cada capa como overlay con carga diferida
+capasGuajira.forEach(cfg => {
+    cfg._group = L.layerGroup();
+    cfg._loaded = false;
+    controlLayer.addOverlay(cfg._group, cfg.label);
+});
+
+// Al activar una capa por primera vez, descargar su GeoJSON
+map.on('overlayadd', function (e) {
+    const cfg = capasGuajira.find(c => c._group === e.layer);
+    if (cfg && !cfg._loaded) {
+        cfg._loaded = true;
+        cargarCapaGuajira(cfg);
+    }
+});
+
 function onEachFeature(feature, layer) {
     // Popup al hacer clic
     if (feature.properties) {
