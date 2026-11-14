@@ -99,7 +99,7 @@ baseMaps["OpenStreetMap"].addTo(map);
 // cuando el usuario activa la capa en el control, porque algunas
 // (Drenaje, Curvas de Nivel, Vías) pesan varios MB.
 // ============================================================
-const guajiraDataDir = 'datos/44_LA_GUAJIRA/';
+const guajiraDataDir = 'https://epiragauta.github.io/geoservicios_y_websites/webapp/datos/44_LA_GUAJIRA/';
 
 const capasGuajira = [
     {
