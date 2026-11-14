@@ -15,7 +15,7 @@ const departamentosWMS = L.tileLayer.wms(geoserverUrl, {
     layers: '8',
     format: 'image/png',
     transparent: true,
-    attribution: 'IGAC - Instituto Geográfico Agustín Codazzi'
+    attribution: 'DANE - Departamento Administrativo Nacional de Estadística'
 }).addTo(map);
 
 // URL del servicio WFS
@@ -51,7 +51,7 @@ const municipiosWMS = L.tileLayer.wms(geoserverUrl, {
     layers: '7',
     format: 'image/png',
     transparent: true,
-    attribution: 'IGAC'
+    attribution: 'DANE - Departamento Administrativo Nacional de Estadística'
 });
 
 // Capas base
@@ -138,7 +138,7 @@ info.onAdd = function (map) {
     this._div.innerHTML = `
         <h4>Colombia - Servicios Geográficos</h4>
         <p>Visualización de departamentos y municipios</p>
-        <p><small>Datos: IGAC | Servidor: GeoServer</small></p>
+        <p><small>Datos: DANE | Servidor: GeoServer</small></p>
     `;
     return this._div;
 };
