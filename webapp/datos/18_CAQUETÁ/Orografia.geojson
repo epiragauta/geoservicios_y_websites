@@ -1,0 +1,20 @@
+{
+"type": "FeatureCollection",
+"name": "Orografia",
+"xy_coordinate_resolution": 1e-06,
+"features": [
+{ "type": "Feature", "properties": { "NOMBRE_GEO": "Cerro Paramillo", "CODIGO_NOM": "8106", "PROYECTO": null, "SYMBOL": null, "FECHA": null, "GLOBALID": "{CDC4EAD6-F2E9-4337-B715-E3A74ED6A25D}" }, "geometry": { "type": "Point", "coordinates": [ -75.16222, 2.551277 ] } },
+{ "type": "Feature", "properties": { "NOMBRE_GEO": "Cerro La Cocorra", "CODIGO_NOM": "8106", "PROYECTO": null, "SYMBOL": null, "FECHA": null, "GLOBALID": "{C379575B-D11D-423B-BF8A-1F2A86365EA2}" }, "geometry": { "type": "Point", "coordinates": [ -74.991939, 2.637841 ] } },
+{ "type": "Feature", "properties": { "NOMBRE_GEO": null, "CODIGO_NOM": "8127", "PROYECTO": null, "SYMBOL": "1", "FECHA": null, "GLOBALID": "{B1646BA4-8D22-41CA-9C20-57E741387FFC}" }, "geometry": { "type": "Point", "coordinates": [ -74.121278, 1.448765 ] } },
+{ "type": "Feature", "properties": { "NOMBRE_GEO": "Serranía de Chiribiquete", "CODIGO_NOM": "8128", "PROYECTO": null, "SYMBOL": "1", "FECHA": null, "GLOBALID": "{B0A6F7E9-115B-41B8-B7BC-76C4DAD2523E}" }, "geometry": { "type": "Point", "coordinates": [ -72.741074, 1.029019 ] } },
+{ "type": "Feature", "properties": { "NOMBRE_GEO": "Cerro Neiva", "CODIGO_NOM": "8106", "PROYECTO": null, "SYMBOL": null, "FECHA": null, "GLOBALID": "{5C44DE84-9097-4AB3-9DC9-197AB9710E0B}" }, "geometry": { "type": "Point", "coordinates": [ -75.094851, 2.710053 ] } },
+{ "type": "Feature", "properties": { "NOMBRE_GEO": "Cerro El Diablo", "CODIGO_NOM": "8106", "PROYECTO": null, "SYMBOL": null, "FECHA": null, "GLOBALID": "{58B77328-7D49-4CE6-9BAB-9D91FCA48D54}" }, "geometry": { "type": "Point", "coordinates": [ -74.956578, 2.680132 ] } },
+{ "type": "Feature", "properties": { "NOMBRE_GEO": "Cuchilla Los Picachos", "CODIGO_NOM": "8110", "PROYECTO": null, "SYMBOL": null, "FECHA": null, "GLOBALID": "{DA2E4B1A-B679-441B-836F-112DA9DFB569}" }, "geometry": { "type": "Point", "coordinates": [ -74.672635, 2.816618 ] } },
+{ "type": "Feature", "properties": { "NOMBRE_GEO": "Rocoso", "CODIGO_NOM": "8122", "PROYECTO": null, "SYMBOL": "1", "FECHA": null, "GLOBALID": "{B2A8AE92-CD8E-4A5A-848A-96791D4A13FD}" }, "geometry": { "type": "Point", "coordinates": [ -72.631283, 0.906611 ] } },
+{ "type": "Feature", "properties": { "NOMBRE_GEO": "Rocoso", "CODIGO_NOM": "8122", "PROYECTO": null, "SYMBOL": "1", "FECHA": null, "GLOBALID": "{FFEE18B2-4B05-42A0-8D78-769682B73572}" }, "geometry": { "type": "Point", "coordinates": [ -72.851876, 0.504301 ] } },
+{ "type": "Feature", "properties": { "NOMBRE_GEO": "Serranía de Angosturas", "CODIGO_NOM": "8128", "PROYECTO": null, "SYMBOL": "1", "FECHA": null, "GLOBALID": "{29782080-B605-4ECA-AFED-1870EC610733}" }, "geometry": { "type": "Point", "coordinates": [ -72.46722, -0.321378 ] } },
+{ "type": "Feature", "properties": { "NOMBRE_GEO": "Serranía de Araracuara", "CODIGO_NOM": "8128", "PROYECTO": null, "SYMBOL": "1", "FECHA": null, "GLOBALID": "{53B2BE8F-88D1-4EDF-9C58-4A2EB60D1014}" }, "geometry": { "type": "Point", "coordinates": [ -72.384495, -0.388688 ] } },
+{ "type": "Feature", "properties": { "NOMBRE_GEO": "ROCOSO", "CODIGO_NOM": "8122", "PROYECTO": null, "SYMBOL": "1", "FECHA": null, "GLOBALID": "{855A2D38-43AA-4C6F-AA50-5F62810FF393}" }, "geometry": { "type": "Point", "coordinates": [ -72.445866, -0.387941 ] } },
+{ "type": "Feature", "properties": { "NOMBRE_GEO": "CORDILLERA ORIENTAL", "CODIGO_NOM": "8108", "PROYECTO": null, "SYMBOL": "1", "FECHA": null, "GLOBALID": "{64CD70EA-7894-442D-B4CC-59E58EEA9FA7}" }, "geometry": { "type": "Point", "coordinates": [ -75.629885, 1.968362 ] } }
+]
+}

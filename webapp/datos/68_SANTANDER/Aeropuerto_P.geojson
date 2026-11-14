@@ -1,0 +1,24 @@
+{
+"type": "FeatureCollection",
+"name": "Aeropuerto_P",
+"xy_coordinate_resolution": 1e-06,
+"features": [
+{ "type": "Feature", "properties": { "NOMBRE_GEO": "JERONIMO DE AGUAYO / CAMPO DE ATERRIZAJE", "PROYECTO": "CAMPO DE ATERRIZAJE", "SYMBOL": null, "FECHA": null, "ESCALA": 0, "GLOBALID": "{A40C84F5-E5B6-4852-B8D3-325ED567F9E7}" }, "geometry": { "type": "Point", "coordinates": [ -72.745481, 6.717512 ] } },
+{ "type": "Feature", "properties": { "NOMBRE_GEO": "ZAPATOCA", "PROYECTO": null, "SYMBOL": "1", "FECHA": null, "ESCALA": 0, "GLOBALID": "{A37A0409-CC1F-442A-BBD9-DB1902C8D784}" }, "geometry": { "type": "Point", "coordinates": [ -73.25, 6.8 ] } },
+{ "type": "Feature", "properties": { "NOMBRE_GEO": "PUERTO WILCHES", "PROYECTO": null, "SYMBOL": "1", "FECHA": null, "ESCALA": 0, "GLOBALID": "{C23D3F71-B53F-40E3-AE4E-C971F8280119}" }, "geometry": { "type": "Point", "coordinates": [ -73.9, 7.35 ] } },
+{ "type": "Feature", "properties": { "NOMBRE_GEO": "LAS CRUCES / AGUACHICA FABAL", "PROYECTO": "AGUACHICA FABAL", "SYMBOL": null, "FECHA": null, "ESCALA": 0, "GLOBALID": "{40DFFAD2-E84E-41A2-B93D-56A0F5937FFA}" }, "geometry": { "type": "Point", "coordinates": [ -73.512495, 7.384409 ] } },
+{ "type": "Feature", "properties": { "NOMBRE_GEO": "GAMARRA / PALONEGRO", "PROYECTO": null, "SYMBOL": null, "FECHA": "2008-08-21", "ESCALA": 0, "GLOBALID": "{F58A600B-ED32-4A58-A146-F39A8D617108}" }, "geometry": { "type": "Point", "coordinates": [ -73.188097, 7.121951 ] } },
+{ "type": "Feature", "properties": { "NOMBRE_GEO": "EL CARMEN DE CHUCURI", "PROYECTO": null, "SYMBOL": "1", "FECHA": null, "ESCALA": 0, "GLOBALID": "{17760505-7758-40B3-AA4E-6379F5EE85BB}" }, "geometry": { "type": "Point", "coordinates": [ -73.55444, 6.74055 ] } },
+{ "type": "Feature", "properties": { "NOMBRE_GEO": "SOCORRO", "PROYECTO": null, "SYMBOL": "1", "FECHA": null, "ESCALA": 0, "GLOBALID": "{54404D47-569B-469A-9346-B4488F424894}" }, "geometry": { "type": "Point", "coordinates": [ -73.256388, 6.38666 ] } },
+{ "type": "Feature", "properties": { "NOMBRE_GEO": "CIMITARRA", "PROYECTO": null, "SYMBOL": "1", "FECHA": null, "ESCALA": 0, "GLOBALID": "{E5215B81-EBD7-4788-A961-2078347683BB}" }, "geometry": { "type": "Point", "coordinates": [ -74.016666, 6.45 ] } },
+{ "type": "Feature", "properties": { "NOMBRE_GEO": "BARBOSA", "PROYECTO": null, "SYMBOL": "1", "FECHA": null, "ESCALA": 0, "GLOBALID": "{E756C84D-B8F9-402B-BA96-40E6FCE929B6}" }, "geometry": { "type": "Point", "coordinates": [ -73.6091, 5.94833 ] } },
+{ "type": "Feature", "properties": { "NOMBRE_GEO": "YARIGUIES", "PROYECTO": null, "SYMBOL": null, "FECHA": null, "ESCALA": 0, "GLOBALID": "{ACE77F11-A426-466C-BCE9-D46E5444A982}" }, "geometry": { "type": "Point", "coordinates": [ -73.808123, 7.026324 ] } },
+{ "type": "Feature", "properties": { "NOMBRE_GEO": null, "PROYECTO": null, "SYMBOL": "1", "FECHA": null, "ESCALA": 1, "GLOBALID": "{E98CC6F0-8EA1-4DFC-9D77-F3D7EB9799B1}" }, "geometry": { "type": "Point", "coordinates": [ -73.12833, 6.58444 ] } },
+{ "type": "Feature", "properties": { "NOMBRE_GEO": null, "PROYECTO": null, "SYMBOL": "1", "FECHA": null, "ESCALA": 1, "GLOBALID": "{6813BE6F-7304-4258-A0B0-70DF35BDDE29}" }, "geometry": { "type": "Point", "coordinates": [ -73.421617, 6.893052 ] } },
+{ "type": "Feature", "properties": { "NOMBRE_GEO": null, "PROYECTO": null, "SYMBOL": null, "FECHA": null, "ESCALA": 1, "GLOBALID": "{4E47DD4A-4C94-47F3-84F5-63FC01BC1C4F}" }, "geometry": { "type": "Point", "coordinates": [ -73.769235, 7.367218 ] } },
+{ "type": "Feature", "properties": { "NOMBRE_GEO": null, "PROYECTO": null, "SYMBOL": null, "FECHA": null, "ESCALA": 1, "GLOBALID": "{E6BD04A4-32E3-4F81-8026-BD8940F42E0A}" }, "geometry": { "type": "Point", "coordinates": [ -73.569651, 7.164377 ] } },
+{ "type": "Feature", "properties": { "NOMBRE_GEO": "AGUAS CLARAS", "PROYECTO": "AGUAS CLARAS", "SYMBOL": null, "FECHA": null, "ESCALA": 1, "GLOBALID": "{F6F250A5-50A4-4F2A-8E8D-FD84386FB9D1}" }, "geometry": { "type": "Point", "coordinates": [ -73.249675, 7.283192 ] } },
+{ "type": "Feature", "properties": { "NOMBRE_GEO": "PISTA DE ATERRIZAJE", "PROYECTO": "PISTA DE ATERRIZAJE", "SYMBOL": null, "FECHA": null, "ESCALA": 1, "GLOBALID": "{F9EC7A4F-C034-4964-B434-2017B90FF937}" }, "geometry": { "type": "Point", "coordinates": [ -73.566664, 7.274793 ] } },
+{ "type": "Feature", "properties": { "NOMBRE_GEO": "LOS PAJAROS", "PROYECTO": "LOS PAJAROS", "SYMBOL": null, "FECHA": null, "ESCALA": 1, "GLOBALID": "{54526578-F68D-48CC-8BDA-B23682BE59B8}" }, "geometry": { "type": "Point", "coordinates": [ -73.808506, 7.237745 ] } }
+]
+}

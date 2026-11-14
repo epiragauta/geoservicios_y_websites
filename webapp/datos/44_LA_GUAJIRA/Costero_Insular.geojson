@@ -1,0 +1,25 @@
+{
+"type": "FeatureCollection",
+"name": "Costero_Insular",
+"xy_coordinate_resolution": 1e-06,
+"features": [
+{ "type": "Feature", "properties": { "NOMBRE_GEO": "Punta Huayapain", "CODIGO_NOM": "8431", "PROYECTO": null, "SYMBOL": "1", "FECHA": null, "GLOBALID": "{212234EA-0EDB-444E-A6C4-883F174A4184}" }, "geometry": { "type": "Point", "coordinates": [ -71.426734, 12.385418 ] } },
+{ "type": "Feature", "properties": { "NOMBRE_GEO": "Punta Taroa", "CODIGO_NOM": "8431", "PROYECTO": null, "SYMBOL": "1", "FECHA": null, "GLOBALID": "{C793A316-C69E-4AAD-B9E5-426107DC6E64}" }, "geometry": { "type": "Point", "coordinates": [ -71.573585, 12.442957 ] } },
+{ "type": "Feature", "properties": { "NOMBRE_GEO": "Punta Shuapia", "CODIGO_NOM": "8431", "PROYECTO": null, "SYMBOL": "1", "FECHA": null, "GLOBALID": "{0BB09205-1A76-4B2E-BF4B-DEE94E0D3E07}" }, "geometry": { "type": "Point", "coordinates": [ -71.384224, 12.378119 ] } },
+{ "type": "Feature", "properties": { "NOMBRE_GEO": "Cabo Chichibacoa", "CODIGO_NOM": "8411", "PROYECTO": null, "SYMBOL": "1", "FECHA": null, "GLOBALID": "{6BD56B37-8311-4E15-BC26-E6664A1D9B52}" }, "geometry": { "type": "Point", "coordinates": [ -71.223633, 12.291382 ] } },
+{ "type": "Feature", "properties": { "NOMBRE_GEO": "Punta Espada", "CODIGO_NOM": "8431", "PROYECTO": null, "SYMBOL": "1", "FECHA": null, "GLOBALID": "{D1F64DA7-C0E1-4ACF-AAB7-2C80FE1CBC6A}" }, "geometry": { "type": "Point", "coordinates": [ -71.115856, 12.085275 ] } },
+{ "type": "Feature", "properties": { "NOMBRE_GEO": "Punta Cañon", "CODIGO_NOM": "8431", "PROYECTO": null, "SYMBOL": "1", "FECHA": null, "GLOBALID": "{13291058-EAB4-4DDD-8D35-B6BA4EAD7638}" }, "geometry": { "type": "Point", "coordinates": [ -71.807603, 12.367384 ] } },
+{ "type": "Feature", "properties": { "NOMBRE_GEO": "Punta Polno", "CODIGO_NOM": "8431", "PROYECTO": null, "SYMBOL": "1", "FECHA": null, "GLOBALID": "{9A386487-A97C-49DC-A5D5-459698E93C9C}" }, "geometry": { "type": "Point", "coordinates": [ -71.670198, 12.456268 ] } },
+{ "type": "Feature", "properties": { "NOMBRE_GEO": "Punta Paranturero", "CODIGO_NOM": "8431", "PROYECTO": null, "SYMBOL": "1", "FECHA": null, "GLOBALID": "{3109A804-7FE6-4A38-9AB6-3C11C8858DBC}" }, "geometry": { "type": "Point", "coordinates": [ -71.719578, 12.435228 ] } },
+{ "type": "Feature", "properties": { "NOMBRE_GEO": "Boca de San Agustín", "CODIGO_NOM": "8408", "PROYECTO": null, "SYMBOL": "1", "FECHA": null, "GLOBALID": "{D3E18D43-3558-4B2E-ABC8-87375803EAD7}" }, "geometry": { "type": "Point", "coordinates": [ -72.526672, 11.770284 ] } },
+{ "type": "Feature", "properties": { "NOMBRE_GEO": "Cabo Falso", "CODIGO_NOM": "8411", "PROYECTO": null, "SYMBOL": "1", "FECHA": null, "GLOBALID": "{6ADC0BF1-15CA-472C-B672-FA96EB8E5143}" }, "geometry": { "type": "Point", "coordinates": [ -71.311228, 12.355791 ] } },
+{ "type": "Feature", "properties": { "NOMBRE_GEO": "Punta Gallinas", "CODIGO_NOM": "8431", "PROYECTO": null, "SYMBOL": "1", "FECHA": null, "GLOBALID": "{C372F9AD-855F-4244-8C48-1983C7F51BD2}" }, "geometry": { "type": "Point", "coordinates": [ -71.659034, 12.455409 ] } },
+{ "type": "Feature", "properties": { "NOMBRE_GEO": "Punta Coco", "CODIGO_NOM": "8431", "PROYECTO": null, "SYMBOL": "1", "FECHA": null, "GLOBALID": "{373B920E-288F-449E-9A99-C4EC1A367395}" }, "geometry": { "type": "Point", "coordinates": [ -71.954455, 12.272918 ] } },
+{ "type": "Feature", "properties": { "NOMBRE_GEO": "Punta Parey", "CODIGO_NOM": "8431", "PROYECTO": null, "SYMBOL": "1", "FECHA": null, "GLOBALID": "{C7809D74-6D07-4C21-90E2-163AFFE2B90F}" }, "geometry": { "type": "Point", "coordinates": [ -71.729454, 12.425781 ] } },
+{ "type": "Feature", "properties": { "NOMBRE_GEO": "Punta Media Luna", "CODIGO_NOM": "8431", "PROYECTO": null, "SYMBOL": "1", "FECHA": null, "GLOBALID": "{567F1ED5-4E20-4574-97EC-B216E7BD7E54}" }, "geometry": { "type": "Point", "coordinates": [ -71.878882, 12.235991 ] } },
+{ "type": "Feature", "properties": { "NOMBRE_GEO": "Punta Guamachito", "CODIGO_NOM": "8431", "PROYECTO": null, "SYMBOL": "1", "FECHA": null, "GLOBALID": "{DF370EFC-3362-4FA4-BEFF-9F64D2641A76}" }, "geometry": { "type": "Point", "coordinates": [ -73.146143, 11.403222 ] } },
+{ "type": "Feature", "properties": { "NOMBRE_GEO": "Punta Frú", "CODIGO_NOM": "8431", "PROYECTO": null, "SYMBOL": "1", "FECHA": null, "GLOBALID": "{E3FA5C83-838D-428F-8DAF-7BB104BE6F31}" }, "geometry": { "type": "Point", "coordinates": [ -71.857842, 12.357079 ] } },
+{ "type": "Feature", "properties": { "NOMBRE_GEO": "Punta Kijolú", "CODIGO_NOM": "8431", "PROYECTO": null, "SYMBOL": "1", "FECHA": null, "GLOBALID": "{AF6E7587-6FC4-45E3-AC91-62F2099B55E4}" }, "geometry": { "type": "Point", "coordinates": [ -71.686086, 12.44768 ] } },
+{ "type": "Feature", "properties": { "NOMBRE_GEO": "Punta Semesein", "CODIGO_NOM": "8431", "PROYECTO": null, "SYMBOL": "1", "FECHA": null, "GLOBALID": "{E57CA4B4-8144-4D82-AFDD-1159F0DD3F48}" }, "geometry": { "type": "Point", "coordinates": [ -72.308701, 11.852545 ] } }
+]
+}

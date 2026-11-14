@@ -1,0 +1,18 @@
+{
+"type": "FeatureCollection",
+"name": "Orografia",
+"xy_coordinate_resolution": 1e-06,
+"features": [
+{ "type": "Feature", "properties": { "NOMBRE_GEO": "Serrania de Naquen", "CODIGO_NOM": "8128", "PROYECTO": null, "SYMBOL": null, "FECHA": null, "GLOBALID": "{74DC46DA-8FF0-48F2-8605-3FD873C96CED}" }, "geometry": { "type": "Point", "coordinates": [ -68.038393, 2.012047 ] } },
+{ "type": "Feature", "properties": { "NOMBRE_GEO": "Serranía de Naquén", "CODIGO_NOM": "8128", "PROYECTO": null, "SYMBOL": "1", "FECHA": null, "GLOBALID": "{8D8D1B45-40DB-4802-BB59-C47F8FC6DD26}" }, "geometry": { "type": "Point", "coordinates": [ -68.207861, 2.027883 ] } },
+{ "type": "Feature", "properties": { "NOMBRE_GEO": "Cerro La Laguna", "CODIGO_NOM": "8106", "PROYECTO": null, "SYMBOL": "1", "FECHA": null, "GLOBALID": "{777029A5-9C16-417D-806D-AC3AC1BFF548}" }, "geometry": { "type": "Point", "coordinates": [ -69.470339, 2.495846 ] } },
+{ "type": "Feature", "properties": { "NOMBRE_GEO": "Cerro Caño Minas", "CODIGO_NOM": "8106", "PROYECTO": null, "SYMBOL": "1", "FECHA": null, "GLOBALID": "{4F2F8468-23F5-493E-991B-210E09DE814E}" }, "geometry": { "type": "Point", "coordinates": [ -69.247863, 2.636406 ] } },
+{ "type": "Feature", "properties": { "NOMBRE_GEO": "Cerro Los Gemelos", "CODIGO_NOM": "8106", "PROYECTO": null, "SYMBOL": "1", "FECHA": null, "GLOBALID": "{BFFC30A1-FCA5-4F51-8004-8FA7AC0C8124}" }, "geometry": { "type": "Point", "coordinates": [ -69.043015, 2.690138 ] } },
+{ "type": "Feature", "properties": { "NOMBRE_GEO": "Serranía de Naquen", "CODIGO_NOM": "8128", "PROYECTO": null, "SYMBOL": "1", "FECHA": null, "GLOBALID": "{B28C068E-BEC2-4614-BDA7-B2F652310006}" }, "geometry": { "type": "Point", "coordinates": [ -68.139111, 2.132644 ] } },
+{ "type": "Feature", "properties": { "NOMBRE_GEO": "Cerro Corocoro", "CODIGO_NOM": "8106", "PROYECTO": null, "SYMBOL": "1", "FECHA": null, "GLOBALID": "{C2835050-61C2-4050-B633-90618A4A9D5C}" }, "geometry": { "type": "Point", "coordinates": [ -67.245286, 2.351426 ] } },
+{ "type": "Feature", "properties": { "NOMBRE_GEO": "Cerro Cangrejo", "CODIGO_NOM": "8106", "PROYECTO": null, "SYMBOL": "1", "FECHA": null, "GLOBALID": "{7A626C41-D8EB-4205-BD93-CD1704C47513}" }, "geometry": { "type": "Point", "coordinates": [ -69.449508, 2.777888 ] } },
+{ "type": "Feature", "properties": { "NOMBRE_GEO": "Cerro El Tigre", "CODIGO_NOM": "8106", "PROYECTO": null, "SYMBOL": "1", "FECHA": null, "GLOBALID": "{1FBACED9-5D9A-448B-A0A3-757B44613D3E}" }, "geometry": { "type": "Point", "coordinates": [ -69.334435, 2.721573 ] } },
+{ "type": "Feature", "properties": { "NOMBRE_GEO": "Cerro Mapiripana", "CODIGO_NOM": "8106", "PROYECTO": null, "SYMBOL": "1", "FECHA": null, "GLOBALID": "{5FA4CD64-86CF-4339-B1A4-C74A96D99623}" }, "geometry": { "type": "Point", "coordinates": [ -70.447335, 2.776245 ] } },
+{ "type": "Feature", "properties": { "NOMBRE_GEO": "Cerro Pajarito", "CODIGO_NOM": "8106", "PROYECTO": null, "SYMBOL": "1", "FECHA": null, "GLOBALID": "{8C9BE8EB-79FE-4DAC-B114-4C1C94DF0D67}" }, "geometry": { "type": "Point", "coordinates": [ -67.98444, 3.494386 ] } }
+]
+}

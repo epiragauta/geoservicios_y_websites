@@ -1,0 +1,994 @@
+﻿capa,registros_totales,dpto_codigo,dpto_nombre,estado,registros_recorte
+Administrativo_P,8199,05,ANTIOQUIA,generada,554
+Administrativo_P,8199,08,ATLÁNTICO,generada,55
+Administrativo_P,8199,11,"BOGOTÁ, D.C.",descartada_dpto,4
+Administrativo_P,8199,13,BOLÍVAR,generada,445
+Administrativo_P,8199,15,BOYACÁ,generada,322
+Administrativo_P,8199,17,CALDAS,generada,168
+Administrativo_P,8199,18,CAQUETÁ,generada,174
+Administrativo_P,8199,19,CAUCA,generada,515
+Administrativo_P,8199,20,CESAR,generada,240
+Administrativo_P,8199,23,CÓRDOBA,generada,446
+Administrativo_P,8199,25,CUNDINAMARCA,generada,386
+Administrativo_P,8199,27,CHOCÓ,generada,405
+Administrativo_P,8199,41,HUILA,generada,239
+Administrativo_P,8199,44,LA GUAJIRA,generada,185
+Administrativo_P,8199,47,MAGDALENA,generada,170
+Administrativo_P,8199,50,META,generada,216
+Administrativo_P,8199,52,NARIÑO,generada,640
+Administrativo_P,8199,54,NORTE DE SANTANDER,generada,310
+Administrativo_P,8199,63,QUINDIO,generada,38
+Administrativo_P,8199,66,RISARALDA,generada,87
+Administrativo_P,8199,68,SANTANDER,generada,417
+Administrativo_P,8199,70,SUCRE,generada,268
+Administrativo_P,8199,73,TOLIMA,generada,318
+Administrativo_P,8199,76,VALLE DEL CAUCA,generada,533
+Administrativo_P,8199,81,ARAUCA,generada,105
+Administrativo_P,8199,85,CASANARE,generada,130
+Administrativo_P,8199,86,PUTUMAYO,generada,117
+Administrativo_P,8199,88,"ARCHIPIÉLAGO DE SAN ANDRÉS, PROVIDENCIA Y SANTA CATALINA",generada,170
+Administrativo_P,8199,91,AMAZONAS,generada,131
+Administrativo_P,8199,94,GUAINÍA,generada,121
+Administrativo_P,8199,95,GUAVIARE,generada,60
+Administrativo_P,8199,97,VAUPÉS,generada,71
+Administrativo_P,8199,99,VICHADA,generada,77
+Administrativo_R,282,05,ANTIOQUIA,generada,37
+Administrativo_R,282,08,ATLÁNTICO,generada,12
+Administrativo_R,282,11,"BOGOTÁ, D.C.",descartada_dpto,2
+Administrativo_R,282,13,BOLÍVAR,generada,13
+Administrativo_R,282,15,BOYACÁ,generada,12
+Administrativo_R,282,17,CALDAS,descartada_dpto,8
+Administrativo_R,282,18,CAQUETÁ,descartada_dpto,3
+Administrativo_R,282,19,CAUCA,descartada_dpto,5
+Administrativo_R,282,20,CESAR,generada,13
+Administrativo_R,282,23,CÓRDOBA,generada,12
+Administrativo_R,282,25,CUNDINAMARCA,generada,27
+Administrativo_R,282,27,CHOCÓ,descartada_dpto,2
+Administrativo_R,282,41,HUILA,generada,10
+Administrativo_R,282,44,LA GUAJIRA,descartada_dpto,8
+Administrativo_R,282,47,MAGDALENA,generada,11
+Administrativo_R,282,50,META,generada,12
+Administrativo_R,282,52,NARIÑO,descartada_dpto,5
+Administrativo_R,282,54,NORTE DE SANTANDER,descartada_dpto,8
+Administrativo_R,282,63,QUINDIO,descartada_dpto,6
+Administrativo_R,282,66,RISARALDA,descartada_dpto,6
+Administrativo_R,282,68,SANTANDER,generada,12
+Administrativo_R,282,70,SUCRE,descartada_dpto,8
+Administrativo_R,282,73,TOLIMA,generada,20
+Administrativo_R,282,76,VALLE DEL CAUCA,generada,20
+Administrativo_R,282,81,ARAUCA,descartada_dpto,7
+Administrativo_R,282,85,CASANARE,descartada_dpto,8
+Administrativo_R,282,86,PUTUMAYO,descartada_dpto,2
+Administrativo_R,282,88,"ARCHIPIÉLAGO DE SAN ANDRÉS, PROVIDENCIA Y SANTA CATALINA",descartada_dpto,0
+Administrativo_R,282,91,AMAZONAS,descartada_dpto,1
+Administrativo_R,282,94,GUAINÍA,descartada_dpto,1
+Administrativo_R,282,95,GUAVIARE,descartada_dpto,1
+Administrativo_R,282,97,VAUPÉS,descartada_dpto,1
+Administrativo_R,282,99,VICHADA,descartada_dpto,2
+Aeropuerto_P,185,05,ANTIOQUIA,generada,25
+Aeropuerto_P,185,08,ATLÁNTICO,descartada_dpto,1
+Aeropuerto_P,185,11,"BOGOTÁ, D.C.",descartada_dpto,2
+Aeropuerto_P,185,13,BOLÍVAR,descartada_dpto,7
+Aeropuerto_P,185,15,BOYACÁ,descartada_dpto,4
+Aeropuerto_P,185,17,CALDAS,descartada_dpto,0
+Aeropuerto_P,185,18,CAQUETÁ,descartada_dpto,9
+Aeropuerto_P,185,19,CAUCA,descartada_dpto,4
+Aeropuerto_P,185,20,CESAR,descartada_dpto,8
+Aeropuerto_P,185,23,CÓRDOBA,generada,10
+Aeropuerto_P,185,25,CUNDINAMARCA,descartada_dpto,2
+Aeropuerto_P,185,27,CHOCÓ,descartada_dpto,7
+Aeropuerto_P,185,41,HUILA,descartada_dpto,3
+Aeropuerto_P,185,44,LA GUAJIRA,descartada_dpto,6
+Aeropuerto_P,185,47,MAGDALENA,descartada_dpto,6
+Aeropuerto_P,185,50,META,generada,11
+Aeropuerto_P,185,52,NARIÑO,descartada_dpto,7
+Aeropuerto_P,185,54,NORTE DE SANTANDER,descartada_dpto,2
+Aeropuerto_P,185,63,QUINDIO,descartada_dpto,2
+Aeropuerto_P,185,66,RISARALDA,descartada_dpto,1
+Aeropuerto_P,185,68,SANTANDER,generada,17
+Aeropuerto_P,185,70,SUCRE,descartada_dpto,3
+Aeropuerto_P,185,73,TOLIMA,descartada_dpto,5
+Aeropuerto_P,185,76,VALLE DEL CAUCA,descartada_dpto,5
+Aeropuerto_P,185,81,ARAUCA,descartada_dpto,7
+Aeropuerto_P,185,85,CASANARE,descartada_dpto,7
+Aeropuerto_P,185,86,PUTUMAYO,descartada_dpto,5
+Aeropuerto_P,185,88,"ARCHIPIÉLAGO DE SAN ANDRÉS, PROVIDENCIA Y SANTA CATALINA",descartada_dpto,0
+Aeropuerto_P,185,91,AMAZONAS,descartada_dpto,2
+Aeropuerto_P,185,94,GUAINÍA,descartada_dpto,2
+Aeropuerto_P,185,95,GUAVIARE,descartada_dpto,5
+Aeropuerto_P,185,97,VAUPÉS,descartada_dpto,2
+Aeropuerto_P,185,99,VICHADA,descartada_dpto,6
+Aeropuerto_R,2,,,descartada,pocos registros globales
+Antena,0,,,descartada,vacia
+Arbol,0,,,descartada,vacia
+Area_Desecho,0,,,descartada,vacia
+Banco_Arena,951,05,ANTIOQUIA,descartada_dpto,3
+Banco_Arena,951,08,ATLÁNTICO,descartada_dpto,0
+Banco_Arena,951,11,"BOGOTÁ, D.C.",descartada_dpto,0
+Banco_Arena,951,13,BOLÍVAR,descartada_dpto,0
+Banco_Arena,951,15,BOYACÁ,generada,30
+Banco_Arena,951,17,CALDAS,descartada_dpto,1
+Banco_Arena,951,18,CAQUETÁ,generada,34
+Banco_Arena,951,19,CAUCA,descartada_dpto,0
+Banco_Arena,951,20,CESAR,descartada_dpto,0
+Banco_Arena,951,23,CÓRDOBA,descartada_dpto,0
+Banco_Arena,951,25,CUNDINAMARCA,descartada_dpto,1
+Banco_Arena,951,27,CHOCÓ,descartada_dpto,0
+Banco_Arena,951,41,HUILA,descartada_dpto,2
+Banco_Arena,951,44,LA GUAJIRA,descartada_dpto,0
+Banco_Arena,951,47,MAGDALENA,descartada_dpto,0
+Banco_Arena,951,50,META,generada,160
+Banco_Arena,951,52,NARIÑO,descartada_dpto,0
+Banco_Arena,951,54,NORTE DE SANTANDER,generada,13
+Banco_Arena,951,63,QUINDIO,descartada_dpto,0
+Banco_Arena,951,66,RISARALDA,descartada_dpto,0
+Banco_Arena,951,68,SANTANDER,generada,10
+Banco_Arena,951,70,SUCRE,descartada_dpto,0
+Banco_Arena,951,73,TOLIMA,generada,24
+Banco_Arena,951,76,VALLE DEL CAUCA,descartada_dpto,0
+Banco_Arena,951,81,ARAUCA,generada,172
+Banco_Arena,951,85,CASANARE,generada,410
+Banco_Arena,951,86,PUTUMAYO,descartada_dpto,6
+Banco_Arena,951,88,"ARCHIPIÉLAGO DE SAN ANDRÉS, PROVIDENCIA Y SANTA CATALINA",descartada_dpto,0
+Banco_Arena,951,91,AMAZONAS,generada,30
+Banco_Arena,951,94,GUAINÍA,descartada_dpto,0
+Banco_Arena,951,95,GUAVIARE,descartada_dpto,6
+Banco_Arena,951,97,VAUPÉS,descartada_dpto,0
+Banco_Arena,951,99,VICHADA,generada,135
+Bosque,2367,05,ANTIOQUIA,generada,155
+Bosque,2367,08,ATLÁNTICO,generada,18
+Bosque,2367,11,"BOGOTÁ, D.C.",generada,21
+Bosque,2367,13,BOLÍVAR,generada,43
+Bosque,2367,15,BOYACÁ,generada,101
+Bosque,2367,17,CALDAS,generada,72
+Bosque,2367,18,CAQUETÁ,generada,76
+Bosque,2367,19,CAUCA,generada,21
+Bosque,2367,20,CESAR,generada,25
+Bosque,2367,23,CÓRDOBA,generada,40
+Bosque,2367,25,CUNDINAMARCA,generada,50
+Bosque,2367,27,CHOCÓ,generada,72
+Bosque,2367,41,HUILA,generada,23
+Bosque,2367,44,LA GUAJIRA,generada,19
+Bosque,2367,47,MAGDALENA,generada,47
+Bosque,2367,50,META,generada,122
+Bosque,2367,52,NARIÑO,generada,33
+Bosque,2367,54,NORTE DE SANTANDER,generada,47
+Bosque,2367,63,QUINDIO,generada,20
+Bosque,2367,66,RISARALDA,generada,19
+Bosque,2367,68,SANTANDER,generada,177
+Bosque,2367,70,SUCRE,generada,28
+Bosque,2367,73,TOLIMA,generada,31
+Bosque,2367,76,VALLE DEL CAUCA,generada,25
+Bosque,2367,81,ARAUCA,generada,163
+Bosque,2367,85,CASANARE,generada,875
+Bosque,2367,86,PUTUMAYO,generada,42
+Bosque,2367,88,"ARCHIPIÉLAGO DE SAN ANDRÉS, PROVIDENCIA Y SANTA CATALINA",generada,17
+Bosque,2367,91,AMAZONAS,generada,29
+Bosque,2367,94,GUAINÍA,generada,154
+Bosque,2367,95,GUAVIARE,generada,34
+Bosque,2367,97,VAUPÉS,generada,29
+Bosque,2367,99,VICHADA,generada,477
+Canal_Doble,0,,,descartada,vacia
+Canal_Sencillo,2,,,descartada,pocos registros globales
+Catarata,0,,,descartada,vacia
+Central_Energia,4,,,descartada,pocos registros globales
+Cerca,0,,,descartada,vacia
+Cicloruta,0,,,descartada,vacia
+Cienaga,1091,05,ANTIOQUIA,generada,63
+Cienaga,1091,08,ATLÁNTICO,generada,24
+Cienaga,1091,11,"BOGOTÁ, D.C.",descartada_dpto,0
+Cienaga,1091,13,BOLÍVAR,generada,334
+Cienaga,1091,15,BOYACÁ,descartada_dpto,1
+Cienaga,1091,17,CALDAS,descartada_dpto,0
+Cienaga,1091,18,CAQUETÁ,descartada_dpto,0
+Cienaga,1091,19,CAUCA,descartada_dpto,0
+Cienaga,1091,20,CESAR,generada,50
+Cienaga,1091,23,CÓRDOBA,generada,152
+Cienaga,1091,25,CUNDINAMARCA,descartada_dpto,0
+Cienaga,1091,27,CHOCÓ,generada,62
+Cienaga,1091,41,HUILA,descartada_dpto,0
+Cienaga,1091,44,LA GUAJIRA,descartada_dpto,7
+Cienaga,1091,47,MAGDALENA,generada,196
+Cienaga,1091,50,META,descartada_dpto,1
+Cienaga,1091,52,NARIÑO,descartada_dpto,0
+Cienaga,1091,54,NORTE DE SANTANDER,descartada_dpto,0
+Cienaga,1091,63,QUINDIO,descartada_dpto,0
+Cienaga,1091,66,RISARALDA,descartada_dpto,0
+Cienaga,1091,68,SANTANDER,generada,30
+Cienaga,1091,70,SUCRE,generada,189
+Cienaga,1091,73,TOLIMA,descartada_dpto,0
+Cienaga,1091,76,VALLE DEL CAUCA,descartada_dpto,1
+Cienaga,1091,81,ARAUCA,descartada_dpto,0
+Cienaga,1091,85,CASANARE,descartada_dpto,0
+Cienaga,1091,86,PUTUMAYO,descartada_dpto,0
+Cienaga,1091,88,"ARCHIPIÉLAGO DE SAN ANDRÉS, PROVIDENCIA Y SANTA CATALINA",descartada_dpto,1
+Cienaga,1091,91,AMAZONAS,descartada_dpto,0
+Cienaga,1091,94,GUAINÍA,descartada_dpto,0
+Cienaga,1091,95,GUAVIARE,descartada_dpto,0
+Cienaga,1091,97,VAUPÉS,descartada_dpto,0
+Cienaga,1091,99,VICHADA,descartada_dpto,0
+Construccion_Agua_L,0,,,descartada,vacia
+Construccion_Agua_P,0,,,descartada,vacia
+Construccion_Agua_R,0,,,descartada,vacia
+Construccion_P,7968,05,ANTIOQUIA,existente,428
+Construccion_P,7968,08,ATLÁNTICO,descartada_dpto,7
+Construccion_P,7968,11,"BOGOTÁ, D.C.",descartada_dpto,5
+Construccion_P,7968,13,BOLÍVAR,existente,21
+Construccion_P,7968,15,BOYACÁ,existente,376
+Construccion_P,7968,17,CALDAS,existente,77
+Construccion_P,7968,18,CAQUETÁ,existente,162
+Construccion_P,7968,19,CAUCA,existente,18
+Construccion_P,7968,20,CESAR,existente,49
+Construccion_P,7968,23,CÓRDOBA,existente,40
+Construccion_P,7968,25,CUNDINAMARCA,existente,328
+Construccion_P,7968,27,CHOCÓ,existente,105
+Construccion_P,7968,41,HUILA,existente,18
+Construccion_P,7968,44,LA GUAJIRA,existente,183
+Construccion_P,7968,47,MAGDALENA,existente,77
+Construccion_P,7968,50,META,existente,538
+Construccion_P,7968,52,NARIÑO,existente,18
+Construccion_P,7968,54,NORTE DE SANTANDER,existente,22
+Construccion_P,7968,63,QUINDIO,descartada_dpto,7
+Construccion_P,7968,66,RISARALDA,existente,13
+Construccion_P,7968,68,SANTANDER,existente,182
+Construccion_P,7968,70,SUCRE,existente,10
+Construccion_P,7968,73,TOLIMA,existente,161
+Construccion_P,7968,76,VALLE DEL CAUCA,existente,26
+Construccion_P,7968,81,ARAUCA,existente,560
+Construccion_P,7968,85,CASANARE,existente,2111
+Construccion_P,7968,86,PUTUMAYO,existente,300
+Construccion_P,7968,88,"ARCHIPIÉLAGO DE SAN ANDRÉS, PROVIDENCIA Y SANTA CATALINA",existente,1093
+Construccion_P,7968,91,AMAZONAS,existente,137
+Construccion_P,7968,94,GUAINÍA,existente,95
+Construccion_P,7968,95,GUAVIARE,existente,112
+Construccion_P,7968,97,VAUPÉS,existente,153
+Construccion_P,7968,99,VICHADA,existente,390
+Construccion_R,0,,,descartada,vacia
+Costero_Insular,294,05,ANTIOQUIA,descartada_dpto,0
+Costero_Insular,294,08,ATLÁNTICO,descartada_dpto,4
+Costero_Insular,294,11,"BOGOTÁ, D.C.",descartada_dpto,0
+Costero_Insular,294,13,BOLÍVAR,descartada_dpto,0
+Costero_Insular,294,15,BOYACÁ,descartada_dpto,0
+Costero_Insular,294,17,CALDAS,descartada_dpto,0
+Costero_Insular,294,18,CAQUETÁ,descartada_dpto,0
+Costero_Insular,294,19,CAUCA,descartada_dpto,0
+Costero_Insular,294,20,CESAR,descartada_dpto,0
+Costero_Insular,294,23,CÓRDOBA,descartada_dpto,0
+Costero_Insular,294,25,CUNDINAMARCA,descartada_dpto,0
+Costero_Insular,294,27,CHOCÓ,descartada_dpto,1
+Costero_Insular,294,41,HUILA,descartada_dpto,0
+Costero_Insular,294,44,LA GUAJIRA,generada,18
+Costero_Insular,294,47,MAGDALENA,descartada_dpto,8
+Costero_Insular,294,50,META,descartada_dpto,0
+Costero_Insular,294,52,NARIÑO,descartada_dpto,4
+Costero_Insular,294,54,NORTE DE SANTANDER,descartada_dpto,0
+Costero_Insular,294,63,QUINDIO,descartada_dpto,0
+Costero_Insular,294,66,RISARALDA,descartada_dpto,0
+Costero_Insular,294,68,SANTANDER,descartada_dpto,0
+Costero_Insular,294,70,SUCRE,descartada_dpto,0
+Costero_Insular,294,73,TOLIMA,descartada_dpto,0
+Costero_Insular,294,76,VALLE DEL CAUCA,descartada_dpto,0
+Costero_Insular,294,81,ARAUCA,descartada_dpto,0
+Costero_Insular,294,85,CASANARE,descartada_dpto,0
+Costero_Insular,294,86,PUTUMAYO,descartada_dpto,0
+Costero_Insular,294,88,"ARCHIPIÉLAGO DE SAN ANDRÉS, PROVIDENCIA Y SANTA CATALINA",generada,12
+Costero_Insular,294,91,AMAZONAS,descartada_dpto,0
+Costero_Insular,294,94,GUAINÍA,descartada_dpto,0
+Costero_Insular,294,95,GUAVIARE,descartada_dpto,0
+Costero_Insular,294,97,VAUPÉS,descartada_dpto,0
+Costero_Insular,294,99,VICHADA,descartada_dpto,0
+Cultivo,0,,,descartada,vacia
+Curva_Nivel,1954,05,ANTIOQUIA,generada,179
+Curva_Nivel,1954,08,ATLÁNTICO,generada,18
+Curva_Nivel,1954,11,"BOGOTÁ, D.C.",descartada_dpto,8
+Curva_Nivel,1954,13,BOLÍVAR,generada,92
+Curva_Nivel,1954,15,BOYACÁ,generada,41
+Curva_Nivel,1954,17,CALDAS,generada,31
+Curva_Nivel,1954,18,CAQUETÁ,generada,94
+Curva_Nivel,1954,19,CAUCA,generada,88
+Curva_Nivel,1954,20,CESAR,generada,101
+Curva_Nivel,1954,23,CÓRDOBA,generada,66
+Curva_Nivel,1954,25,CUNDINAMARCA,generada,36
+Curva_Nivel,1954,27,CHOCÓ,generada,367
+Curva_Nivel,1954,41,HUILA,generada,93
+Curva_Nivel,1954,44,LA GUAJIRA,generada,116
+Curva_Nivel,1954,47,MAGDALENA,generada,65
+Curva_Nivel,1954,50,META,generada,91
+Curva_Nivel,1954,52,NARIÑO,generada,119
+Curva_Nivel,1954,54,NORTE DE SANTANDER,generada,118
+Curva_Nivel,1954,63,QUINDIO,generada,11
+Curva_Nivel,1954,66,RISARALDA,generada,34
+Curva_Nivel,1954,68,SANTANDER,generada,100
+Curva_Nivel,1954,70,SUCRE,generada,17
+Curva_Nivel,1954,73,TOLIMA,generada,87
+Curva_Nivel,1954,76,VALLE DEL CAUCA,generada,53
+Curva_Nivel,1954,81,ARAUCA,generada,28
+Curva_Nivel,1954,85,CASANARE,generada,16
+Curva_Nivel,1954,86,PUTUMAYO,generada,42
+Curva_Nivel,1954,88,"ARCHIPIÉLAGO DE SAN ANDRÉS, PROVIDENCIA Y SANTA CATALINA",descartada_dpto,0
+Curva_Nivel,1954,91,AMAZONAS,generada,71
+Curva_Nivel,1954,94,GUAINÍA,generada,125
+Curva_Nivel,1954,95,GUAVIARE,generada,21
+Curva_Nivel,1954,97,VAUPÉS,generada,13
+Curva_Nivel,1954,99,VICHADA,generada,26
+Drenaje_Doble,277,05,ANTIOQUIA,generada,38
+Drenaje_Doble,277,08,ATLÁNTICO,descartada_dpto,1
+Drenaje_Doble,277,11,"BOGOTÁ, D.C.",descartada_dpto,0
+Drenaje_Doble,277,13,BOLÍVAR,generada,12
+Drenaje_Doble,277,15,BOYACÁ,descartada_dpto,8
+Drenaje_Doble,277,17,CALDAS,descartada_dpto,6
+Drenaje_Doble,277,18,CAQUETÁ,descartada_dpto,5
+Drenaje_Doble,277,19,CAUCA,generada,14
+Drenaje_Doble,277,20,CESAR,descartada_dpto,1
+Drenaje_Doble,277,23,CÓRDOBA,descartada_dpto,2
+Drenaje_Doble,277,25,CUNDINAMARCA,descartada_dpto,7
+Drenaje_Doble,277,27,CHOCÓ,generada,46
+Drenaje_Doble,277,41,HUILA,descartada_dpto,3
+Drenaje_Doble,277,44,LA GUAJIRA,descartada_dpto,6
+Drenaje_Doble,277,47,MAGDALENA,descartada_dpto,2
+Drenaje_Doble,277,50,META,generada,24
+Drenaje_Doble,277,52,NARIÑO,generada,59
+Drenaje_Doble,277,54,NORTE DE SANTANDER,descartada_dpto,1
+Drenaje_Doble,277,63,QUINDIO,descartada_dpto,0
+Drenaje_Doble,277,66,RISARALDA,descartada_dpto,0
+Drenaje_Doble,277,68,SANTANDER,descartada_dpto,4
+Drenaje_Doble,277,70,SUCRE,descartada_dpto,2
+Drenaje_Doble,277,73,TOLIMA,descartada_dpto,7
+Drenaje_Doble,277,76,VALLE DEL CAUCA,generada,20
+Drenaje_Doble,277,81,ARAUCA,generada,18
+Drenaje_Doble,277,85,CASANARE,generada,12
+Drenaje_Doble,277,86,PUTUMAYO,descartada_dpto,4
+Drenaje_Doble,277,88,"ARCHIPIÉLAGO DE SAN ANDRÉS, PROVIDENCIA Y SANTA CATALINA",descartada_dpto,0
+Drenaje_Doble,277,91,AMAZONAS,descartada_dpto,6
+Drenaje_Doble,277,94,GUAINÍA,descartada_dpto,6
+Drenaje_Doble,277,95,GUAVIARE,descartada_dpto,6
+Drenaje_Doble,277,97,VAUPÉS,descartada_dpto,3
+Drenaje_Doble,277,99,VICHADA,generada,10
+Drenaje_Sencillo,115282,05,ANTIOQUIA,generada,6058
+Drenaje_Sencillo,115282,08,ATLÁNTICO,generada,406
+Drenaje_Sencillo,115282,11,"BOGOTÁ, D.C.",generada,109
+Drenaje_Sencillo,115282,13,BOLÍVAR,generada,2721
+Drenaje_Sencillo,115282,15,BOYACÁ,generada,2972
+Drenaje_Sencillo,115282,17,CALDAS,generada,627
+Drenaje_Sencillo,115282,18,CAQUETÁ,generada,9946
+Drenaje_Sencillo,115282,19,CAUCA,generada,4715
+Drenaje_Sencillo,115282,20,CESAR,generada,2405
+Drenaje_Sencillo,115282,23,CÓRDOBA,generada,2221
+Drenaje_Sencillo,115282,25,CUNDINAMARCA,generada,2264
+Drenaje_Sencillo,115282,27,CHOCÓ,generada,4354
+Drenaje_Sencillo,115282,41,HUILA,generada,2943
+Drenaje_Sencillo,115282,44,LA GUAJIRA,generada,1762
+Drenaje_Sencillo,115282,47,MAGDALENA,generada,2212
+Drenaje_Sencillo,115282,50,META,generada,10059
+Drenaje_Sencillo,115282,52,NARIÑO,generada,3301
+Drenaje_Sencillo,115282,54,NORTE DE SANTANDER,generada,3167
+Drenaje_Sencillo,115282,63,QUINDIO,generada,130
+Drenaje_Sencillo,115282,66,RISARALDA,generada,289
+Drenaje_Sencillo,115282,68,SANTANDER,generada,3361
+Drenaje_Sencillo,115282,70,SUCRE,generada,1192
+Drenaje_Sencillo,115282,73,TOLIMA,generada,2765
+Drenaje_Sencillo,115282,76,VALLE DEL CAUCA,generada,2646
+Drenaje_Sencillo,115282,81,ARAUCA,generada,1255
+Drenaje_Sencillo,115282,85,CASANARE,generada,2297
+Drenaje_Sencillo,115282,86,PUTUMAYO,generada,2347
+Drenaje_Sencillo,115282,88,"ARCHIPIÉLAGO DE SAN ANDRÉS, PROVIDENCIA Y SANTA CATALINA",generada,338
+Drenaje_Sencillo,115282,91,AMAZONAS,generada,9425
+Drenaje_Sencillo,115282,94,GUAINÍA,generada,9964
+Drenaje_Sencillo,115282,95,GUAVIARE,generada,6711
+Drenaje_Sencillo,115282,97,VAUPÉS,generada,3778
+Drenaje_Sencillo,115282,99,VICHADA,generada,8285
+Embalse,34,05,ANTIOQUIA,descartada_dpto,8
+Embalse,34,08,ATLÁNTICO,descartada_dpto,1
+Embalse,34,11,"BOGOTÁ, D.C.",descartada_dpto,2
+Embalse,34,13,BOLÍVAR,descartada_dpto,1
+Embalse,34,15,BOYACÁ,descartada_dpto,4
+Embalse,34,17,CALDAS,descartada_dpto,0
+Embalse,34,18,CAQUETÁ,descartada_dpto,0
+Embalse,34,19,CAUCA,descartada_dpto,1
+Embalse,34,20,CESAR,descartada_dpto,0
+Embalse,34,23,CÓRDOBA,descartada_dpto,1
+Embalse,34,25,CUNDINAMARCA,descartada_dpto,8
+Embalse,34,27,CHOCÓ,descartada_dpto,0
+Embalse,34,41,HUILA,descartada_dpto,1
+Embalse,34,44,LA GUAJIRA,descartada_dpto,0
+Embalse,34,47,MAGDALENA,descartada_dpto,0
+Embalse,34,50,META,descartada_dpto,0
+Embalse,34,52,NARIÑO,descartada_dpto,1
+Embalse,34,54,NORTE DE SANTANDER,descartada_dpto,0
+Embalse,34,63,QUINDIO,descartada_dpto,0
+Embalse,34,66,RISARALDA,descartada_dpto,0
+Embalse,34,68,SANTANDER,descartada_dpto,0
+Embalse,34,70,SUCRE,descartada_dpto,0
+Embalse,34,73,TOLIMA,descartada_dpto,1
+Embalse,34,76,VALLE DEL CAUCA,descartada_dpto,3
+Embalse,34,81,ARAUCA,descartada_dpto,0
+Embalse,34,85,CASANARE,descartada_dpto,0
+Embalse,34,86,PUTUMAYO,descartada_dpto,0
+Embalse,34,88,"ARCHIPIÉLAGO DE SAN ANDRÉS, PROVIDENCIA Y SANTA CATALINA",descartada_dpto,2
+Embalse,34,91,AMAZONAS,descartada_dpto,0
+Embalse,34,94,GUAINÍA,descartada_dpto,0
+Embalse,34,95,GUAVIARE,descartada_dpto,0
+Embalse,34,97,VAUPÉS,descartada_dpto,0
+Embalse,34,99,VICHADA,descartada_dpto,0
+Embarcadero_Muelle,0,,,descartada,vacia
+Grupo_arboles,0,,,descartada,vacia
+Helipuerto_P,0,,,descartada,vacia
+Helipuerto_R,0,,,descartada,vacia
+Hito_Limite,92,05,ANTIOQUIA,descartada_dpto,0
+Hito_Limite,92,08,ATLÁNTICO,descartada_dpto,0
+Hito_Limite,92,11,"BOGOTÁ, D.C.",descartada_dpto,0
+Hito_Limite,92,13,BOLÍVAR,descartada_dpto,0
+Hito_Limite,92,15,BOYACÁ,descartada_dpto,0
+Hito_Limite,92,17,CALDAS,descartada_dpto,0
+Hito_Limite,92,18,CAQUETÁ,descartada_dpto,0
+Hito_Limite,92,19,CAUCA,descartada_dpto,0
+Hito_Limite,92,20,CESAR,descartada_dpto,7
+Hito_Limite,92,23,CÓRDOBA,descartada_dpto,0
+Hito_Limite,92,25,CUNDINAMARCA,descartada_dpto,0
+Hito_Limite,92,27,CHOCÓ,descartada_dpto,6
+Hito_Limite,92,41,HUILA,descartada_dpto,0
+Hito_Limite,92,44,LA GUAJIRA,descartada_dpto,4
+Hito_Limite,92,47,MAGDALENA,descartada_dpto,0
+Hito_Limite,92,50,META,descartada_dpto,0
+Hito_Limite,92,52,NARIÑO,descartada_dpto,0
+Hito_Limite,92,54,NORTE DE SANTANDER,descartada_dpto,2
+Hito_Limite,92,63,QUINDIO,descartada_dpto,0
+Hito_Limite,92,66,RISARALDA,descartada_dpto,0
+Hito_Limite,92,68,SANTANDER,descartada_dpto,0
+Hito_Limite,92,70,SUCRE,descartada_dpto,0
+Hito_Limite,92,73,TOLIMA,descartada_dpto,0
+Hito_Limite,92,76,VALLE DEL CAUCA,descartada_dpto,0
+Hito_Limite,92,81,ARAUCA,generada,13
+Hito_Limite,92,85,CASANARE,descartada_dpto,0
+Hito_Limite,92,86,PUTUMAYO,descartada_dpto,3
+Hito_Limite,92,88,"ARCHIPIÉLAGO DE SAN ANDRÉS, PROVIDENCIA Y SANTA CATALINA",descartada_dpto,0
+Hito_Limite,92,91,AMAZONAS,generada,11
+Hito_Limite,92,94,GUAINÍA,descartada_dpto,2
+Hito_Limite,92,95,GUAVIARE,descartada_dpto,0
+Hito_Limite,92,97,VAUPÉS,descartada_dpto,0
+Hito_Limite,92,99,VICHADA,descartada_dpto,0
+Humedal,0,,,descartada,vacia
+IndEscala,27,05,ANTIOQUIA,descartada_dpto,6
+IndEscala,27,08,ATLÁNTICO,descartada_dpto,3
+IndEscala,27,11,"BOGOTÁ, D.C.",descartada_dpto,3
+IndEscala,27,13,BOLÍVAR,descartada_dpto,5
+IndEscala,27,15,BOYACÁ,descartada_dpto,5
+IndEscala,27,17,CALDAS,descartada_dpto,3
+IndEscala,27,18,CAQUETÁ,descartada_dpto,8
+IndEscala,27,19,CAUCA,descartada_dpto,3
+IndEscala,27,20,CESAR,descartada_dpto,4
+IndEscala,27,23,CÓRDOBA,descartada_dpto,5
+IndEscala,27,25,CUNDINAMARCA,descartada_dpto,3
+IndEscala,27,27,CHOCÓ,descartada_dpto,5
+IndEscala,27,41,HUILA,descartada_dpto,5
+IndEscala,27,44,LA GUAJIRA,descartada_dpto,4
+IndEscala,27,47,MAGDALENA,descartada_dpto,3
+IndEscala,27,50,META,descartada_dpto,6
+IndEscala,27,52,NARIÑO,descartada_dpto,5
+IndEscala,27,54,NORTE DE SANTANDER,descartada_dpto,4
+IndEscala,27,63,QUINDIO,descartada_dpto,4
+IndEscala,27,66,RISARALDA,descartada_dpto,3
+IndEscala,27,68,SANTANDER,descartada_dpto,4
+IndEscala,27,70,SUCRE,descartada_dpto,4
+IndEscala,27,73,TOLIMA,descartada_dpto,5
+IndEscala,27,76,VALLE DEL CAUCA,descartada_dpto,3
+IndEscala,27,81,ARAUCA,descartada_dpto,4
+IndEscala,27,85,CASANARE,descartada_dpto,3
+IndEscala,27,86,PUTUMAYO,descartada_dpto,4
+IndEscala,27,88,"ARCHIPIÉLAGO DE SAN ANDRÉS, PROVIDENCIA Y SANTA CATALINA",descartada_dpto,0
+IndEscala,27,91,AMAZONAS,descartada_dpto,7
+IndEscala,27,94,GUAINÍA,descartada_dpto,5
+IndEscala,27,95,GUAVIARE,descartada_dpto,5
+IndEscala,27,97,VAUPÉS,descartada_dpto,6
+IndEscala,27,99,VICHADA,descartada_dpto,5
+Isla,1983,05,ANTIOQUIA,generada,71
+Isla,1983,08,ATLÁNTICO,generada,10
+Isla,1983,11,"BOGOTÁ, D.C.",descartada_dpto,4
+Isla,1983,13,BOLÍVAR,generada,89
+Isla,1983,15,BOYACÁ,generada,27
+Isla,1983,17,CALDAS,generada,16
+Isla,1983,18,CAQUETÁ,generada,104
+Isla,1983,19,CAUCA,generada,21
+Isla,1983,20,CESAR,generada,16
+Isla,1983,23,CÓRDOBA,descartada_dpto,4
+Isla,1983,25,CUNDINAMARCA,generada,32
+Isla,1983,27,CHOCÓ,generada,39
+Isla,1983,41,HUILA,generada,31
+Isla,1983,44,LA GUAJIRA,descartada_dpto,4
+Isla,1983,47,MAGDALENA,generada,48
+Isla,1983,50,META,generada,204
+Isla,1983,52,NARIÑO,generada,49
+Isla,1983,54,NORTE DE SANTANDER,descartada_dpto,4
+Isla,1983,63,QUINDIO,descartada_dpto,4
+Isla,1983,66,RISARALDA,descartada_dpto,4
+Isla,1983,68,SANTANDER,generada,55
+Isla,1983,70,SUCRE,descartada_dpto,7
+Isla,1983,73,TOLIMA,generada,56
+Isla,1983,76,VALLE DEL CAUCA,generada,11
+Isla,1983,81,ARAUCA,generada,57
+Isla,1983,85,CASANARE,generada,129
+Isla,1983,86,PUTUMAYO,generada,213
+Isla,1983,88,"ARCHIPIÉLAGO DE SAN ANDRÉS, PROVIDENCIA Y SANTA CATALINA",descartada_dpto,7
+Isla,1983,91,AMAZONAS,generada,370
+Isla,1983,94,GUAINÍA,generada,77
+Isla,1983,95,GUAVIARE,generada,50
+Isla,1983,97,VAUPÉS,generada,49
+Isla,1983,99,VICHADA,generada,292
+Jaguey_P,0,,,descartada,vacia
+Jaguey_R,2,,,descartada,pocos registros globales
+Laguna,1290,05,ANTIOQUIA,generada,16
+Laguna,1290,08,ATLÁNTICO,descartada_dpto,8
+Laguna,1290,11,"BOGOTÁ, D.C.",descartada_dpto,4
+Laguna,1290,13,BOLÍVAR,descartada_dpto,1
+Laguna,1290,15,BOYACÁ,descartada_dpto,6
+Laguna,1290,17,CALDAS,descartada_dpto,1
+Laguna,1290,18,CAQUETÁ,generada,98
+Laguna,1290,19,CAUCA,descartada_dpto,2
+Laguna,1290,20,CESAR,descartada_dpto,6
+Laguna,1290,23,CÓRDOBA,descartada_dpto,0
+Laguna,1290,25,CUNDINAMARCA,generada,12
+Laguna,1290,27,CHOCÓ,descartada_dpto,0
+Laguna,1290,41,HUILA,generada,10
+Laguna,1290,44,LA GUAJIRA,generada,33
+Laguna,1290,47,MAGDALENA,generada,36
+Laguna,1290,50,META,generada,149
+Laguna,1290,52,NARIÑO,generada,18
+Laguna,1290,54,NORTE DE SANTANDER,descartada_dpto,0
+Laguna,1290,63,QUINDIO,descartada_dpto,0
+Laguna,1290,66,RISARALDA,descartada_dpto,1
+Laguna,1290,68,SANTANDER,descartada_dpto,4
+Laguna,1290,70,SUCRE,descartada_dpto,0
+Laguna,1290,73,TOLIMA,generada,14
+Laguna,1290,76,VALLE DEL CAUCA,descartada_dpto,4
+Laguna,1290,81,ARAUCA,generada,25
+Laguna,1290,85,CASANARE,generada,43
+Laguna,1290,86,PUTUMAYO,descartada_dpto,3
+Laguna,1290,88,"ARCHIPIÉLAGO DE SAN ANDRÉS, PROVIDENCIA Y SANTA CATALINA",descartada_dpto,8
+Laguna,1290,91,AMAZONAS,generada,58
+Laguna,1290,94,GUAINÍA,generada,256
+Laguna,1290,95,GUAVIARE,generada,76
+Laguna,1290,97,VAUPÉS,descartada_dpto,7
+Laguna,1290,99,VICHADA,generada,393
+Limite_Manzana,400,05,ANTIOQUIA,descartada_dpto,0
+Limite_Manzana,400,08,ATLÁNTICO,descartada_dpto,0
+Limite_Manzana,400,11,"BOGOTÁ, D.C.",descartada_dpto,0
+Limite_Manzana,400,13,BOLÍVAR,descartada_dpto,0
+Limite_Manzana,400,15,BOYACÁ,descartada_dpto,0
+Limite_Manzana,400,17,CALDAS,descartada_dpto,0
+Limite_Manzana,400,18,CAQUETÁ,descartada_dpto,0
+Limite_Manzana,400,19,CAUCA,descartada_dpto,0
+Limite_Manzana,400,20,CESAR,descartada_dpto,0
+Limite_Manzana,400,23,CÓRDOBA,descartada_dpto,0
+Limite_Manzana,400,25,CUNDINAMARCA,descartada_dpto,0
+Limite_Manzana,400,27,CHOCÓ,descartada_dpto,0
+Limite_Manzana,400,41,HUILA,descartada_dpto,0
+Limite_Manzana,400,44,LA GUAJIRA,descartada_dpto,0
+Limite_Manzana,400,47,MAGDALENA,descartada_dpto,0
+Limite_Manzana,400,50,META,descartada_dpto,0
+Limite_Manzana,400,52,NARIÑO,descartada_dpto,0
+Limite_Manzana,400,54,NORTE DE SANTANDER,descartada_dpto,0
+Limite_Manzana,400,63,QUINDIO,descartada_dpto,0
+Limite_Manzana,400,66,RISARALDA,descartada_dpto,0
+Limite_Manzana,400,68,SANTANDER,descartada_dpto,0
+Limite_Manzana,400,70,SUCRE,descartada_dpto,0
+Limite_Manzana,400,73,TOLIMA,descartada_dpto,0
+Limite_Manzana,400,76,VALLE DEL CAUCA,descartada_dpto,0
+Limite_Manzana,400,81,ARAUCA,descartada_dpto,0
+Limite_Manzana,400,85,CASANARE,descartada_dpto,0
+Limite_Manzana,400,86,PUTUMAYO,descartada_dpto,0
+Limite_Manzana,400,88,"ARCHIPIÉLAGO DE SAN ANDRÉS, PROVIDENCIA Y SANTA CATALINA",generada,391
+Limite_Manzana,400,91,AMAZONAS,descartada_dpto,0
+Limite_Manzana,400,94,GUAINÍA,descartada_dpto,0
+Limite_Manzana,400,95,GUAVIARE,descartada_dpto,0
+Limite_Manzana,400,97,VAUPÉS,descartada_dpto,0
+Limite_Manzana,400,99,VICHADA,descartada_dpto,0
+Limite_Manzana_Aproximado,0,,,descartada,vacia
+Limite_Via,0,,,descartada,vacia
+Linea_Costera,5,,,descartada,pocos registros globales
+Lineas_De_Quiebre,0,,,descartada,vacia
+Lineas_de_Forma,0,,,descartada,vacia
+Lote_L,0,,,descartada,vacia
+Lote_R,0,,,descartada,vacia
+Madrevieja_L,0,,,descartada,vacia
+Madrevieja_R,10,05,ANTIOQUIA,descartada_dpto,0
+Madrevieja_R,10,08,ATLÁNTICO,descartada_dpto,0
+Madrevieja_R,10,11,"BOGOTÁ, D.C.",descartada_dpto,0
+Madrevieja_R,10,13,BOLÍVAR,descartada_dpto,0
+Madrevieja_R,10,15,BOYACÁ,descartada_dpto,0
+Madrevieja_R,10,17,CALDAS,descartada_dpto,0
+Madrevieja_R,10,18,CAQUETÁ,descartada_dpto,0
+Madrevieja_R,10,19,CAUCA,descartada_dpto,0
+Madrevieja_R,10,20,CESAR,descartada_dpto,0
+Madrevieja_R,10,23,CÓRDOBA,descartada_dpto,0
+Madrevieja_R,10,25,CUNDINAMARCA,descartada_dpto,0
+Madrevieja_R,10,27,CHOCÓ,descartada_dpto,0
+Madrevieja_R,10,41,HUILA,descartada_dpto,0
+Madrevieja_R,10,44,LA GUAJIRA,descartada_dpto,0
+Madrevieja_R,10,47,MAGDALENA,descartada_dpto,0
+Madrevieja_R,10,50,META,descartada_dpto,0
+Madrevieja_R,10,52,NARIÑO,descartada_dpto,0
+Madrevieja_R,10,54,NORTE DE SANTANDER,descartada_dpto,0
+Madrevieja_R,10,63,QUINDIO,descartada_dpto,0
+Madrevieja_R,10,66,RISARALDA,descartada_dpto,0
+Madrevieja_R,10,68,SANTANDER,descartada_dpto,0
+Madrevieja_R,10,70,SUCRE,descartada_dpto,0
+Madrevieja_R,10,73,TOLIMA,descartada_dpto,0
+Madrevieja_R,10,76,VALLE DEL CAUCA,descartada_dpto,0
+Madrevieja_R,10,81,ARAUCA,descartada_dpto,0
+Madrevieja_R,10,85,CASANARE,descartada_dpto,0
+Madrevieja_R,10,86,PUTUMAYO,descartada_dpto,0
+Madrevieja_R,10,88,"ARCHIPIÉLAGO DE SAN ANDRÉS, PROVIDENCIA Y SANTA CATALINA",descartada_dpto,0
+Madrevieja_R,10,91,AMAZONAS,descartada_dpto,0
+Madrevieja_R,10,94,GUAINÍA,descartada_dpto,0
+Madrevieja_R,10,95,GUAVIARE,descartada_dpto,0
+Madrevieja_R,10,97,VAUPÉS,descartada_dpto,0
+Madrevieja_R,10,99,VICHADA,generada,10
+Manantial,0,,,descartada,vacia
+Manglar,11,05,ANTIOQUIA,descartada_dpto,0
+Manglar,11,08,ATLÁNTICO,descartada_dpto,0
+Manglar,11,11,"BOGOTÁ, D.C.",descartada_dpto,0
+Manglar,11,13,BOLÍVAR,descartada_dpto,0
+Manglar,11,15,BOYACÁ,descartada_dpto,0
+Manglar,11,17,CALDAS,descartada_dpto,0
+Manglar,11,18,CAQUETÁ,descartada_dpto,0
+Manglar,11,19,CAUCA,descartada_dpto,0
+Manglar,11,20,CESAR,descartada_dpto,0
+Manglar,11,23,CÓRDOBA,descartada_dpto,0
+Manglar,11,25,CUNDINAMARCA,descartada_dpto,0
+Manglar,11,27,CHOCÓ,descartada_dpto,0
+Manglar,11,41,HUILA,descartada_dpto,0
+Manglar,11,44,LA GUAJIRA,descartada_dpto,0
+Manglar,11,47,MAGDALENA,descartada_dpto,0
+Manglar,11,50,META,descartada_dpto,0
+Manglar,11,52,NARIÑO,descartada_dpto,0
+Manglar,11,54,NORTE DE SANTANDER,descartada_dpto,0
+Manglar,11,63,QUINDIO,descartada_dpto,0
+Manglar,11,66,RISARALDA,descartada_dpto,0
+Manglar,11,68,SANTANDER,descartada_dpto,0
+Manglar,11,70,SUCRE,descartada_dpto,0
+Manglar,11,73,TOLIMA,descartada_dpto,0
+Manglar,11,76,VALLE DEL CAUCA,descartada_dpto,0
+Manglar,11,81,ARAUCA,descartada_dpto,0
+Manglar,11,85,CASANARE,descartada_dpto,0
+Manglar,11,86,PUTUMAYO,descartada_dpto,0
+Manglar,11,88,"ARCHIPIÉLAGO DE SAN ANDRÉS, PROVIDENCIA Y SANTA CATALINA",generada,11
+Manglar,11,91,AMAZONAS,descartada_dpto,0
+Manglar,11,94,GUAINÍA,descartada_dpto,0
+Manglar,11,95,GUAVIARE,descartada_dpto,0
+Manglar,11,97,VAUPÉS,descartada_dpto,0
+Manglar,11,99,VICHADA,descartada_dpto,0
+Mascara,0,,,descartada,vacia
+Matorral,0,,,descartada,vacia
+Mina_P,0,,,descartada,vacia
+Mina_R,0,,,descartada,vacia
+Modelo_de_Elevacion,0,,,descartada,vacia
+Morichal,0,,,descartada,vacia
+Muro,0,,,descartada,vacia
+Nomenclatura,0,,,descartada,vacia
+Orografia,904,05,ANTIOQUIA,generada,87
+Orografia,904,08,ATLÁNTICO,descartada_dpto,0
+Orografia,904,11,"BOGOTÁ, D.C.",descartada_dpto,6
+Orografia,904,13,BOLÍVAR,generada,25
+Orografia,904,15,BOYACÁ,generada,76
+Orografia,904,17,CALDAS,generada,30
+Orografia,904,18,CAQUETÁ,generada,13
+Orografia,904,19,CAUCA,generada,53
+Orografia,904,20,CESAR,descartada_dpto,3
+Orografia,904,23,CÓRDOBA,generada,13
+Orografia,904,25,CUNDINAMARCA,generada,110
+Orografia,904,27,CHOCÓ,generada,21
+Orografia,904,41,HUILA,generada,53
+Orografia,904,44,LA GUAJIRA,descartada_dpto,2
+Orografia,904,47,MAGDALENA,descartada_dpto,2
+Orografia,904,50,META,generada,28
+Orografia,904,52,NARIÑO,generada,15
+Orografia,904,54,NORTE DE SANTANDER,descartada_dpto,5
+Orografia,904,63,QUINDIO,descartada_dpto,1
+Orografia,904,66,RISARALDA,descartada_dpto,6
+Orografia,904,68,SANTANDER,generada,29
+Orografia,904,70,SUCRE,descartada_dpto,0
+Orografia,904,73,TOLIMA,generada,94
+Orografia,904,76,VALLE DEL CAUCA,generada,20
+Orografia,904,81,ARAUCA,generada,33
+Orografia,904,85,CASANARE,generada,78
+Orografia,904,86,PUTUMAYO,descartada_dpto,1
+Orografia,904,88,"ARCHIPIÉLAGO DE SAN ANDRÉS, PROVIDENCIA Y SANTA CATALINA",generada,34
+Orografia,904,91,AMAZONAS,descartada_dpto,1
+Orografia,904,94,GUAINÍA,generada,11
+Orografia,904,95,GUAVIARE,generada,12
+Orografia,904,97,VAUPÉS,descartada_dpto,9
+Orografia,904,99,VICHADA,generada,29
+Otros_Cuerpos_Agua,0,,,descartada,vacia
+Otros_Textos,0,,,descartada,vacia
+Pantano,175,05,ANTIOQUIA,descartada_dpto,0
+Pantano,175,08,ATLÁNTICO,descartada_dpto,0
+Pantano,175,11,"BOGOTÁ, D.C.",descartada_dpto,0
+Pantano,175,13,BOLÍVAR,descartada_dpto,0
+Pantano,175,15,BOYACÁ,descartada_dpto,0
+Pantano,175,17,CALDAS,descartada_dpto,0
+Pantano,175,18,CAQUETÁ,generada,18
+Pantano,175,19,CAUCA,descartada_dpto,0
+Pantano,175,20,CESAR,descartada_dpto,0
+Pantano,175,23,CÓRDOBA,descartada_dpto,0
+Pantano,175,25,CUNDINAMARCA,descartada_dpto,0
+Pantano,175,27,CHOCÓ,descartada_dpto,0
+Pantano,175,41,HUILA,descartada_dpto,0
+Pantano,175,44,LA GUAJIRA,descartada_dpto,0
+Pantano,175,47,MAGDALENA,descartada_dpto,1
+Pantano,175,50,META,descartada_dpto,1
+Pantano,175,52,NARIÑO,descartada_dpto,0
+Pantano,175,54,NORTE DE SANTANDER,descartada_dpto,0
+Pantano,175,63,QUINDIO,descartada_dpto,0
+Pantano,175,66,RISARALDA,descartada_dpto,0
+Pantano,175,68,SANTANDER,descartada_dpto,0
+Pantano,175,70,SUCRE,descartada_dpto,0
+Pantano,175,73,TOLIMA,descartada_dpto,0
+Pantano,175,76,VALLE DEL CAUCA,descartada_dpto,0
+Pantano,175,81,ARAUCA,descartada_dpto,0
+Pantano,175,85,CASANARE,descartada_dpto,1
+Pantano,175,86,PUTUMAYO,descartada_dpto,0
+Pantano,175,88,"ARCHIPIÉLAGO DE SAN ANDRÉS, PROVIDENCIA Y SANTA CATALINA",descartada_dpto,0
+Pantano,175,91,AMAZONAS,descartada_dpto,3
+Pantano,175,94,GUAINÍA,generada,15
+Pantano,175,95,GUAVIARE,descartada_dpto,7
+Pantano,175,97,VAUPÉS,generada,20
+Pantano,175,99,VICHADA,generada,122
+Paramento,0,,,descartada,vacia
+Parque_P,0,,,descartada,vacia
+Parque_R,0,,,descartada,vacia
+Paso_Nivel,0,,,descartada,vacia
+Peaje,0,,,descartada,vacia
+Piscina,0,,,descartada,vacia
+Pista_Aterrizaje_L,2,,,descartada,pocos registros globales
+Pista_Aterrizaje_R,0,,,descartada,vacia
+Planta_Tratamiento,0,,,descartada,vacia
+Poste,0,,,descartada,vacia
+Puente_L,69,05,ANTIOQUIA,descartada_dpto,1
+Puente_L,69,08,ATLÁNTICO,descartada_dpto,1
+Puente_L,69,11,"BOGOTÁ, D.C.",descartada_dpto,0
+Puente_L,69,13,BOLÍVAR,descartada_dpto,1
+Puente_L,69,15,BOYACÁ,descartada_dpto,4
+Puente_L,69,17,CALDAS,descartada_dpto,6
+Puente_L,69,18,CAQUETÁ,descartada_dpto,0
+Puente_L,69,19,CAUCA,descartada_dpto,1
+Puente_L,69,20,CESAR,descartada_dpto,0
+Puente_L,69,23,CÓRDOBA,descartada_dpto,0
+Puente_L,69,25,CUNDINAMARCA,descartada_dpto,8
+Puente_L,69,27,CHOCÓ,descartada_dpto,1
+Puente_L,69,41,HUILA,descartada_dpto,2
+Puente_L,69,44,LA GUAJIRA,descartada_dpto,0
+Puente_L,69,47,MAGDALENA,descartada_dpto,2
+Puente_L,69,50,META,generada,15
+Puente_L,69,52,NARIÑO,descartada_dpto,1
+Puente_L,69,54,NORTE DE SANTANDER,descartada_dpto,0
+Puente_L,69,63,QUINDIO,descartada_dpto,0
+Puente_L,69,66,RISARALDA,descartada_dpto,0
+Puente_L,69,68,SANTANDER,descartada_dpto,1
+Puente_L,69,70,SUCRE,descartada_dpto,0
+Puente_L,69,73,TOLIMA,descartada_dpto,8
+Puente_L,69,76,VALLE DEL CAUCA,descartada_dpto,0
+Puente_L,69,81,ARAUCA,generada,24
+Puente_L,69,85,CASANARE,generada,10
+Puente_L,69,86,PUTUMAYO,descartada_dpto,1
+Puente_L,69,88,"ARCHIPIÉLAGO DE SAN ANDRÉS, PROVIDENCIA Y SANTA CATALINA",descartada_dpto,0
+Puente_L,69,91,AMAZONAS,descartada_dpto,0
+Puente_L,69,94,GUAINÍA,descartada_dpto,0
+Puente_L,69,95,GUAVIARE,descartada_dpto,2
+Puente_L,69,97,VAUPÉS,descartada_dpto,0
+Puente_L,69,99,VICHADA,descartada_dpto,1
+Puente_P,20,05,ANTIOQUIA,descartada_dpto,1
+Puente_P,20,08,ATLÁNTICO,descartada_dpto,0
+Puente_P,20,11,"BOGOTÁ, D.C.",descartada_dpto,0
+Puente_P,20,13,BOLÍVAR,descartada_dpto,0
+Puente_P,20,15,BOYACÁ,descartada_dpto,0
+Puente_P,20,17,CALDAS,descartada_dpto,0
+Puente_P,20,18,CAQUETÁ,descartada_dpto,0
+Puente_P,20,19,CAUCA,descartada_dpto,0
+Puente_P,20,20,CESAR,descartada_dpto,0
+Puente_P,20,23,CÓRDOBA,descartada_dpto,0
+Puente_P,20,25,CUNDINAMARCA,descartada_dpto,0
+Puente_P,20,27,CHOCÓ,descartada_dpto,2
+Puente_P,20,41,HUILA,descartada_dpto,4
+Puente_P,20,44,LA GUAJIRA,descartada_dpto,0
+Puente_P,20,47,MAGDALENA,descartada_dpto,0
+Puente_P,20,50,META,descartada_dpto,2
+Puente_P,20,52,NARIÑO,descartada_dpto,0
+Puente_P,20,54,NORTE DE SANTANDER,descartada_dpto,0
+Puente_P,20,63,QUINDIO,descartada_dpto,0
+Puente_P,20,66,RISARALDA,descartada_dpto,0
+Puente_P,20,68,SANTANDER,descartada_dpto,0
+Puente_P,20,70,SUCRE,descartada_dpto,0
+Puente_P,20,73,TOLIMA,descartada_dpto,0
+Puente_P,20,76,VALLE DEL CAUCA,generada,10
+Puente_P,20,81,ARAUCA,descartada_dpto,0
+Puente_P,20,85,CASANARE,descartada_dpto,0
+Puente_P,20,86,PUTUMAYO,descartada_dpto,0
+Puente_P,20,88,"ARCHIPIÉLAGO DE SAN ANDRÉS, PROVIDENCIA Y SANTA CATALINA",descartada_dpto,0
+Puente_P,20,91,AMAZONAS,descartada_dpto,0
+Puente_P,20,94,GUAINÍA,descartada_dpto,0
+Puente_P,20,95,GUAVIARE,descartada_dpto,0
+Puente_P,20,97,VAUPÉS,descartada_dpto,0
+Puente_P,20,99,VICHADA,descartada_dpto,0
+Puerto_P,84,05,ANTIOQUIA,descartada_dpto,3
+Puerto_P,84,08,ATLÁNTICO,descartada_dpto,0
+Puerto_P,84,11,"BOGOTÁ, D.C.",descartada_dpto,0
+Puerto_P,84,13,BOLÍVAR,descartada_dpto,8
+Puerto_P,84,15,BOYACÁ,descartada_dpto,2
+Puerto_P,84,17,CALDAS,descartada_dpto,1
+Puerto_P,84,18,CAQUETÁ,generada,11
+Puerto_P,84,19,CAUCA,descartada_dpto,0
+Puerto_P,84,20,CESAR,descartada_dpto,0
+Puerto_P,84,23,CÓRDOBA,descartada_dpto,0
+Puerto_P,84,25,CUNDINAMARCA,descartada_dpto,0
+Puerto_P,84,27,CHOCÓ,descartada_dpto,5
+Puerto_P,84,41,HUILA,descartada_dpto,0
+Puerto_P,84,44,LA GUAJIRA,descartada_dpto,1
+Puerto_P,84,47,MAGDALENA,descartada_dpto,3
+Puerto_P,84,50,META,descartada_dpto,7
+Puerto_P,84,52,NARIÑO,descartada_dpto,0
+Puerto_P,84,54,NORTE DE SANTANDER,descartada_dpto,0
+Puerto_P,84,63,QUINDIO,descartada_dpto,0
+Puerto_P,84,66,RISARALDA,descartada_dpto,0
+Puerto_P,84,68,SANTANDER,descartada_dpto,2
+Puerto_P,84,70,SUCRE,descartada_dpto,0
+Puerto_P,84,73,TOLIMA,descartada_dpto,0
+Puerto_P,84,76,VALLE DEL CAUCA,descartada_dpto,0
+Puerto_P,84,81,ARAUCA,descartada_dpto,4
+Puerto_P,84,85,CASANARE,descartada_dpto,1
+Puerto_P,84,86,PUTUMAYO,generada,11
+Puerto_P,84,88,"ARCHIPIÉLAGO DE SAN ANDRÉS, PROVIDENCIA Y SANTA CATALINA",descartada_dpto,2
+Puerto_P,84,91,AMAZONAS,descartada_dpto,5
+Puerto_P,84,94,GUAINÍA,descartada_dpto,1
+Puerto_P,84,95,GUAVIARE,descartada_dpto,2
+Puerto_P,84,97,VAUPÉS,descartada_dpto,2
+Puerto_P,84,99,VICHADA,descartada_dpto,7
+Puerto_R,0,,,descartada,vacia
+Punto_Aerotriangulacion,0,,,descartada,vacia
+Punto_Cota_Fotogrametrica,0,,,descartada,vacia
+Punto_Estereoscopico,0,,,descartada,vacia
+Punto_Geodesico,1,,,descartada,pocos registros globales
+Punto_Nivelacion,0,,,descartada,vacia
+Punto_Topografico,0,,,descartada,vacia
+Raudal_Rapido,178,05,ANTIOQUIA,descartada_dpto,0
+Raudal_Rapido,178,08,ATLÁNTICO,descartada_dpto,0
+Raudal_Rapido,178,11,"BOGOTÁ, D.C.",descartada_dpto,0
+Raudal_Rapido,178,13,BOLÍVAR,descartada_dpto,0
+Raudal_Rapido,178,15,BOYACÁ,descartada_dpto,0
+Raudal_Rapido,178,17,CALDAS,descartada_dpto,0
+Raudal_Rapido,178,18,CAQUETÁ,generada,46
+Raudal_Rapido,178,19,CAUCA,descartada_dpto,0
+Raudal_Rapido,178,20,CESAR,descartada_dpto,0
+Raudal_Rapido,178,23,CÓRDOBA,descartada_dpto,0
+Raudal_Rapido,178,25,CUNDINAMARCA,descartada_dpto,0
+Raudal_Rapido,178,27,CHOCÓ,descartada_dpto,0
+Raudal_Rapido,178,41,HUILA,descartada_dpto,0
+Raudal_Rapido,178,44,LA GUAJIRA,descartada_dpto,0
+Raudal_Rapido,178,47,MAGDALENA,descartada_dpto,0
+Raudal_Rapido,178,50,META,descartada_dpto,0
+Raudal_Rapido,178,52,NARIÑO,descartada_dpto,0
+Raudal_Rapido,178,54,NORTE DE SANTANDER,descartada_dpto,0
+Raudal_Rapido,178,63,QUINDIO,descartada_dpto,0
+Raudal_Rapido,178,66,RISARALDA,descartada_dpto,0
+Raudal_Rapido,178,68,SANTANDER,descartada_dpto,0
+Raudal_Rapido,178,70,SUCRE,descartada_dpto,0
+Raudal_Rapido,178,73,TOLIMA,descartada_dpto,0
+Raudal_Rapido,178,76,VALLE DEL CAUCA,descartada_dpto,0
+Raudal_Rapido,178,81,ARAUCA,descartada_dpto,0
+Raudal_Rapido,178,85,CASANARE,descartada_dpto,0
+Raudal_Rapido,178,86,PUTUMAYO,descartada_dpto,0
+Raudal_Rapido,178,88,"ARCHIPIÉLAGO DE SAN ANDRÉS, PROVIDENCIA Y SANTA CATALINA",descartada_dpto,0
+Raudal_Rapido,178,91,AMAZONAS,generada,27
+Raudal_Rapido,178,94,GUAINÍA,generada,55
+Raudal_Rapido,178,95,GUAVIARE,descartada_dpto,4
+Raudal_Rapido,178,97,VAUPÉS,generada,64
+Raudal_Rapido,178,99,VICHADA,generada,14
+Red_Alta_Tension,82,05,ANTIOQUIA,descartada_dpto,7
+Red_Alta_Tension,82,08,ATLÁNTICO,descartada_dpto,2
+Red_Alta_Tension,82,11,"BOGOTÁ, D.C.",descartada_dpto,0
+Red_Alta_Tension,82,13,BOLÍVAR,generada,11
+Red_Alta_Tension,82,15,BOYACÁ,descartada_dpto,0
+Red_Alta_Tension,82,17,CALDAS,descartada_dpto,2
+Red_Alta_Tension,82,18,CAQUETÁ,descartada_dpto,0
+Red_Alta_Tension,82,19,CAUCA,descartada_dpto,0
+Red_Alta_Tension,82,20,CESAR,descartada_dpto,3
+Red_Alta_Tension,82,23,CÓRDOBA,descartada_dpto,3
+Red_Alta_Tension,82,25,CUNDINAMARCA,descartada_dpto,0
+Red_Alta_Tension,82,27,CHOCÓ,generada,11
+Red_Alta_Tension,82,41,HUILA,descartada_dpto,5
+Red_Alta_Tension,82,44,LA GUAJIRA,descartada_dpto,4
+Red_Alta_Tension,82,47,MAGDALENA,descartada_dpto,4
+Red_Alta_Tension,82,50,META,descartada_dpto,1
+Red_Alta_Tension,82,52,NARIÑO,descartada_dpto,1
+Red_Alta_Tension,82,54,NORTE DE SANTANDER,descartada_dpto,1
+Red_Alta_Tension,82,63,QUINDIO,descartada_dpto,2
+Red_Alta_Tension,82,66,RISARALDA,descartada_dpto,4
+Red_Alta_Tension,82,68,SANTANDER,descartada_dpto,9
+Red_Alta_Tension,82,70,SUCRE,descartada_dpto,2
+Red_Alta_Tension,82,73,TOLIMA,descartada_dpto,9
+Red_Alta_Tension,82,76,VALLE DEL CAUCA,generada,11
+Red_Alta_Tension,82,81,ARAUCA,descartada_dpto,0
+Red_Alta_Tension,82,85,CASANARE,descartada_dpto,0
+Red_Alta_Tension,82,86,PUTUMAYO,descartada_dpto,0
+Red_Alta_Tension,82,88,"ARCHIPIÉLAGO DE SAN ANDRÉS, PROVIDENCIA Y SANTA CATALINA",descartada_dpto,0
+Red_Alta_Tension,82,91,AMAZONAS,descartada_dpto,0
+Red_Alta_Tension,82,94,GUAINÍA,descartada_dpto,0
+Red_Alta_Tension,82,95,GUAVIARE,descartada_dpto,0
+Red_Alta_Tension,82,97,VAUPÉS,descartada_dpto,0
+Red_Alta_Tension,82,99,VICHADA,descartada_dpto,0
+Separador,0,,,descartada,vacia
+Tapa_Camara,0,,,descartada,vacia
+Teleferico,0,,,descartada,vacia
+Terminal_P,0,,,descartada,vacia
+Terminal_R,0,,,descartada,vacia
+Terraplen,0,,,descartada,vacia
+Torre,0,,,descartada,vacia
+Tuberia,0,,,descartada,vacia
+Tunel,3,,,descartada,pocos registros globales
+Via,27310,05,ANTIOQUIA,generada,1784
+Via,27310,08,ATLÁNTICO,generada,465
+Via,27310,11,"BOGOTÁ, D.C.",generada,188
+Via,27310,13,BOLÍVAR,generada,476
+Via,27310,15,BOYACÁ,generada,1003
+Via,27310,17,CALDAS,generada,735
+Via,27310,18,CAQUETÁ,generada,464
+Via,27310,19,CAUCA,generada,1103
+Via,27310,20,CESAR,generada,589
+Via,27310,23,CÓRDOBA,generada,863
+Via,27310,25,CUNDINAMARCA,generada,1510
+Via,27310,27,CHOCÓ,generada,105
+Via,27310,41,HUILA,generada,908
+Via,27310,44,LA GUAJIRA,generada,758
+Via,27310,47,MAGDALENA,generada,520
+Via,27310,50,META,generada,1826
+Via,27310,52,NARIÑO,generada,1605
+Via,27310,54,NORTE DE SANTANDER,generada,792
+Via,27310,63,QUINDIO,generada,268
+Via,27310,66,RISARALDA,generada,391
+Via,27310,68,SANTANDER,generada,1232
+Via,27310,70,SUCRE,generada,1815
+Via,27310,73,TOLIMA,generada,928
+Via,27310,76,VALLE DEL CAUCA,generada,1584
+Via,27310,81,ARAUCA,generada,1025
+Via,27310,85,CASANARE,generada,2335
+Via,27310,86,PUTUMAYO,generada,162
+Via,27310,88,"ARCHIPIÉLAGO DE SAN ANDRÉS, PROVIDENCIA Y SANTA CATALINA",generada,397
+Via,27310,91,AMAZONAS,generada,31
+Via,27310,94,GUAINÍA,generada,120
+Via,27310,95,GUAVIARE,generada,88
+Via,27310,97,VAUPÉS,generada,18
+Via,27310,99,VICHADA,generada,1824
+Via_Ferrea,55,05,ANTIOQUIA,descartada_dpto,6
+Via_Ferrea,55,08,ATLÁNTICO,descartada_dpto,2
+Via_Ferrea,55,11,"BOGOTÁ, D.C.",descartada_dpto,2
+Via_Ferrea,55,13,BOLÍVAR,descartada_dpto,0
+Via_Ferrea,55,15,BOYACÁ,descartada_dpto,2
+Via_Ferrea,55,17,CALDAS,descartada_dpto,5
+Via_Ferrea,55,18,CAQUETÁ,descartada_dpto,0
+Via_Ferrea,55,19,CAUCA,descartada_dpto,0
+Via_Ferrea,55,20,CESAR,generada,13
+Via_Ferrea,55,23,CÓRDOBA,descartada_dpto,0
+Via_Ferrea,55,25,CUNDINAMARCA,descartada_dpto,4
+Via_Ferrea,55,27,CHOCÓ,descartada_dpto,0
+Via_Ferrea,55,41,HUILA,descartada_dpto,1
+Via_Ferrea,55,44,LA GUAJIRA,descartada_dpto,3
+Via_Ferrea,55,47,MAGDALENA,descartada_dpto,4
+Via_Ferrea,55,50,META,descartada_dpto,0
+Via_Ferrea,55,52,NARIÑO,descartada_dpto,0
+Via_Ferrea,55,54,NORTE DE SANTANDER,descartada_dpto,1
+Via_Ferrea,55,63,QUINDIO,descartada_dpto,1
+Via_Ferrea,55,66,RISARALDA,descartada_dpto,2
+Via_Ferrea,55,68,SANTANDER,generada,15
+Via_Ferrea,55,70,SUCRE,descartada_dpto,0
+Via_Ferrea,55,73,TOLIMA,descartada_dpto,5
+Via_Ferrea,55,76,VALLE DEL CAUCA,descartada_dpto,8
+Via_Ferrea,55,81,ARAUCA,descartada_dpto,0
+Via_Ferrea,55,85,CASANARE,descartada_dpto,0
+Via_Ferrea,55,86,PUTUMAYO,descartada_dpto,0
+Via_Ferrea,55,88,"ARCHIPIÉLAGO DE SAN ANDRÉS, PROVIDENCIA Y SANTA CATALINA",descartada_dpto,0
+Via_Ferrea,55,91,AMAZONAS,descartada_dpto,0
+Via_Ferrea,55,94,GUAINÍA,descartada_dpto,0
+Via_Ferrea,55,95,GUAVIARE,descartada_dpto,0
+Via_Ferrea,55,97,VAUPÉS,descartada_dpto,0
+Via_Ferrea,55,99,VICHADA,descartada_dpto,0
+Zona_Deportiva,0,,,descartada,vacia
+Zona_Verde,0,,,descartada,vacia

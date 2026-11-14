@@ -1,0 +1,17 @@
+{
+"type": "FeatureCollection",
+"name": "Puente_P",
+"xy_coordinate_resolution": 1e-06,
+"features": [
+{ "type": "Feature", "properties": { "FUNCION_PU": 4302, "NOMBRE_GEO": null, "PROYECTO": "500000", "SYMBOL": "1", "FECHA": null, "ROTACION": 30.0, "GLOBALID": "{5145AD6A-0935-4921-8E85-6FFAF9B91008}" }, "geometry": { "type": "Point", "coordinates": [ -76.598674, 3.093486 ] } },
+{ "type": "Feature", "properties": { "FUNCION_PU": 4302, "NOMBRE_GEO": null, "PROYECTO": "500000", "SYMBOL": "1", "FECHA": null, "ROTACION": 30.0, "GLOBALID": "{DA89E9D2-6D5D-4BFC-8DD8-EB1660E4678C}" }, "geometry": { "type": "Point", "coordinates": [ -76.494153, 3.205911 ] } },
+{ "type": "Feature", "properties": { "FUNCION_PU": 4302, "NOMBRE_GEO": null, "PROYECTO": null, "SYMBOL": "1", "FECHA": null, "ROTACION": 45.0, "GLOBALID": "{99FF5B85-5DF4-4013-A738-D0D03B2CCBCD}" }, "geometry": { "type": "Point", "coordinates": [ -76.476116, 3.301439 ] } },
+{ "type": "Feature", "properties": { "FUNCION_PU": 4302, "NOMBRE_GEO": null, "PROYECTO": null, "SYMBOL": "1", "FECHA": null, "ROTACION": 90.0, "GLOBALID": "{4640D732-455A-4BAA-AA71-BA9DFC73C745}" }, "geometry": { "type": "Point", "coordinates": [ -76.475111, 3.45004 ] } },
+{ "type": "Feature", "properties": { "FUNCION_PU": 4302, "NOMBRE_GEO": null, "PROYECTO": null, "SYMBOL": "1", "FECHA": null, "ROTACION": 100.0, "GLOBALID": "{769459E5-8F08-4703-A3B1-190AE564E7AE}" }, "geometry": { "type": "Point", "coordinates": [ -76.48283, 3.492616 ] } },
+{ "type": "Feature", "properties": { "FUNCION_PU": 4302, "NOMBRE_GEO": null, "PROYECTO": null, "SYMBOL": "1", "FECHA": null, "ROTACION": 100.0, "GLOBALID": "{1B5C9CFD-8FD1-44A9-8E92-DB76F1C91510}" }, "geometry": { "type": "Point", "coordinates": [ -76.455985, 3.498069 ] } },
+{ "type": "Feature", "properties": { "FUNCION_PU": 4302, "NOMBRE_GEO": null, "PROYECTO": null, "SYMBOL": "1", "FECHA": null, "ROTACION": 90.0, "GLOBALID": "{10E1244A-8D5D-4354-BEEC-48289FBCDFD6}" }, "geometry": { "type": "Point", "coordinates": [ -76.456147, 3.560163 ] } },
+{ "type": "Feature", "properties": { "FUNCION_PU": 4302, "NOMBRE_GEO": null, "PROYECTO": null, "SYMBOL": "1", "FECHA": null, "ROTACION": 90.0, "GLOBALID": "{574D560B-6935-48D2-8142-6DB78C5B2130}" }, "geometry": { "type": "Point", "coordinates": [ -76.452486, 3.628256 ] } },
+{ "type": "Feature", "properties": { "FUNCION_PU": 4302, "NOMBRE_GEO": null, "PROYECTO": null, "SYMBOL": "1", "FECHA": null, "ROTACION": 70.0, "GLOBALID": "{1894AEBE-B176-40BB-A637-4E20BDC14CE7}" }, "geometry": { "type": "Point", "coordinates": [ -76.34914, 3.890674 ] } },
+{ "type": "Feature", "properties": { "FUNCION_PU": 4302, "NOMBRE_GEO": null, "PROYECTO": null, "SYMBOL": "1", "FECHA": null, "ROTACION": 30.0, "GLOBALID": "{293BEFE8-75A8-49C1-8C9C-0C652E9A0F30}" }, "geometry": { "type": "Point", "coordinates": [ -76.269133, 4.123613 ] } }
+]
+}

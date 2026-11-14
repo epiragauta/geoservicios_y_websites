@@ -1,0 +1,17 @@
+{
+"type": "FeatureCollection",
+"name": "Construccion_P",
+"xy_coordinate_resolution": 1e-06,
+"features": [
+{ "type": "Feature", "properties": { "NOMBRE_GEO": "La Sabana", "CODIGO_USO": "4101", "PROYECTO": null, "SYMBOL": "1", "FECHA": null, "ESCALA": 1, "GLOBALID": "{8F166584-EB3E-4362-AA92-00F07583AC6E}" }, "geometry": { "type": "Point", "coordinates": [ -75.625603, 9.740429 ] } },
+{ "type": "Feature", "properties": { "NOMBRE_GEO": "Higuerón", "CODIGO_USO": "4101", "PROYECTO": null, "SYMBOL": "1", "FECHA": null, "ESCALA": 1, "GLOBALID": "{C0032035-18E8-456E-898F-B5F649943DC3}" }, "geometry": { "type": "Point", "coordinates": [ -75.567612, 9.781989 ] } },
+{ "type": "Feature", "properties": { "NOMBRE_GEO": "Sabanetica", "CODIGO_USO": "4101", "PROYECTO": null, "SYMBOL": "1", "FECHA": null, "ESCALA": 1, "GLOBALID": "{3EB4C381-160A-495F-9E18-3E35BFFDD2BD}" }, "geometry": { "type": "Point", "coordinates": [ -75.597574, 9.898453 ] } },
+{ "type": "Feature", "properties": { "NOMBRE_GEO": "San Mateo", "CODIGO_USO": "4165", "PROYECTO": null, "SYMBOL": "1", "FECHA": null, "ESCALA": 1, "GLOBALID": "{923E3CD1-03E5-49A6-A353-5B11AD486F1E}" }, "geometry": { "type": "Point", "coordinates": [ -75.015949, 9.355698 ] } },
+{ "type": "Feature", "properties": { "NOMBRE_GEO": "Puerto Realón", "CODIGO_USO": "4101", "PROYECTO": null, "SYMBOL": "1", "FECHA": null, "ESCALA": 1, "GLOBALID": "{0FFE1372-AD83-4CE4-B156-B95057ED9CA8}" }, "geometry": { "type": "Point", "coordinates": [ -75.621253, 9.804702 ] } },
+{ "type": "Feature", "properties": { "NOMBRE_GEO": null, "CODIGO_USO": "4101", "PROYECTO": null, "SYMBOL": "1", "FECHA": null, "ESCALA": 1, "GLOBALID": "{2FA03A51-D86F-44AE-9692-73CE5ED179C3}" }, "geometry": { "type": "Point", "coordinates": [ -74.773716, 8.316942 ] } },
+{ "type": "Feature", "properties": { "NOMBRE_GEO": "Tierra Santa", "CODIGO_USO": "4101", "PROYECTO": null, "SYMBOL": "1", "FECHA": null, "ESCALA": 1, "GLOBALID": "{C485927C-9131-4455-9CE3-F540E79B07C1}" }, "geometry": { "type": "Point", "coordinates": [ -74.605961, 8.45694 ] } },
+{ "type": "Feature", "properties": { "NOMBRE_GEO": "Caño Hondo", "CODIGO_USO": "4101", "PROYECTO": null, "SYMBOL": "1", "FECHA": null, "ESCALA": 1, "GLOBALID": "{A0E596AC-81BA-4DF6-A051-22410DB0F3DF}" }, "geometry": { "type": "Point", "coordinates": [ -74.617426, 8.412889 ] } },
+{ "type": "Feature", "properties": { "NOMBRE_GEO": "El Gaicero", "CODIGO_USO": "4101", "PROYECTO": null, "SYMBOL": "1", "FECHA": null, "ESCALA": 1, "GLOBALID": "{092696BA-C0F2-4AB9-B9B7-857B53BECB81}" }, "geometry": { "type": "Point", "coordinates": [ -74.659063, 8.388751 ] } },
+{ "type": "Feature", "properties": { "NOMBRE_GEO": "Villa Raquel", "CODIGO_USO": "4101", "PROYECTO": null, "SYMBOL": "1", "FECHA": null, "ESCALA": 1, "GLOBALID": "{587346B7-C5A5-4371-A47F-A1AF26767D8D}" }, "geometry": { "type": "Point", "coordinates": [ -74.745686, 8.366583 ] } }
+]
+}

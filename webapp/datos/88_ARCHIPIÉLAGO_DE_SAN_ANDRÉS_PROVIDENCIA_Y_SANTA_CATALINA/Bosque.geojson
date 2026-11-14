@@ -1,0 +1,24 @@
+{
+"type": "FeatureCollection",
+"name": "Bosque",
+"xy_coordinate_resolution": 1e-06,
+"features": [
+{ "type": "Feature", "properties": { "PROYECTO": null, "SYMBOL": "3", "FECHA": null, "GLOBALID": "{FBA0CB10-6F4D-4867-87AA-58D28F04C5E5}", "SHAPE_Leng": 0.0, "SHAPE_Area": 0.0 }, "geometry": null },
+{ "type": "Feature", "properties": { "PROYECTO": null, "SYMBOL": "3", "FECHA": null, "GLOBALID": "{8072C87F-CE07-435C-BD4B-A2970BBE770B}", "SHAPE_Leng": 0.0, "SHAPE_Area": 0.0 }, "geometry": null },
+{ "type": "Feature", "properties": { "PROYECTO": null, "SYMBOL": "3", "FECHA": null, "GLOBALID": "{8A22D83C-D7E5-4296-8D06-BF01AC1B18A6}", "SHAPE_Leng": 0.0, "SHAPE_Area": 0.0 }, "geometry": null },
+{ "type": "Feature", "properties": { "PROYECTO": null, "SYMBOL": "3", "FECHA": null, "GLOBALID": "{08477E2A-C619-456D-909F-33FC118368B8}", "SHAPE_Leng": 0.0, "SHAPE_Area": 0.0 }, "geometry": null },
+{ "type": "Feature", "properties": { "PROYECTO": null, "SYMBOL": "3", "FECHA": null, "GLOBALID": "{54E10703-1A92-4964-B565-05F5765D81FF}", "SHAPE_Leng": 0.0, "SHAPE_Area": 0.0 }, "geometry": null },
+{ "type": "Feature", "properties": { "PROYECTO": null, "SYMBOL": "3", "FECHA": null, "GLOBALID": "{4A0DD5C9-8792-4053-85E3-BC4EF4D93DA9}", "SHAPE_Leng": 0.0, "SHAPE_Area": 0.0 }, "geometry": null },
+{ "type": "Feature", "properties": { "PROYECTO": null, "SYMBOL": "3", "FECHA": null, "GLOBALID": "{4FAE1672-3D28-4677-B859-C80FE95CABF6}", "SHAPE_Leng": 0.0, "SHAPE_Area": 0.0 }, "geometry": null },
+{ "type": "Feature", "properties": { "PROYECTO": null, "SYMBOL": "3", "FECHA": null, "GLOBALID": "{0272B79B-9DE4-4E8B-B0C4-350593E48CF2}", "SHAPE_Leng": 0.0, "SHAPE_Area": 0.0 }, "geometry": null },
+{ "type": "Feature", "properties": { "PROYECTO": null, "SYMBOL": "3", "FECHA": null, "GLOBALID": "{AC2FF3EF-03E5-4181-B0E8-58BAEC6EA768}", "SHAPE_Leng": 0.0, "SHAPE_Area": 0.0 }, "geometry": null },
+{ "type": "Feature", "properties": { "PROYECTO": null, "SYMBOL": "3", "FECHA": null, "GLOBALID": "{5AB7C7BA-26D0-4800-89CD-E5D88D3B44AE}", "SHAPE_Leng": 0.0, "SHAPE_Area": 0.0 }, "geometry": null },
+{ "type": "Feature", "properties": { "PROYECTO": null, "SYMBOL": "3", "FECHA": null, "GLOBALID": "{0E435563-D1F8-4A42-A1AD-C73450ADD462}", "SHAPE_Leng": 0.0, "SHAPE_Area": 0.0 }, "geometry": null },
+{ "type": "Feature", "properties": { "PROYECTO": null, "SYMBOL": "3", "FECHA": null, "GLOBALID": "{5B389847-51A5-418D-B947-BCDB574C645F}", "SHAPE_Leng": 0.0, "SHAPE_Area": 0.0 }, "geometry": null },
+{ "type": "Feature", "properties": { "PROYECTO": null, "SYMBOL": "3", "FECHA": null, "GLOBALID": "{027A039D-9B59-4930-A680-5D4BD3DDB762}", "SHAPE_Leng": 0.0, "SHAPE_Area": 0.0 }, "geometry": null },
+{ "type": "Feature", "properties": { "PROYECTO": null, "SYMBOL": "3", "FECHA": null, "GLOBALID": "{DD7CF76F-C730-4198-95F5-A91EA454D7BF}", "SHAPE_Leng": 0.0, "SHAPE_Area": 0.0 }, "geometry": null },
+{ "type": "Feature", "properties": { "PROYECTO": null, "SYMBOL": "3", "FECHA": null, "GLOBALID": "{5CA95550-F094-4A71-9ABA-4CF126C9D725}", "SHAPE_Leng": 0.0, "SHAPE_Area": 0.0 }, "geometry": null },
+{ "type": "Feature", "properties": { "PROYECTO": null, "SYMBOL": "3", "FECHA": null, "GLOBALID": "{F89A394A-4A97-4273-840C-051ACB9291E3}", "SHAPE_Leng": 0.0, "SHAPE_Area": 0.0 }, "geometry": null },
+{ "type": "Feature", "properties": { "PROYECTO": null, "SYMBOL": "3", "FECHA": null, "GLOBALID": "{15A7BA35-DAD8-4980-A687-B58E17866DF7}", "SHAPE_Leng": 0.0, "SHAPE_Area": 0.0 }, "geometry": null }
+]
+}
