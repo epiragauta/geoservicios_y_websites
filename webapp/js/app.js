@@ -1,5 +1,5 @@
 // Crear el mapa centrado en el departamento de Córdoba
-const map = L.map('map').setView([11.35, -72.5], 8);
+const map = L.map('map').setView([8.75, -75.9], 8);
 
 // Agregar capa base de OpenStreetMap
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
@@ -312,10 +312,18 @@ document.addEventListener('DOMContentLoaded', function() {
 const MonteriaMarker = L.marker([8.75081, -75.87823])
     .addTo(map)
     .bindPopup('<b>monteria</b><br>Capital de cordoba');
-    // Lee las capas WMS que están activas en el mapa y pide su leyenda al servicio
-// (GetLegendGraphic). Se actualiza sola al activar/desactivar capas.
+  // Leyenda automática (v2). No requiere modificar app.js.
+// - Capas WMS activas: pide su imagen de leyenda al servicio (GetLegendGraphic).
+// - Capas GeoJSON de Córdoba (capascordoba) y Departamentos (WFS): dibuja el símbolo
+//   con los mismos colores/estilos que ya tienes definidos.
 (function () {
-  // CSS propio de la leyenda
+  // ---- Parche de compatibilidad: app.js usa dos nombres de La Guajira que no existen.
+  // Mejor solución: en app.js reemplazar GUAJIRA_CCDGO -> CORDOBA_CCDGO y popupGuajira -> popupCordoba.
+  if (typeof GUAJIRA_CCDGO === 'undefined')
+    window.GUAJIRA_CCDGO = (typeof CORDOBA_CCDGO !== 'undefined') ? CORDOBA_CCDGO : '23';
+  if (typeof popupGuajira === 'undefined' && typeof popupCordoba === 'function')
+    window.popupGuajira = function (p) { return popupCordoba(p); };
+
   const css = document.createElement('style');
   css.textContent = `
     .leyenda-wms{background:#fff;padding:8px 10px;border-radius:6px;box-shadow:0 1px 8px rgba(0,0,0,.3);
@@ -324,19 +332,32 @@ const MonteriaMarker = L.marker([8.75081, -75.87823])
     .leyenda-wms .capa{margin:6px 0}
     .leyenda-wms .capa b{display:block;margin-bottom:2px}
     .leyenda-wms img{max-width:100%}
+    .leyenda-wms .item{display:flex;align-items:center;gap:8px;margin:4px 0}
+    .leyenda-wms .sim{display:inline-block;width:22px;flex:none;text-align:center}
     .leyenda-wms.cerrada .cuerpo{display:none}
     @media(max-width:600px){.leyenda-wms{font-size:12px;max-width:170px;max-height:40vh}}`;
   document.head.appendChild(css);
 
-  // Intenta encontrar el control de capas para usar los nombres que ya definiste
+  const def = n => { try { return eval(n); } catch (e) { return undefined; } };
+
   function nombresDeCapas() {
     const mapa = new Map();
-    const ctrls = [];
     ['controlLayer', 'controlCapas', 'controlLayers', 'layersControl'].forEach(n => {
-      try { const c = eval(n); if (c && c._layers) ctrls.push(c); } catch (e) {}
+      const c = def(n);
+      if (c && c._layers) c._layers.forEach(l => mapa.set(l.layer, l.name));
     });
-    ctrls.forEach(c => c._layers.forEach(l => mapa.set(l.layer, l.name)));
     return mapa;
+  }
+
+  function simbolo(cfg) {
+    if (cfg.tipo === 'punto') {
+      const r = (cfg.radio || 4) + 2;
+      return `<span class="sim"><span style="display:inline-block;width:${r * 2}px;height:${r * 2}px;border-radius:50%;background:${cfg.color};border:1px solid ${cfg.color}"></span></span>`;
+    }
+    const e = cfg.estilo || {};
+    if (cfg.tipo === 'linea')
+      return `<span class="sim"><span style="display:block;height:0;border-top:${Math.max(2, e.weight || 1)}px solid ${e.color}"></span></span>`;
+    return `<span class="sim"><span style="display:block;height:14px;background:${e.fillColor};opacity:${e.fillOpacity || 0.6};border:2px solid ${e.color}"></span></span>`;
   }
 
   const control = L.control({ position: 'bottomright' });
@@ -352,6 +373,8 @@ const MonteriaMarker = L.marker([8.75081, -75.87823])
     const nombres = nombresDeCapas();
     let html = '<h4 title="Mostrar / ocultar">Leyenda ▾</h4><div class="cuerpo">';
     let hay = false;
+
+    // 1) WMS
     map.eachLayer(function (layer) {
       if (!(layer instanceof L.TileLayer.WMS)) return;
       const id = layer.wmsParams.layers;
@@ -364,14 +387,31 @@ const MonteriaMarker = L.marker([8.75081, -75.87823])
         '<img src="' + url + '" alt="Leyenda de ' + nombre + '" ' +
         'onerror="this.replaceWith(Object.assign(document.createElement(\'small\'),{textContent:\'(sin leyenda disponible)\'}))"></div>';
     });
-    if (!hay) html += '<small>No hay capas WMS activas.</small>';
+
+    // 2) Departamentos (GeoJSON / "WFS")
+    const dg = def('departamentosGeoJSON');
+    if (dg && map.hasLayer(dg)) {
+      hay = true;
+      html += '<div class="item"><span class="sim"><span style="display:block;height:14px;background:#e8f881;opacity:.7;border:2px solid #232323"></span></span>Departamentos (WFS)</div>';
+    }
+
+    // 3) Capas GeoJSON de Córdoba
+    const lista = def('capascordoba');
+    if (Array.isArray(lista)) {
+      lista.forEach(cfg => {
+        if (cfg._group && map.hasLayer(cfg._group)) {
+          hay = true;
+          html += '<div class="item">' + simbolo(cfg) + cfg.label + '</div>';
+        }
+      });
+    }
+
+    if (!hay) html += '<small>No hay capas activas.</small>';
     this._div.innerHTML = html + '</div>';
     this._div.querySelector('h4').onclick = () => this._div.classList.toggle('cerrada');
   };
 
   control.addTo(map);
-  map.on('overlayadd overlayremove layeradd layerremove', function (e) {
-    if (e.layer instanceof L.TileLayer.WMS) control.actualizar();
-  });
-  setTimeout(() => control.actualizar(), 500);
+  map.on('overlayadd overlayremove', () => control.actualizar());
+  setTimeout(() => control.actualizar(), 800);
 })();
