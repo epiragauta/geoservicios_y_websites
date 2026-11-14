@@ -1,67 +1,55 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Colombia - Departamentos y Municipios</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Colombia - Departamentos y Municipios</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+  <style>
+    * { box-sizing: border-box; }
+    html, body { margin: 0; height: 100%; font-family: Arial, sans-serif; }
+    #map { width: 100%; height: 100%; }
 
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+    .panel {
+      background: #fff; padding: 10px 12px; border-radius: 6px;
+      box-shadow: 0 1px 8px rgba(0,0,0,.3); font-size: 14px; line-height: 1.4;
+      max-width: 260px;
+    }
+    .panel h4 { margin: 0 0 4px; font-size: 15px; color: #222; }
+    .panel small { color: #666; }
+    .info .nombre { font-weight: bold; }
 
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+    .legend i {
+      display: inline-block; width: 18px; height: 14px; margin-right: 8px;
+      vertical-align: middle; border: 2px solid #232323;
+    }
+    .legend .dep   { background: rgba(232,248,129,.7); }
+    .legend .mun   { background: transparent; border-color: #8a5a00; }
+    .legend .sel   { background: rgba(255,140,0,.6); border-color: #b34700; }
+    .legend div { margin: 3px 0; }
+    .legend-toggle { display: none; }
 
-        body {
-            font-family: Arial, sans-serif;
-        }
+    .search { display: flex; gap: 4px; padding: 6px; max-width: none; }
+    .search input { width: 170px; padding: 5px 6px; border: 1px solid #aaa; border-radius: 4px; }
+    .search button { padding: 5px 10px; border: 0; border-radius: 4px; background: #2b6cb0; color: #fff; cursor: pointer; }
+    .search button:hover { background: #1f4f85; }
+    .search .msg { color: #b00020; font-size: 12px; }
 
-        #map {
-            width: 100%;
-            height: 100vh;
-        }
-
-        .info {
-            padding: 10px;
-            font: 14px/16px Arial, sans-serif;
-            background: white;
-            box-shadow: 0 0 15px rgba(0,0,0,0.2);
-            border-radius: 5px;
-        }
-
-        .info h4 {
-            margin: 0 0 5px;
-            color: #333;
-        }
-
-        .legend {
-            line-height: 18px;
-            color: #555;
-        }
-
-        .legend i {
-            width: 18px;
-            height: 18px;
-            float: left;
-            margin-right: 8px;
-            opacity: 0.7;
-        }
-
-        .leaflet-control-layers {
-            border: 2px solid rgba(0,0,0,0.2);
-            border-radius: 5px;
-        }
-    </style>
+    /* Móvil */
+    @media (max-width: 600px) {
+      .panel { font-size: 13px; max-width: 200px; padding: 8px 10px; }
+      .search input { width: 120px; }
+      .info small { display: none; }
+      .legend-body { display: none; }
+      .legend.open .legend-body { display: block; }
+      .legend-toggle { display: block; background: none; border: 0; padding: 0; font: bold 13px Arial; cursor: pointer; }
+      .leaflet-control-layers { max-width: 160px; }
+    }
+  </style>
 </head>
 <body>
-    <div id="map"></div>
-
-    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-
-    <!-- Nuestra aplicación -->
-    <script src="js/app.js"></script>
-    
+  <div id="map"></div>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="js/app.js"></script>
 </body>
 </html>

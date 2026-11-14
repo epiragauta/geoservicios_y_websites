@@ -1,5 +1,5 @@
-// Crear el mapa centrado en Colombia
-const map = L.map('map').setView([4.5709, -74.2973], 6);
+// Crear el mapa centrado en el departamento de La Guajira
+const map = L.map('map').setView([11.35, -72.5], 8);
 
 // Agregar capa base de OpenStreetMap
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
@@ -10,7 +10,12 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 // URL del servicio WMS de GeoServer
 const geoserverUrl = 'https://geoportal.dane.gov.co/mparcgis/services/MGN2024/Serv_CapasMGN_2024/MapServer/WMSServer';
 
+// Código DANE del departamento a mostrar: La Guajira
+const CORDOBA_CCDGO = '23';
+
 // Agregar capa WMS de departamentos
+// Nota: el servicio es un ArcGIS MapServer WMS y no admite filtros por atributo (CQL),
+// por lo que se restringe la carga de teselas a la extensión de La Guajira mediante 'bounds'.
 const departamentosWMS = L.tileLayer.wms(geoserverUrl, {
     layers: '8',
     format: 'image/png',
@@ -26,8 +31,9 @@ let departamentosGeoJSON; // Variable para almacenar la capa GeoJSON
 fetch(departamentosWFSUrl)
     .then(response => response.json())
     .then(data => {
-        // Crear capa GeoJSON
+        // Crear capa GeoJSON (solo La Guajira)
         departamentosGeoJSON = L.geoJSON(data, {
+            filter: feature => feature.properties.dpto_ccdgo === GUAJIRA_CCDGO,
             style: {
                 color: '#232323',
                 weight: 2,
@@ -38,11 +44,19 @@ fetch(departamentosWFSUrl)
         });
 
         // Agregar al mapa
-        departamentosGeoJSON.addTo(map);        
+        departamentosGeoJSON.addTo(map);
         controlLayer.addOverlay(departamentosGeoJSON, "Departamentos (WFS)"); // Agregar al control de capas
 
-        // Ajustar vista al extent de los datos
-        map.fitBounds(departamentosGeoJSON.getBounds());
+        // Extensión de Cordoba
+        const CordobaBounds = departamentosGeoJSON.getBounds();
+
+        // Restringir las teselas de ambos WMS a la extensión de cordoba
+        departamentosWMS.options.bounds = CordobaBounds;
+        departamentosWMS.redraw();
+        municipiosWMS.options.bounds = CordobaBounds;
+
+        // Centrar la vista en el departamento de cordoba
+        map.fitBounds(CordobaBounds);
     })
     .catch(error => console.error('Error cargando WFS:', error));
 
@@ -77,6 +91,109 @@ const controlLayer = L.control.layers(baseMaps, overlayMaps, {
 
 // Agregar capa base por defecto
 baseMaps["OpenStreetMap"].addTo(map);
+
+// ============================================================
+// Capas detalladas de cordoba (cartografía base IGAC/DANE)
+// Datos recortados por departamento en datos/23_CORDOBA/.
+// Se cargan de forma diferida (lazy): solo se descarga el GeoJSON
+// cuando el usuario activa la capa en el control, porque algunas
+// (Drenaje, Curvas de Nivel, Vías) pesan varios MB.
+// ============================================================
+const CordobaDataDir = 'https://epiragauta.github.io/geoservicios_y_websites/webapp/datos/23_CÓRDOBA/';
+
+const capascordoba = [
+    {
+        file: 'Administrativo_P.geojson', label: 'Topónimos administrativos',
+        tipo: 'punto', color: '#c62828', radio: 4
+    },
+    {
+        file: 'Construccion_P.geojson', label: 'Construcciones',
+        tipo: 'punto', color: '#6d4c41', radio: 3
+    },
+    {
+        file: 'Costero_Insular.geojson', label: 'Costero / insular',
+        tipo: 'punto', color: '#00838f', radio: 4
+    },
+    {
+        file: 'Via.geojson', label: 'Vías',
+        tipo: 'linea', estilo: { color: '#e65100', weight: 1.5 }
+    },
+    {
+        file: 'Drenaje_Sencillo.geojson', label: 'Drenaje sencillo',
+        tipo: 'linea', estilo: { color: '#1e88e5', weight: 1 }
+    },
+    {
+        file: 'Curva_Nivel.geojson', label: 'Curvas de nivel',
+        tipo: 'linea', estilo: { color: '#8d6e63', weight: 0.8 }
+    },
+    {
+        file: 'Laguna.geojson', label: 'Lagunas',
+        tipo: 'poligono', estilo: { color: '#0277bd', weight: 1, fillColor: '#4fc3f7', fillOpacity: 0.5 }
+    },
+    {
+        file: 'Bosque.geojson', label: 'Bosques',
+        tipo: 'poligono', estilo: { color: '#1b5e20', weight: 1, fillColor: '#66bb6a', fillOpacity: 0.4 }
+    }
+];
+
+// Construye el contenido del popup a partir de los atributos más relevantes
+function popupCordoba(props) {
+    const campos = [
+        ['NOMBRE_GEO', 'Nombre'],
+        ['TIPO_VIA', 'Tipo de vía'],
+        ['ESTADO_SUP', 'Estado superficie'],
+        ['ESTADO_DRE', 'Estado drenaje'],
+        ['ALTURA_SOB', 'Altura (m)'],
+        ['TIPO_CURVA', 'Tipo de curva'],
+        ['CODIGO_USO', 'Código de uso'],
+        ['CODIGO_NOM', 'Código']
+    ];
+    const filas = campos
+        .filter(([k]) => props[k] !== undefined && props[k] !== null && props[k] !== '')
+        .map(([k, etiqueta]) => `<p style="margin:2px 0"><strong>${etiqueta}:</strong> ${props[k]}</p>`);
+    return filas.length ? `<div>${filas.join('')}</div>` : '<div>Sin atributos</div>';
+}
+
+// Carga (una sola vez) el GeoJSON de una capa dentro de su layerGroup
+function cargarCapaCordoba(cfg) {
+    fetch(CordobaDataDir + cfg.file)
+        .then(response => response.json())
+        .then(data => {
+            const capa = L.geoJSON(data, {
+                style: cfg.estilo,
+                pointToLayer: (feature, latlng) => L.circleMarker(latlng, {
+                    radius: cfg.radio || 4,
+                    color: cfg.color,
+                    fillColor: cfg.color,
+                    weight: 1,
+                    fillOpacity: 0.8
+                }),
+                onEachFeature: (feature, layer) => {
+                    if (feature.properties) {
+                        layer.bindPopup(popupGuajira(feature.properties));
+                    }
+                }
+            });
+            capa.addTo(cfg._group);
+        })
+        .catch(error => console.error('Error cargando capa ' + cfg.file + ':', error));
+}
+
+// Registrar cada capa como overlay con carga diferida
+capascordoba.forEach(cfg => {
+    cfg._group = L.layerGroup();
+    cfg._loaded = false;
+    controlLayer.addOverlay(cfg._group, cfg.label);
+});
+
+// Al activar una capa por primera vez, descargar su GeoJSON
+map.on('overlayadd', function (e) {
+    const cfg = capascordoba.find(c => c._group === e.layer);
+    if (cfg && !cfg._loaded) {
+        cfg._loaded = true;
+        cargarCapaCordoba(cfg);
+    }
+});
 
 function onEachFeature(feature, layer) {
     // Popup al hacer clic
@@ -136,8 +253,8 @@ const info = L.control({position: 'topleft'});
 info.onAdd = function (map) {
     this._div = L.DomUtil.create('div', 'info');
     this._div.innerHTML = `
-        <h4>Colombia - Servicios Geográficos</h4>
-        <p>Visualización de departamentos y municipios</p>
+        <h4> Cordoba - Servicios Geográficos</h4>
+        <p>Visualización del departamento y sus municipios</p>
         <p><small>Datos: DANE | Servidor: GeoServer</small></p>
     `;
     return this._div;
@@ -191,7 +308,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-// Marcador de Bogotá
-const bogotaMarker = L.marker([4.7110, -74.0721])
+// Marcador de Riohacha (capital de La Guajira)
+const monteriaMarker = L.marker([8.75081, -75.87823])
     .addTo(map)
-    .bindPopup('<b>Bogotá D.C.</b><br>Capital de Colombia');
+    .bindPopup('<b>monteria</b><br>Capital de cordoba');
