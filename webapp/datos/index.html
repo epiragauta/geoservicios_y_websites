@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Explorador de datos geograficos</title>
+<style>
+  :root{
+    --bg:#f5f7fa; --panel:#ffffff; --border:#e2e8f0; --text:#1a202c;
+    --muted:#64748b; --accent:#0277bd; --accent-soft:#e1f1f9; --hover:#f1f5f9;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{
+      --bg:#0f172a; --panel:#1e293b; --border:#334155; --text:#e2e8f0;
+      --muted:#94a3b8; --accent:#38bdf8; --accent-soft:#1e3a4d; --hover:#263449;
+    }
+  }
+  *{box-sizing:border-box}
+  body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    background:var(--bg);color:var(--text);line-height:1.5}
+  header{background:var(--panel);border-bottom:1px solid var(--border);padding:20px 24px;
+    position:sticky;top:0;z-index:10}
+  h1{margin:0 0 4px;font-size:1.4rem}
+  .sub{color:var(--muted);font-size:.9rem}
+  .stats{display:flex;gap:18px;margin-top:12px;flex-wrap:wrap}
+  .stat{background:var(--accent-soft);border-radius:8px;padding:8px 14px;font-size:.85rem}
+  .stat b{display:block;font-size:1.25rem;color:var(--accent)}
+  .toolbar{display:flex;gap:10px;margin-top:14px;flex-wrap:wrap;align-items:center}
+  #search{flex:1;min-width:220px;padding:9px 12px;border:1px solid var(--border);border-radius:8px;
+    background:var(--bg);color:var(--text);font-size:.95rem}
+  .btn{padding:9px 14px;border:1px solid var(--border);border-radius:8px;background:var(--panel);
+    color:var(--text);cursor:pointer;font-size:.85rem}
+  .btn:hover{background:var(--hover)}
+  main{max-width:1000px;margin:0 auto;padding:20px 24px 60px}
+  details{background:var(--panel);border:1px solid var(--border);border-radius:10px;margin-bottom:10px;
+    overflow:hidden}
+  summary{cursor:pointer;padding:12px 16px;font-weight:600;display:flex;justify-content:space-between;
+    align-items:center;list-style:none;user-select:none}
+  summary::-webkit-details-marker{display:none}
+  summary:hover{background:var(--hover)}
+  .dep-code{color:var(--accent);font-family:ui-monospace,monospace;margin-right:8px}
+  .count{color:var(--muted);font-weight:400;font-size:.85rem}
+  .files{border-top:1px solid var(--border)}
+  .file{display:flex;justify-content:space-between;align-items:center;gap:12px;
+    padding:9px 16px 9px 28px;border-bottom:1px solid var(--border);text-decoration:none;color:var(--text)}
+  .file:last-child{border-bottom:none}
+  .file:hover{background:var(--hover)}
+  .file .nm{display:flex;align-items:center;gap:10px;min-width:0}
+  .ico{font-size:1.1rem;flex-shrink:0}
+  .fname{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+  .size{color:var(--muted);font-size:.8rem;font-variant-numeric:tabular-nums;flex-shrink:0}
+  .size.big{color:#d97706}
+  .root-files{margin-bottom:18px}
+  .hidden{display:none !important}
+  .empty{color:var(--muted);text-align:center;padding:40px}
+  footer{color:var(--muted);font-size:.8rem;text-align:center;padding:20px}
+  a.plain{color:var(--accent);text-decoration:none}
+</style>
+</head>
+<body>
+<header>
+  <h1>Explorador de datos geograficos</h1>
+  <div class="sub">Capas GeoJSON recortadas por departamento &middot; <a class="plain" href="../index.html">&larr; Volver al visor</a></div>
+  <div class="stats">
+    <div class="stat"><b>33</b>departamentos</div>
+    <div class="stat"><b>328</b>archivos</div>
+    <div class="stat"><b>473 MB</b>tama&ntilde;o total</div>
+  </div>
+  <div class="toolbar">
+    <input id="search" type="text" placeholder="Buscar por departamento o nombre de capa..." autocomplete="off">
+    <button class="btn" id="expand">Expandir todo</button>
+    <button class="btn" id="collapse">Colapsar todo</button>
+  </div>
+</header>
+<main>
+  <div class="root-files" id="rootFiles"></div>
+  <div id="tree"></div>
+  <div class="empty hidden" id="empty">No hay coincidencias.</div>
+</main>
+<footer>Generado estaticamente &middot; los enlaces abren el GeoJSON en el navegador.</footer>
+<script>
+const TREE = {"dirs":[{"name":"05_ANTIOQUIA","files":[{"name":"Administrativo_P.geojson","size":155872},{"name":"Administrativo_R.geojson","size":822522},{"name":"Aeropuerto_P.geojson","size":6654},{"name":"Bosque.geojson","size":2627546},{"name":"Cienaga.geojson","size":81552},{"name":"Construccion_P.geojson","size":119815},{"name":"Curva_Nivel.geojson","size":7400580},{"name":"Drenaje_Doble.geojson","size":337020},{"name":"Drenaje_Sencillo.geojson","size":6776617},{"name":"Isla.geojson","size":65352},{"name":"Laguna.geojson","size":26990},{"name":"Orografia.geojson","size":23879},{"name":"Via.geojson","size":1563888}]},{"name":"08_ATLÁNTICO","files":[{"name":"Administrativo_P.geojson","size":15598},{"name":"Administrativo_R.geojson","size":210326},{"name":"Bosque.geojson","size":9612},{"name":"Cienaga.geojson","size":73666},{"name":"Curva_Nivel.geojson","size":258052},{"name":"Drenaje_Sencillo.geojson","size":457568},{"name":"Isla.geojson","size":13809},{"name":"Via.geojson","size":519107}]},{"name":"11_BOGOTÁ_DC","files":[{"name":"Bosque.geojson","size":43589},{"name":"Drenaje_Sencillo.geojson","size":255822},{"name":"Via.geojson","size":128503}]},{"name":"13_BOLÍVAR","files":[{"name":"Administrativo_P.geojson","size":125597},{"name":"Administrativo_R.geojson","size":86289},{"name":"Bosque.geojson","size":296678},{"name":"Cienaga.geojson","size":1113274},{"name":"Construccion_P.geojson","size":6040},{"name":"Curva_Nivel.geojson","size":2148676},{"name":"Drenaje_Doble.geojson","size":571873},{"name":"Drenaje_Sencillo.geojson","size":5009971},{"name":"Isla.geojson","size":143759},{"name":"Orografia.geojson","size":7007},{"name":"Red_Alta_Tension.geojson","size":34420},{"name":"Via.geojson","size":794329}]},{"name":"15_BOYACÁ","files":[{"name":"Administrativo_P.geojson","size":90371},{"name":"Administrativo_R.geojson","size":94896},{"name":"Banco_Arena.geojson","size":25469},{"name":"Bosque.geojson","size":2243668},{"name":"Construccion_P.geojson","size":105492},{"name":"Curva_Nivel.geojson","size":4361244},{"name":"Drenaje_Sencillo.geojson","size":4678692},{"name":"Isla.geojson","size":20845},{"name":"Orografia.geojson","size":21063},{"name":"Via.geojson","size":1527778}]},{"name":"17_CALDAS","files":[{"name":"Administrativo_P.geojson","size":47086},{"name":"Bosque.geojson","size":1518231},{"name":"Construccion_P.geojson","size":21666},{"name":"Curva_Nivel.geojson","size":3124819},{"name":"Drenaje_Sencillo.geojson","size":722388},{"name":"Isla.geojson","size":12029},{"name":"Orografia.geojson","size":8350},{"name":"Via.geojson","size":774588}]},{"name":"18_CAQUETÁ","files":[{"name":"Administrativo_P.geojson","size":49219},{"name":"Banco_Arena.geojson","size":37645},{"name":"Bosque.geojson","size":2379292},{"name":"Construccion_P.geojson","size":45714},{"name":"Curva_Nivel.geojson","size":5469115},{"name":"Drenaje_Sencillo.geojson","size":20173660},{"name":"Isla.geojson","size":178370},{"name":"Laguna.geojson","size":330040},{"name":"Orografia.geojson","size":3659},{"name":"Pantano.geojson","size":323555},{"name":"Puerto_P.geojson","size":2726},{"name":"Raudal_Rapido.geojson","size":16614},{"name":"Via.geojson","size":1120216}]},{"name":"19_CAUCA","files":[{"name":"Administrativo_P.geojson","size":144895},{"name":"Bosque.geojson","size":200219},{"name":"Construccion_P.geojson","size":5121},{"name":"Curva_Nivel.geojson","size":2538602},{"name":"Drenaje_Doble.geojson","size":263097},{"name":"Drenaje_Sencillo.geojson","size":6311346},{"name":"Isla.geojson","size":105774},{"name":"Orografia.geojson","size":14664},{"name":"Via.geojson","size":727718}]},{"name":"20_CESAR","files":[{"name":"Administrativo_P.geojson","size":67898},{"name":"Administrativo_R.geojson","size":47806},{"name":"Bosque.geojson","size":115934},{"name":"Cienaga.geojson","size":208104},{"name":"Construccion_P.geojson","size":13940},{"name":"Curva_Nivel.geojson","size":2493909},{"name":"Drenaje_Sencillo.geojson","size":4130861},{"name":"Isla.geojson","size":21365},{"name":"Via_Ferrea.geojson","size":43399},{"name":"Via.geojson","size":853119}]},{"name":"23_CÓRDOBA","files":[{"name":"Administrativo_P.geojson","size":127438},{"name":"Administrativo_R.geojson","size":45212},{"name":"Aeropuerto_P.geojson","size":2733},{"name":"Bosque.geojson","size":90009},{"name":"Cienaga.geojson","size":238666},{"name":"Construccion_P.geojson","size":11392},{"name":"Curva_Nivel.geojson","size":822041},{"name":"Drenaje_Sencillo.geojson","size":2114909},{"name":"Orografia.geojson","size":3685},{"name":"Via.geojson","size":719914}]},{"name":"25_CUNDINAMARCA","files":[{"name":"Administrativo_P.geojson","size":108403},{"name":"Administrativo_R.geojson","size":320060},{"name":"Bosque.geojson","size":1471134},{"name":"Construccion_P.geojson","size":92110},{"name":"Curva_Nivel.geojson","size":5451067},{"name":"Drenaje_Sencillo.geojson","size":3585888},{"name":"Isla.geojson","size":32111},{"name":"Laguna.geojson","size":14522},{"name":"Orografia.geojson","size":30320},{"name":"Via.geojson","size":1309972}]},{"name":"27_CHOCÓ","files":[{"name":"Administrativo_P.geojson","size":114030},{"name":"Bosque.geojson","size":672467},{"name":"Cienaga.geojson","size":145495},{"name":"Construccion_P.geojson","size":29604},{"name":"Curva_Nivel.geojson","size":5186663},{"name":"Drenaje_Doble.geojson","size":722001},{"name":"Drenaje_Sencillo.geojson","size":4997614},{"name":"Isla.geojson","size":41941},{"name":"Orografia.geojson","size":5854},{"name":"Red_Alta_Tension.geojson","size":25780},{"name":"Via.geojson","size":74410}]},{"name":"41_HUILA","files":[{"name":"Administrativo_P.geojson","size":67087},{"name":"Administrativo_R.geojson","size":235409},{"name":"Bosque.geojson","size":65587},{"name":"Construccion_P.geojson","size":5151},{"name":"Curva_Nivel.geojson","size":1685987},{"name":"Drenaje_Sencillo.geojson","size":4287559},{"name":"Isla.geojson","size":51064},{"name":"Laguna.geojson","size":31753},{"name":"Orografia.geojson","size":14680},{"name":"Via.geojson","size":1295046}]},{"name":"44_LA_GUAJIRA","files":[{"name":"Administrativo_P.geojson","size":52340},{"name":"Bosque.geojson","size":28221},{"name":"Construccion_P.geojson","size":52372},{"name":"Costero_Insular.geojson","size":5019},{"name":"Curva_Nivel.geojson","size":1709671},{"name":"Drenaje_Sencillo.geojson","size":4064972},{"name":"Laguna.geojson","size":138386},{"name":"Via.geojson","size":871281}]},{"name":"47_MAGDALENA","files":[{"name":"Administrativo_P.geojson","size":48236},{"name":"Administrativo_R.geojson","size":157683},{"name":"Bosque.geojson","size":618356},{"name":"Cienaga.geojson","size":1283232},{"name":"Construccion_P.geojson","size":22047},{"name":"Curva_Nivel.geojson","size":1840172},{"name":"Drenaje_Sencillo.geojson","size":3720510},{"name":"Isla.geojson","size":148580},{"name":"Laguna.geojson","size":113499},{"name":"Via.geojson","size":885106}]},{"name":"50_META","files":[{"name":"Administrativo_P.geojson","size":60976},{"name":"Administrativo_R.geojson","size":347015},{"name":"Aeropuerto_P.geojson","size":2972},{"name":"Banco_Arena.geojson","size":153678},{"name":"Bosque.geojson","size":3813644},{"name":"Construccion_P.geojson","size":151356},{"name":"Curva_Nivel.geojson","size":6106447},{"name":"Drenaje_Doble.geojson","size":2000632},{"name":"Drenaje_Sencillo.geojson","size":27333528},{"name":"Isla.geojson","size":390672},{"name":"Laguna.geojson","size":384328},{"name":"Orografia.geojson","size":7842},{"name":"Puente_L.geojson","size":5256},{"name":"Via.geojson","size":4157488}]},{"name":"52_NARIÑO","files":[{"name":"Administrativo_P.geojson","size":180830},{"name":"Bosque.geojson","size":1349627},{"name":"Construccion_P.geojson","size":5150},{"name":"Curva_Nivel.geojson","size":2849650},{"name":"Drenaje_Doble.geojson","size":1051983},{"name":"Drenaje_Sencillo.geojson","size":4791134},{"name":"Isla.geojson","size":124597},{"name":"Laguna.geojson","size":112022},{"name":"Orografia.geojson","size":4236},{"name":"Via.geojson","size":4224772}]},{"name":"54_NORTE_DE_SANTANDER","files":[{"name":"Administrativo_P.geojson","size":87658},{"name":"Banco_Arena.geojson","size":10491},{"name":"Bosque.geojson","size":93151},{"name":"Construccion_P.geojson","size":6274},{"name":"Curva_Nivel.geojson","size":3975749},{"name":"Drenaje_Sencillo.geojson","size":6753261},{"name":"Via.geojson","size":1533866}]},{"name":"63_QUINDIO","files":[{"name":"Administrativo_P.geojson","size":10726},{"name":"Bosque.geojson","size":60854},{"name":"Curva_Nivel.geojson","size":320330},{"name":"Drenaje_Sencillo.geojson","size":155908},{"name":"Via.geojson","size":174500}]},{"name":"66_RISARALDA","files":[{"name":"Administrativo_P.geojson","size":24411},{"name":"Bosque.geojson","size":69019},{"name":"Construccion_P.geojson","size":3754},{"name":"Curva_Nivel.geojson","size":671217},{"name":"Drenaje_Sencillo.geojson","size":280512},{"name":"Via.geojson","size":266588}]},{"name":"68_SANTANDER","files":[{"name":"Administrativo_P.geojson","size":117623},{"name":"Administrativo_R.geojson","size":143312},{"name":"Aeropuerto_P.geojson","size":4611},{"name":"Banco_Arena.geojson","size":12220},{"name":"Bosque.geojson","size":3411283},{"name":"Cienaga.geojson","size":62166},{"name":"Construccion_P.geojson","size":51197},{"name":"Curva_Nivel.geojson","size":4455028},{"name":"Drenaje_Sencillo.geojson","size":6740234},{"name":"Isla.geojson","size":49801},{"name":"Orografia.geojson","size":8077},{"name":"Via_Ferrea.geojson","size":64219},{"name":"Via.geojson","size":1925058}]},{"name":"70_SUCRE","files":[{"name":"Administrativo_P.geojson","size":75356},{"name":"Bosque.geojson","size":89121},{"name":"Cienaga.geojson","size":655476},{"name":"Construccion_P.geojson","size":2923},{"name":"Curva_Nivel.geojson","size":313300},{"name":"Drenaje_Sencillo.geojson","size":2062095},{"name":"Via.geojson","size":1980293}]},{"name":"73_TOLIMA","files":[{"name":"Administrativo_P.geojson","size":89131},{"name":"Administrativo_R.geojson","size":300202},{"name":"Banco_Arena.geojson","size":19126},{"name":"Bosque.geojson","size":633996},{"name":"Construccion_P.geojson","size":45494},{"name":"Curva_Nivel.geojson","size":4622917},{"name":"Drenaje_Sencillo.geojson","size":4921039},{"name":"Isla.geojson","size":51005},{"name":"Laguna.geojson","size":30521},{"name":"Orografia.geojson","size":25947},{"name":"Via.geojson","size":1386124}]},{"name":"76_VALLE_DEL_CAUCA","files":[{"name":"Administrativo_P.geojson","size":149449},{"name":"Administrativo_R.geojson","size":260117},{"name":"Bosque.geojson","size":167539},{"name":"Construccion_P.geojson","size":7412},{"name":"Curva_Nivel.geojson","size":1662347},{"name":"Drenaje_Doble.geojson","size":98868},{"name":"Drenaje_Sencillo.geojson","size":3260699},{"name":"Isla.geojson","size":17734},{"name":"Orografia.geojson","size":5638},{"name":"Puente_P.geojson","size":2877},{"name":"Red_Alta_Tension.geojson","size":22330},{"name":"Via.geojson","size":1230849}]},{"name":"81_ARAUCA","files":[{"name":"Administrativo_P.geojson","size":30150},{"name":"Banco_Arena.geojson","size":380763},{"name":"Bosque.geojson","size":1481936},{"name":"Construccion_P.geojson","size":157581},{"name":"Curva_Nivel.geojson","size":1379854},{"name":"Drenaje_Doble.geojson","size":1810691},{"name":"Drenaje_Sencillo.geojson","size":6864722},{"name":"Hito_Limite.geojson","size":3622},{"name":"Isla.geojson","size":224165},{"name":"Laguna.geojson","size":279012},{"name":"Orografia.geojson","size":9242},{"name":"Puente_L.geojson","size":8319},{"name":"Via.geojson","size":2274218}]},{"name":"85_CASANARE","files":[{"name":"Administrativo_P.geojson","size":36821},{"name":"Banco_Arena.geojson","size":410095},{"name":"Bosque.geojson","size":11036915},{"name":"Construccion_P.geojson","size":593517},{"name":"Curva_Nivel.geojson","size":1102433},{"name":"Drenaje_Doble.geojson","size":1255251},{"name":"Drenaje_Sencillo.geojson","size":16128034},{"name":"Isla.geojson","size":334027},{"name":"Laguna.geojson","size":414343},{"name":"Orografia.geojson","size":21541},{"name":"Puente_L.geojson","size":4331},{"name":"Via.geojson","size":3510121}]},{"name":"86_PUTUMAYO","files":[{"name":"Administrativo_P.geojson","size":33174},{"name":"Bosque.geojson","size":976637},{"name":"Construccion_P.geojson","size":84767},{"name":"Curva_Nivel.geojson","size":1036278},{"name":"Drenaje_Sencillo.geojson","size":4007351},{"name":"Isla.geojson","size":378445},{"name":"Puerto_P.geojson","size":2731},{"name":"Via.geojson","size":252001}]},{"name":"88_ARCHIPIÉLAGO_DE_SAN_ANDRÉS_PROVIDENCIA_Y_SANTA_CATALINA","files":[{"name":"Administrativo_P.geojson","size":48194},{"name":"Bosque.geojson","size":3508},{"name":"Construccion_P.geojson","size":309181},{"name":"Costero_Insular.geojson","size":3388},{"name":"Drenaje_Sencillo.geojson","size":337471},{"name":"Limite_Manzana.geojson","size":503148},{"name":"Manglar.geojson","size":41861},{"name":"Orografia.geojson","size":9372},{"name":"Via.geojson","size":329143}]},{"name":"91_AMAZONAS","files":[{"name":"Administrativo_P.geojson","size":37344},{"name":"Banco_Arena.geojson","size":100505},{"name":"Bosque.geojson","size":2204095},{"name":"Construccion_P.geojson","size":38997},{"name":"Curva_Nivel.geojson","size":2559055},{"name":"Drenaje_Sencillo.geojson","size":27782281},{"name":"Hito_Limite.geojson","size":3126},{"name":"Isla.geojson","size":1139506},{"name":"Laguna.geojson","size":260963},{"name":"Raudal_Rapido.geojson","size":9729},{"name":"Via.geojson","size":25604}]},{"name":"94_GUAINÍA","files":[{"name":"Administrativo_P.geojson","size":34154},{"name":"Bosque.geojson","size":8273616},{"name":"Construccion_P.geojson","size":26784},{"name":"Curva_Nivel.geojson","size":4576656},{"name":"Drenaje_Sencillo.geojson","size":19890205},{"name":"Isla.geojson","size":171770},{"name":"Laguna.geojson","size":1793859},{"name":"Orografia.geojson","size":3127},{"name":"Pantano.geojson","size":265994},{"name":"Raudal_Rapido.geojson","size":20824},{"name":"Via.geojson","size":231976}]},{"name":"95_GUAVIARE","files":[{"name":"Administrativo_P.geojson","size":17136},{"name":"Bosque.geojson","size":2575171},{"name":"Construccion_P.geojson","size":31712},{"name":"Curva_Nivel.geojson","size":1468401},{"name":"Drenaje_Sencillo.geojson","size":12124854},{"name":"Isla.geojson","size":96100},{"name":"Laguna.geojson","size":156214},{"name":"Orografia.geojson","size":3374},{"name":"Via.geojson","size":179453}]},{"name":"97_VAUPÉS","files":[{"name":"Administrativo_P.geojson","size":20064},{"name":"Bosque.geojson","size":3636796},{"name":"Construccion_P.geojson","size":43122},{"name":"Curva_Nivel.geojson","size":2712838},{"name":"Drenaje_Sencillo.geojson","size":15919300},{"name":"Isla.geojson","size":107387},{"name":"Pantano.geojson","size":535353},{"name":"Raudal_Rapido.geojson","size":23491},{"name":"Via.geojson","size":48556}]},{"name":"99_VICHADA","files":[{"name":"Administrativo_P.geojson","size":21808},{"name":"Banco_Arena.geojson","size":208428},{"name":"Bosque.geojson","size":24858134},{"name":"Construccion_P.geojson","size":109589},{"name":"Curva_Nivel.geojson","size":3459263},{"name":"Drenaje_Doble.geojson","size":3013543},{"name":"Drenaje_Sencillo.geojson","size":22384170},{"name":"Isla.geojson","size":910095},{"name":"Laguna.geojson","size":1524027},{"name":"Madrevieja_R.geojson","size":51321},{"name":"Orografia.geojson","size":7974},{"name":"Pantano.geojson","size":252012},{"name":"Raudal_Rapido.geojson","size":5142},{"name":"Via.geojson","size":3337441}]}],"files":[{"name":"_reporte_recortes.csv","size":45388},{"name":"departamentos.geojson","size":1278190}]};
+
+function fmtSize(b){
+  if(b >= 1048576) return (b/1048576).toFixed(1)+' MB';
+  if(b >= 1024) return (b/1024).toFixed(0)+' KB';
+  return b+' B';
+}
+function iconFor(name){
+  const n = name.toLowerCase();
+  if(n.endsWith('.csv')) return '📄';
+  if(n.includes('via')) return '🛣️';
+  if(n.includes('drenaje')||n.includes('laguna')||n.includes('cienaga')||n.includes('madrevieja')||n.includes('pantano')||n.includes('raudal')||n.includes('costero')) return '💧';
+  if(n.includes('bosque')||n.includes('manglar')) return '🌳';
+  if(n.includes('curva')||n.includes('orografia')||n.includes('banco')) return '⛰️';
+  if(n.includes('construccion')||n.includes('puente')||n.includes('puerto')||n.includes('aeropuerto')) return '🏗️';
+  if(n.includes('administrativo')||n.includes('limite')||n.includes('hito')||n.includes('manzana')) return '🏛️';
+  if(n.includes('isla')) return '🏝️';
+  return '🗺️';
+}
+function depLabel(dir){
+  const m = dir.match(/^(d+)_(.+)$/);
+  if(!m) return {code:'', name:dir.replace(/_/g,' ')};
+  return {code:m[1], name:m[2].replace(/_/g,' ')};
+}
+
+const rootEl = document.getElementById('rootFiles');
+TREE.files.forEach(f=>{
+  const a = document.createElement('a');
+  a.className='file'; a.href=encodeURIComponent(f.name); a.target='_blank'; a.rel='noopener';
+  a.dataset.name=f.name.toLowerCase();
+  a.innerHTML='<span class="nm"><span class="ico">'+iconFor(f.name)+'</span><span class="fname">'+f.name+'</span></span>'+
+    '<span class="size'+(f.size>1048576?' big':'')+'">'+fmtSize(f.size)+'</span>';
+  rootEl.appendChild(a);
+});
+
+const treeEl = document.getElementById('tree');
+TREE.dirs.forEach(d=>{
+  const lbl = depLabel(d.name);
+  const det = document.createElement('details');
+  det.dataset.dep=(lbl.code+' '+lbl.name).toLowerCase();
+  const sum = document.createElement('summary');
+  sum.innerHTML='<span><span class="dep-code">'+lbl.code+'</span>'+lbl.name+'</span>'+
+    '<span class="count">'+d.files.length+' capas</span>';
+  det.appendChild(sum);
+  const fl = document.createElement('div'); fl.className='files';
+  d.files.forEach(f=>{
+    const a=document.createElement('a');
+    a.className='file'; a.href=encodeURIComponent(d.name)+'/'+encodeURIComponent(f.name);
+    a.target='_blank'; a.rel='noopener'; a.dataset.name=f.name.toLowerCase();
+    a.innerHTML='<span class="nm"><span class="ico">'+iconFor(f.name)+'</span><span class="fname">'+f.name+'</span></span>'+
+      '<span class="size'+(f.size>1048576?' big':'')+'">'+fmtSize(f.size)+'</span>';
+    fl.appendChild(a);
+  });
+  det.appendChild(fl);
+  treeEl.appendChild(det);
+});
+
+const search=document.getElementById('search');
+const empty=document.getElementById('empty');
+search.addEventListener('input',()=>{
+  const q=search.value.trim().toLowerCase();
+  let anyVisible=false;
+  treeEl.querySelectorAll('details').forEach(det=>{
+    const depMatch=!q || det.dataset.dep.includes(q);
+    let fileMatches=0;
+    det.querySelectorAll('.file').forEach(a=>{
+      const show=!q || depMatch || a.dataset.name.includes(q);
+      a.classList.toggle('hidden',!show);
+      if(show) fileMatches++;
+    });
+    const visible = depMatch || fileMatches>0;
+    det.classList.toggle('hidden',!visible);
+    if(visible){anyVisible=true; if(q) det.open=true;}
+  });
+  rootEl.querySelectorAll('.file').forEach(a=>{
+    a.classList.toggle('hidden', !!q && !a.dataset.name.includes(q));
+  });
+  empty.classList.toggle('hidden',anyVisible);
+});
+document.getElementById('expand').onclick=()=>treeEl.querySelectorAll('details').forEach(d=>d.open=true);
+document.getElementById('collapse').onclick=()=>treeEl.querySelectorAll('details').forEach(d=>d.open=false);
+</script>
+</body>
+</html>
