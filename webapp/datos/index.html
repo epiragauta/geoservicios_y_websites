@@ -6,14 +6,8 @@
 <title>Explorador de datos geograficos</title>
 <style>
   :root{
-    --bg:#f5f7fa; --panel:#ffffff; --border:#e2e8f0; --text:#1a202c;
-    --muted:#64748b; --accent:#0277bd; --accent-soft:#e1f1f9; --hover:#f1f5f9;
-  }
-  @media (prefers-color-scheme: dark){
-    :root{
-      --bg:#0f172a; --panel:#1e293b; --border:#334155; --text:#e2e8f0;
-      --muted:#94a3b8; --accent:#38bdf8; --accent-soft:#1e3a4d; --hover:#263449;
-    }
+    --bg:#ffffff; --panel:#ffffff; --border:#cccccc; --text:#000000;
+    --muted:#555555; --accent:#000000; --accent-soft:#f2f2f2; --hover:#f2f2f2;
   }
   *{box-sizing:border-box}
   body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
@@ -38,7 +32,7 @@
     align-items:center;list-style:none;user-select:none}
   summary::-webkit-details-marker{display:none}
   summary:hover{background:var(--hover)}
-  .dep-code{color:var(--accent);font-family:ui-monospace,monospace;margin-right:8px}
+  .dep-code{color:var(--text);font-family:ui-monospace,monospace;margin-right:8px}
   .count{color:var(--muted);font-weight:400;font-size:.85rem}
   .files{border-top:1px solid var(--border)}
   .file{display:flex;justify-content:space-between;align-items:center;gap:12px;
@@ -46,10 +40,10 @@
   .file:last-child{border-bottom:none}
   .file:hover{background:var(--hover)}
   .file .nm{display:flex;align-items:center;gap:10px;min-width:0}
-  .ico{font-size:1.1rem;flex-shrink:0}
+  .ico{font-size:1.1rem;flex-shrink:0;filter:grayscale(1)}
   .fname{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
   .size{color:var(--muted);font-size:.8rem;font-variant-numeric:tabular-nums;flex-shrink:0}
-  .size.big{color:#d97706}
+  .size.big{color:var(--text);font-weight:700}
   .root-files{margin-bottom:18px}
   .hidden{display:none !important}
   .empty{color:var(--muted);text-align:center;padding:40px}
