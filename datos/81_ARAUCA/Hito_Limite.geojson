@@ -1,0 +1,20 @@
+{
+"type": "FeatureCollection",
+"name": "Hito_Limite",
+"xy_coordinate_resolution": 1e-06,
+"features": [
+{ "type": "Feature", "properties": { "NOMBRE_PUN": "VI", "PROYECTO": null, "SYMBOL": "1", "FECHA": null, "ALTURA_SOB": 0.0, "ESCALA": 0, "GLOBALID": "{4D8780B1-2E8B-4938-B781-444F7C9F6A7C}" }, "geometry": { "type": "Point", "coordinates": [ -69.839902, 6.625718 ] } },
+{ "type": "Feature", "properties": { "NOMBRE_PUN": "V", "PROYECTO": null, "SYMBOL": "1", "FECHA": null, "ALTURA_SOB": 0.0, "ESCALA": 0, "GLOBALID": "{32D89705-3336-4D54-9975-D8956509615A}" }, "geometry": { "type": "Point", "coordinates": [ -69.884739, 6.681442 ] } },
+{ "type": "Feature", "properties": { "NOMBRE_PUN": "VII", "PROYECTO": null, "SYMBOL": "1", "FECHA": null, "ALTURA_SOB": 0.0, "ESCALA": 0, "GLOBALID": "{ADA76948-A761-48A8-AB69-70ED8CD5C473}" }, "geometry": { "type": "Point", "coordinates": [ -69.772293, 6.540792 ] } },
+{ "type": "Feature", "properties": { "NOMBRE_PUN": "III", "PROYECTO": null, "SYMBOL": "1", "FECHA": null, "ALTURA_SOB": 0.0, "ESCALA": 0, "GLOBALID": "{4680EEDC-6537-42F1-85B0-9F1D253FB653}" }, "geometry": { "type": "Point", "coordinates": [ -70.007904, 6.837654 ] } },
+{ "type": "Feature", "properties": { "NOMBRE_PUN": "XIII", "PROYECTO": null, "SYMBOL": "1", "FECHA": null, "ALTURA_SOB": 0.0, "ESCALA": 0, "GLOBALID": "{2368DC5E-647C-425B-A81D-BC777ECDCAAD}" }, "geometry": { "type": "Point", "coordinates": [ -69.431271, 6.107918 ] } },
+{ "type": "Feature", "properties": { "NOMBRE_PUN": "II", "PROYECTO": null, "SYMBOL": "1", "FECHA": null, "ALTURA_SOB": 0.0, "ESCALA": 0, "GLOBALID": "{E6C4F811-8A5C-444F-A353-D7C096336582}" }, "geometry": { "type": "Point", "coordinates": [ -70.049892, 6.890861 ] } },
+{ "type": "Feature", "properties": { "NOMBRE_PUN": "IV", "PROYECTO": null, "SYMBOL": "1", "FECHA": null, "ALTURA_SOB": 0.0, "ESCALA": 0, "GLOBALID": "{9568FDF3-9327-44CB-8CE0-5F5A15DAA0D6}" }, "geometry": { "type": "Point", "coordinates": [ -69.965764, 6.7836 ] } },
+{ "type": "Feature", "properties": { "NOMBRE_PUN": "XI", "PROYECTO": null, "SYMBOL": "1", "FECHA": null, "ALTURA_SOB": 0.0, "ESCALA": 0, "GLOBALID": "{4E8C535A-1C9F-4F25-8B0D-4934BBDCAAE7}" }, "geometry": { "type": "Point", "coordinates": [ -69.547021, 6.255461 ] } },
+{ "type": "Feature", "properties": { "NOMBRE_PUN": "XII", "PROYECTO": null, "SYMBOL": "1", "FECHA": null, "ALTURA_SOB": 0.0, "ESCALA": 0, "GLOBALID": "{EF8BEC42-70D5-4489-8579-FC564E6D79BD}" }, "geometry": { "type": "Point", "coordinates": [ -69.490271, 6.183817 ] } },
+{ "type": "Feature", "properties": { "NOMBRE_PUN": "X", "PROYECTO": null, "SYMBOL": "1", "FECHA": null, "ALTURA_SOB": 0.0, "ESCALA": 0, "GLOBALID": "{7D8DE241-3C04-47F0-B706-680E1DC83009}" }, "geometry": { "type": "Point", "coordinates": [ -69.603136, 6.325606 ] } },
+{ "type": "Feature", "properties": { "NOMBRE_PUN": "IX", "PROYECTO": null, "SYMBOL": "1", "FECHA": null, "ALTURA_SOB": 0.0, "ESCALA": 0, "GLOBALID": "{5D4A521D-A878-42E9-AE20-57B17311DCA7}" }, "geometry": { "type": "Point", "coordinates": [ -69.659361, 6.39689 ] } },
+{ "type": "Feature", "properties": { "NOMBRE_PUN": "I", "PROYECTO": null, "SYMBOL": "1", "FECHA": null, "ALTURA_SOB": 0.0, "ESCALA": 0, "GLOBALID": "{320A1095-4ADE-404E-AA50-8FC599A53ECF}" }, "geometry": { "type": "Point", "coordinates": [ -70.097554, 6.95082 ] } },
+{ "type": "Feature", "properties": { "NOMBRE_PUN": "VIII", "PROYECTO": null, "SYMBOL": "1", "FECHA": null, "ALTURA_SOB": 0.0, "ESCALA": 0, "GLOBALID": "{3EFAD8CE-F32C-47F0-A66C-932B5F9CFEDE}" }, "geometry": { "type": "Point", "coordinates": [ -69.715846, 6.46714 ] } }
+]
+}

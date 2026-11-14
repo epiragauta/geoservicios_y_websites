@@ -1,0 +1,20 @@
+{
+"type": "FeatureCollection",
+"name": "Construccion_P",
+"xy_coordinate_resolution": 1e-06,
+"features": [
+{ "type": "Feature", "properties": { "NOMBRE_GEO": "Apia", "CODIGO_USO": "4101", "PROYECTO": null, "SYMBOL": "1", "FECHA": null, "ESCALA": 1, "GLOBALID": "{EA3D4CBB-5F51-4DF5-9EF9-A3612E7518CF}" }, "geometry": { "type": "Point", "coordinates": [ -76.000216, 5.166933 ] } },
+{ "type": "Feature", "properties": { "NOMBRE_GEO": "Hacienda Santa Fe", "CODIGO_USO": "4101", "PROYECTO": null, "SYMBOL": "1", "FECHA": null, "ESCALA": 1, "GLOBALID": "{A2D03DB0-3530-4D06-9112-44E08AAABCE7}" }, "geometry": { "type": "Point", "coordinates": [ -76.042623, 5.248017 ] } },
+{ "type": "Feature", "properties": { "NOMBRE_GEO": "La Miranda", "CODIGO_USO": "4101", "PROYECTO": null, "SYMBOL": "1", "FECHA": null, "ESCALA": 1, "GLOBALID": "{4B73D092-1505-46A8-9626-22E5165D3294}" }, "geometry": { "type": "Point", "coordinates": [ -75.770607, 5.019094 ] } },
+{ "type": "Feature", "properties": { "NOMBRE_GEO": "La Samaria", "CODIGO_USO": "4101", "PROYECTO": null, "SYMBOL": "1", "FECHA": null, "ESCALA": 1, "GLOBALID": "{91AFC00F-18CD-4B87-A9A4-93289EDB04AA}" }, "geometry": { "type": "Point", "coordinates": [ -75.60399, 4.821506 ] } },
+{ "type": "Feature", "properties": { "NOMBRE_GEO": "La María", "CODIGO_USO": "4101", "PROYECTO": null, "SYMBOL": "1", "FECHA": null, "ESCALA": 1, "GLOBALID": "{C3D775DF-2069-4B46-B0CC-A58E4AF1C687}" }, "geometry": { "type": "Point", "coordinates": [ -75.9512, 5.0569 ] } },
+{ "type": "Feature", "properties": { "NOMBRE_GEO": "Los Planes", "CODIGO_USO": "4101", "PROYECTO": null, "SYMBOL": "1", "FECHA": null, "ESCALA": 1, "GLOBALID": "{038A12E1-A139-4EDE-AD12-6B081470B86B}" }, "geometry": { "type": "Point", "coordinates": [ -76.004102, 5.122823 ] } },
+{ "type": "Feature", "properties": { "NOMBRE_GEO": "Yarumal", "CODIGO_USO": "4101", "PROYECTO": null, "SYMBOL": "1", "FECHA": null, "ESCALA": 1, "GLOBALID": "{0677D593-2B08-434B-9E38-A9A7225B46FC}" }, "geometry": { "type": "Point", "coordinates": [ -75.520854, 4.921431 ] } },
+{ "type": "Feature", "properties": { "NOMBRE_GEO": "Irlanda", "CODIGO_USO": "4101", "PROYECTO": null, "SYMBOL": "1", "FECHA": null, "ESCALA": 1, "GLOBALID": "{DF06D3F9-F88E-424A-B9F1-E1FE4192C4BB}" }, "geometry": { "type": "Point", "coordinates": [ -75.475787, 4.898272 ] } },
+{ "type": "Feature", "properties": { "NOMBRE_GEO": "Potreros", "CODIGO_USO": "4101", "PROYECTO": null, "SYMBOL": "1", "FECHA": null, "ESCALA": 1, "GLOBALID": "{94608129-BC9C-4F04-B70F-53A43BABA64F}" }, "geometry": { "type": "Point", "coordinates": [ -75.558845, 4.887161 ] } },
+{ "type": "Feature", "properties": { "NOMBRE_GEO": "La Linda", "CODIGO_USO": "4101", "PROYECTO": null, "SYMBOL": "1", "FECHA": null, "ESCALA": 1, "GLOBALID": "{E5D93D4D-04F8-4EAF-8008-E680304BB9DC}" }, "geometry": { "type": "Point", "coordinates": [ -75.514976, 4.860633 ] } },
+{ "type": "Feature", "properties": { "NOMBRE_GEO": "La Libertad", "CODIGO_USO": "4101", "PROYECTO": null, "SYMBOL": "1", "FECHA": null, "ESCALA": 1, "GLOBALID": "{B1B80526-33B2-44E9-B97C-A95BBDFE71EF}" }, "geometry": { "type": "Point", "coordinates": [ -75.530716, 4.795567 ] } },
+{ "type": "Feature", "properties": { "NOMBRE_GEO": "Corinto", "CODIGO_USO": "4101", "PROYECTO": null, "SYMBOL": "1", "FECHA": null, "ESCALA": 1, "GLOBALID": "{B56FA64C-E1A0-4F20-B77B-73E33A1F83EE}" }, "geometry": { "type": "Point", "coordinates": [ -75.437866, 4.838122 ] } },
+{ "type": "Feature", "properties": { "NOMBRE_GEO": "Buenos Aires", "CODIGO_USO": "4101", "PROYECTO": null, "SYMBOL": "1", "FECHA": null, "ESCALA": 1, "GLOBALID": "{22775A3D-A175-431D-8744-112ECE303827}" }, "geometry": { "type": "Point", "coordinates": [ -75.445573, 4.749884 ] } }
+]
+}

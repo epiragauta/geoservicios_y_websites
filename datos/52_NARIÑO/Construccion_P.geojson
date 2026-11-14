@@ -1,0 +1,25 @@
+{
+"type": "FeatureCollection",
+"name": "Construccion_P",
+"xy_coordinate_resolution": 1e-06,
+"features": [
+{ "type": "Feature", "properties": { "NOMBRE_GEO": "El Porvenir", "CODIGO_USO": "4101", "PROYECTO": null, "SYMBOL": "1", "FECHA": null, "ESCALA": 1, "GLOBALID": "{F08AB3DF-2E01-44A1-8F03-C0964E01E197}" }, "geometry": { "type": "Point", "coordinates": [ -78.790419, 1.769384 ] } },
+{ "type": "Feature", "properties": { "NOMBRE_GEO": "SENA", "CODIGO_USO": "4101", "PROYECTO": null, "SYMBOL": "1", "FECHA": null, "ESCALA": 1, "GLOBALID": "{2DBBAE78-99A1-4BE2-8A34-696A69E6FEEA}" }, "geometry": { "type": "Point", "coordinates": [ -78.682304, 1.480051 ] } },
+{ "type": "Feature", "properties": { "NOMBRE_GEO": "La Islita", "CODIGO_USO": "4101", "PROYECTO": null, "SYMBOL": "1", "FECHA": null, "ESCALA": 1, "GLOBALID": "{7F5F43EB-9ED3-408C-AA24-012CD96F85A7}" }, "geometry": { "type": "Point", "coordinates": [ -78.57933, 2.377884 ] } },
+{ "type": "Feature", "properties": { "NOMBRE_GEO": "La Loma", "CODIGO_USO": "4101", "PROYECTO": null, "SYMBOL": "1", "FECHA": null, "ESCALA": 1, "GLOBALID": "{AA7692B7-9F4B-47FC-93EF-4A531D15FB4E}" }, "geometry": { "type": "Point", "coordinates": [ -78.184234, 1.937201 ] } },
+{ "type": "Feature", "properties": { "NOMBRE_GEO": "San Ignacio", "CODIGO_USO": "4101", "PROYECTO": null, "SYMBOL": "1", "FECHA": null, "ESCALA": 1, "GLOBALID": "{3A83780E-896D-4763-A99A-9157D2D2CFC1}" }, "geometry": { "type": "Point", "coordinates": [ -77.848307, 0.915513 ] } },
+{ "type": "Feature", "properties": { "NOMBRE_GEO": "La Laguna", "CODIGO_USO": "4101", "PROYECTO": null, "SYMBOL": "1", "FECHA": null, "ESCALA": 1, "GLOBALID": "{FD61AA16-8328-49F3-8D8D-5B6516CC637E}" }, "geometry": { "type": "Point", "coordinates": [ -77.830544, 0.938977 ] } },
+{ "type": "Feature", "properties": { "NOMBRE_GEO": "Juan de Dios", "CODIGO_USO": "4101", "PROYECTO": null, "SYMBOL": "1", "FECHA": null, "ESCALA": 1, "GLOBALID": "{70CEACAE-BD8C-4DA2-95F2-1FD66B244BBB}" }, "geometry": { "type": "Point", "coordinates": [ -77.825867, 1.8618 ] } },
+{ "type": "Feature", "properties": { "NOMBRE_GEO": "Chuza", "CODIGO_USO": "4101", "PROYECTO": null, "SYMBOL": "1", "FECHA": null, "ESCALA": 1, "GLOBALID": "{BB002CDC-162B-4059-A297-5FE1B086E40D}" }, "geometry": { "type": "Point", "coordinates": [ -77.372425, 1.44528 ] } },
+{ "type": "Feature", "properties": { "NOMBRE_GEO": "La Soledad", "CODIGO_USO": "4101", "PROYECTO": null, "SYMBOL": "1", "FECHA": null, "ESCALA": 1, "GLOBALID": "{97A6D227-DA20-4813-939C-A7B0A814D347}" }, "geometry": { "type": "Point", "coordinates": [ -77.431554, 0.945609 ] } },
+{ "type": "Feature", "properties": { "NOMBRE_GEO": "Santa Isabel", "CODIGO_USO": "4101", "PROYECTO": null, "SYMBOL": "1", "FECHA": null, "ESCALA": 1, "GLOBALID": "{4F0C534F-6590-457B-9A5F-CEEF721AC414}" }, "geometry": { "type": "Point", "coordinates": [ -77.162889, 0.988169 ] } },
+{ "type": "Feature", "properties": { "NOMBRE_GEO": "Ramos", "CODIGO_USO": "4101", "PROYECTO": null, "SYMBOL": "1", "FECHA": null, "ESCALA": 1, "GLOBALID": "{A7E0A7D8-6C0D-455C-B65C-9EC79C4839AE}" }, "geometry": { "type": "Point", "coordinates": [ -77.177475, 1.046891 ] } },
+{ "type": "Feature", "properties": { "NOMBRE_GEO": "El Carmen", "CODIGO_USO": "4101", "PROYECTO": null, "SYMBOL": "1", "FECHA": null, "ESCALA": 1, "GLOBALID": "{DC147ABF-D858-4DCA-98E9-50726502A12B}" }, "geometry": { "type": "Point", "coordinates": [ -78.391925, 1.892562 ] } },
+{ "type": "Feature", "properties": { "NOMBRE_GEO": "Ecopetrol", "CODIGO_USO": "4101", "PROYECTO": null, "SYMBOL": "1", "FECHA": null, "ESCALA": 1, "GLOBALID": "{AD634F88-00AB-437B-8077-D50411E6194A}" }, "geometry": { "type": "Point", "coordinates": [ -78.757664, 1.794244 ] } },
+{ "type": "Feature", "properties": { "NOMBRE_GEO": "Sabaleta", "CODIGO_USO": "4101", "PROYECTO": null, "SYMBOL": "1", "FECHA": null, "ESCALA": 1, "GLOBALID": "{3837379C-2894-4C24-B6CE-9A61BA74557F}" }, "geometry": { "type": "Point", "coordinates": [ -78.5254, 1.463678 ] } },
+{ "type": "Feature", "properties": { "NOMBRE_GEO": "San Lorenzo", "CODIGO_USO": "4101", "PROYECTO": null, "SYMBOL": "1", "FECHA": null, "ESCALA": 1, "GLOBALID": "{D733063A-C980-4E7D-BC3E-A1AF05D9CEC1}" }, "geometry": { "type": "Point", "coordinates": [ -78.550328, 1.325374 ] } },
+{ "type": "Feature", "properties": { "NOMBRE_GEO": "La Quinta", "CODIGO_USO": "4165", "PROYECTO": null, "SYMBOL": "1", "FECHA": null, "ESCALA": 1, "GLOBALID": "{CA854530-4DFC-49BA-9EEB-A3C8A86FEA32}" }, "geometry": { "type": "Point", "coordinates": [ -77.930611, 2.34663 ] } },
+{ "type": "Feature", "properties": { "NOMBRE_GEO": "Peña Colorada", "CODIGO_USO": "4101", "PROYECTO": null, "SYMBOL": "1", "FECHA": null, "ESCALA": 0, "GLOBALID": "{B7E7EEB0-5504-47B6-9F10-B8F1F1579FB7}" }, "geometry": { "type": "Point", "coordinates": [ -78.7469, 1.5701 ] } },
+{ "type": "Feature", "properties": { "NOMBRE_GEO": "Alto Playón", "CODIGO_USO": "4101", "PROYECTO": null, "SYMBOL": "1", "FECHA": null, "ESCALA": 0, "GLOBALID": "{CCFBAC1D-3CA2-49A6-8530-ED262785B496}" }, "geometry": { "type": "Point", "coordinates": [ -78.551349, 1.312614 ] } }
+]
+}

@@ -1,0 +1,18 @@
+{
+"type": "FeatureCollection",
+"name": "Aeropuerto_P",
+"xy_coordinate_resolution": 1e-06,
+"features": [
+{ "type": "Feature", "properties": { "NOMBRE_GEO": "SAN MARTIN", "PROYECTO": null, "SYMBOL": "1", "FECHA": null, "ESCALA": 0, "GLOBALID": "{56DFDE57-9638-4F07-BD63-D47F2526565B}" }, "geometry": { "type": "Point", "coordinates": [ -73.7, 3.716667 ] } },
+{ "type": "Feature", "properties": { "NOMBRE_GEO": null, "PROYECTO": null, "SYMBOL": "1", "FECHA": null, "ESCALA": 0, "GLOBALID": "{0141DD76-434B-4299-ACB1-D36145FF7C59}" }, "geometry": { "type": "Point", "coordinates": [ -73.65, 4.433333 ] } },
+{ "type": "Feature", "properties": { "NOMBRE_GEO": "PUERTO LLERAS NORTE", "PROYECTO": null, "SYMBOL": "1", "FECHA": null, "ESCALA": 0, "GLOBALID": "{D93BAAA3-80C3-48B8-B86E-0527CC2BD5EC}" }, "geometry": { "type": "Point", "coordinates": [ -73.378045, 3.289065 ] } },
+{ "type": "Feature", "properties": { "NOMBRE_GEO": "LA PLATA PUERTO TRUJILLO", "PROYECTO": null, "SYMBOL": "1", "FECHA": null, "ESCALA": 0, "GLOBALID": "{8B90E5C7-C87D-446B-A2AA-00319DE40C59}" }, "geometry": { "type": "Point", "coordinates": [ -71.375556, 3.488056 ] } },
+{ "type": "Feature", "properties": { "NOMBRE_GEO": null, "PROYECTO": null, "SYMBOL": "1", "FECHA": null, "ESCALA": 0, "GLOBALID": "{B847DFF3-846E-4B87-B460-E3F5B206A9D3}" }, "geometry": { "type": "Point", "coordinates": [ -73.212832, 2.916831 ] } },
+{ "type": "Feature", "properties": { "NOMBRE_GEO": "EL REFUGIO", "PROYECTO": null, "SYMBOL": "1", "FECHA": null, "ESCALA": 0, "GLOBALID": "{2F290F08-6356-4E87-9502-7599FBF77F43}" }, "geometry": { "type": "Point", "coordinates": [ -73.805534, 2.170006 ] } },
+{ "type": "Feature", "properties": { "NOMBRE_GEO": "APIAY", "PROYECTO": null, "SYMBOL": "1", "FECHA": "2008-08-21", "ESCALA": 0, "GLOBALID": "{28FD7D14-6973-4DAA-AE04-3555F9FF9F9F}" }, "geometry": { "type": "Point", "coordinates": [ -73.566111, 4.078611 ] } },
+{ "type": "Feature", "properties": { "NOMBRE_GEO": "AEROPUERTO VANGUARDIA", "PROYECTO": null, "SYMBOL": "1", "FECHA": "2008-08-21", "ESCALA": 0, "GLOBALID": "{4AF9B552-D8B1-4B1B-8F0E-1E6D4EC11535}" }, "geometry": { "type": "Point", "coordinates": [ -73.613327, 4.169064 ] } },
+{ "type": "Feature", "properties": { "NOMBRE_GEO": "Carimagua", "PROYECTO": null, "SYMBOL": "1", "FECHA": null, "ESCALA": 0, "GLOBALID": "{A951CC35-D60B-4F8D-930D-9491A2A9037E}" }, "geometry": { "type": "Point", "coordinates": [ -71.332722, 4.55732 ] } },
+{ "type": "Feature", "properties": { "NOMBRE_GEO": "SAN MARTIN", "PROYECTO": null, "SYMBOL": "1", "FECHA": null, "ESCALA": 1, "GLOBALID": "{E5902217-49A0-4820-B1D7-9DDB6F2A9C70}" }, "geometry": { "type": "Point", "coordinates": [ -73.715475, 3.68594 ] } },
+{ "type": "Feature", "properties": { "NOMBRE_GEO": null, "PROYECTO": null, "SYMBOL": "1", "FECHA": null, "ESCALA": 0, "GLOBALID": "{AEA6AAC9-DC65-4169-B7C8-E6A3A480AFDC}" }, "geometry": { "type": "Point", "coordinates": [ -72.083807, 4.284934 ] } }
+]
+}

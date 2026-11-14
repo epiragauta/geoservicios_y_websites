@@ -1,0 +1,19 @@
+{
+"type": "FeatureCollection",
+"name": "Orografia",
+"xy_coordinate_resolution": 1e-06,
+"features": [
+{ "type": "Feature", "properties": { "NOMBRE_GEO": "Serranía La Lindosa", "CODIGO_NOM": "8128", "PROYECTO": null, "SYMBOL": null, "FECHA": null, "GLOBALID": "{AE1711E2-2A60-4F0D-9211-B1419378E40F}" }, "geometry": { "type": "Point", "coordinates": [ -72.719533, 2.458882 ] } },
+{ "type": "Feature", "properties": { "NOMBRE_GEO": "ROCOSO", "CODIGO_NOM": "8122", "PROYECTO": null, "SYMBOL": null, "FECHA": null, "GLOBALID": "{B6C272C2-D578-42B7-B2DA-CB56BA27D08E}" }, "geometry": { "type": "Point", "coordinates": [ -71.304695, 1.844009 ] } },
+{ "type": "Feature", "properties": { "NOMBRE_GEO": "ROCOSO", "CODIGO_NOM": "8122", "PROYECTO": null, "SYMBOL": null, "FECHA": null, "GLOBALID": "{1E6A6569-6C82-489B-AF04-3729C1D476CE}" }, "geometry": { "type": "Point", "coordinates": [ -71.582512, 1.748278 ] } },
+{ "type": "Feature", "properties": { "NOMBRE_GEO": "Cerro Paloma", "CODIGO_NOM": "8106", "PROYECTO": null, "SYMBOL": "1", "FECHA": null, "GLOBALID": "{FD95FB86-4A1B-4A5E-8AB4-53B436F17B44}" }, "geometry": { "type": "Point", "coordinates": [ -70.984531, 2.181476 ] } },
+{ "type": "Feature", "properties": { "NOMBRE_GEO": "Cerro Santa Ana", "CODIGO_NOM": "8106", "PROYECTO": null, "SYMBOL": "1", "FECHA": null, "GLOBALID": "{6168271C-C908-4EA8-B19A-538AED451283}" }, "geometry": { "type": "Point", "coordinates": [ -71.38264, 2.229991 ] } },
+{ "type": "Feature", "properties": { "NOMBRE_GEO": "Cerro Alto", "CODIGO_NOM": "8106", "PROYECTO": null, "SYMBOL": "1", "FECHA": null, "GLOBALID": "{99AEAEEC-DDF8-46DE-87B3-6F1B7CA85534}" }, "geometry": { "type": "Point", "coordinates": [ -71.890211, 2.192459 ] } },
+{ "type": "Feature", "properties": { "NOMBRE_GEO": "Mesa de La Lindosa", "CODIGO_NOM": "8118", "PROYECTO": null, "SYMBOL": "1", "FECHA": null, "GLOBALID": "{F396C0D4-1F9A-492B-A92D-89954EBA7F6C}" }, "geometry": { "type": "Point", "coordinates": [ -72.011793, 2.242792 ] } },
+{ "type": "Feature", "properties": { "NOMBRE_GEO": "Cerro Pelado", "CODIGO_NOM": "8106", "PROYECTO": null, "SYMBOL": "1", "FECHA": null, "GLOBALID": "{4171EDB9-8CE8-450B-85C6-D44C4B07077E}" }, "geometry": { "type": "Point", "coordinates": [ -72.077746, 2.348222 ] } },
+{ "type": "Feature", "properties": { "NOMBRE_GEO": "Serranía de Chiribiquete", "CODIGO_NOM": "8128", "PROYECTO": null, "SYMBOL": "1", "FECHA": null, "GLOBALID": "{3891A8F6-7980-47A0-8DCB-DF9EE22AE25F}" }, "geometry": { "type": "Point", "coordinates": [ -72.928767, 1.292754 ] } },
+{ "type": "Feature", "properties": { "NOMBRE_GEO": "Bocas del Girisa", "CODIGO_NOM": "8103", "PROYECTO": null, "SYMBOL": null, "FECHA": null, "GLOBALID": "{463AAAE5-640E-4514-BD1E-0020B1FD1026}" }, "geometry": { "type": "Point", "coordinates": [ -72.192867, 1.420802 ] } },
+{ "type": "Feature", "properties": { "NOMBRE_GEO": "Cerro Campana", "CODIGO_NOM": "8106", "PROYECTO": null, "SYMBOL": "1", "FECHA": null, "GLOBALID": "{3C7B7B36-DA1B-4E2E-BE40-AA35737F84F2}" }, "geometry": { "type": "Point", "coordinates": [ -72.618489, 1.30663 ] } },
+{ "type": "Feature", "properties": { "NOMBRE_GEO": "Vuelta Mala", "CODIGO_NOM": "8103", "PROYECTO": null, "SYMBOL": null, "FECHA": null, "GLOBALID": "{B3460530-DDB6-4AB2-926A-93317144690D}" }, "geometry": { "type": "Point", "coordinates": [ -72.941482, 2.418878 ] } }
+]
+}

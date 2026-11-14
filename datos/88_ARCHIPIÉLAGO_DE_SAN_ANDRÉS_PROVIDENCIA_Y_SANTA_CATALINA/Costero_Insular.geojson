@@ -1,0 +1,19 @@
+{
+"type": "FeatureCollection",
+"name": "Costero_Insular",
+"xy_coordinate_resolution": 1e-06,
+"features": [
+{ "type": "Feature", "properties": { "NOMBRE_GEO": "Speatt Bigth", "CODIGO_NOM": "8403", "PROYECTO": null, "SYMBOL": "1", "FECHA": null, "GLOBALID": "{AA21AE77-87E4-4F8C-BF12-8AA7F430ED19}" }, "geometry": { "type": "Point", "coordinates": [ -81.699809, 12.590041 ] } },
+{ "type": "Feature", "properties": { "NOMBRE_GEO": "Old Town Bay", "CODIGO_NOM": "8403", "PROYECTO": null, "SYMBOL": "1", "FECHA": null, "GLOBALID": "{A2CA28F4-6F0A-462C-8BDA-00B0664A4C30}" }, "geometry": { "type": "Point", "coordinates": [ -81.375906, 13.370515 ] } },
+{ "type": "Feature", "properties": { "NOMBRE_GEO": "Bahía Sur Oeste (South West Bay)", "CODIGO_NOM": "8403", "PROYECTO": null, "SYMBOL": "1", "FECHA": null, "GLOBALID": "{7EFD337F-0B2E-4C9E-9F2B-E7F43C068D50}" }, "geometry": { "type": "Point", "coordinates": [ -81.392064, 13.331686 ] } },
+{ "type": "Feature", "properties": { "NOMBRE_GEO": "Fresh Water Bay", "CODIGO_NOM": "8403", "PROYECTO": null, "SYMBOL": "1", "FECHA": null, "GLOBALID": "{6DE05A59-BB25-4165-A716-FFC8F4372B0D}" }, "geometry": { "type": "Point", "coordinates": [ -81.394433, 13.346384 ] } },
+{ "type": "Feature", "properties": { "NOMBRE_GEO": "Long Ground", "CODIGO_NOM": "8431", "PROYECTO": null, "SYMBOL": "1", "FECHA": null, "GLOBALID": "{64C0B823-1661-4CF8-A6C0-ECF0EB9EC45C}" }, "geometry": { "type": "Point", "coordinates": [ -81.3706, 13.391784 ] } },
+{ "type": "Feature", "properties": { "NOMBRE_GEO": "Fort Point", "CODIGO_NOM": "8431", "PROYECTO": null, "SYMBOL": "1", "FECHA": null, "GLOBALID": "{39E6BBD5-FC67-492B-BC41-59EF0E33BEEF}" }, "geometry": { "type": "Point", "coordinates": [ -81.376455, 13.381753 ] } },
+{ "type": "Feature", "properties": { "NOMBRE_GEO": "Bush Pass Point", "CODIGO_NOM": "8431", "PROYECTO": null, "SYMBOL": "1", "FECHA": null, "GLOBALID": "{3BF16ACE-FB56-401E-8F30-138268DB54D3}" }, "geometry": { "type": "Point", "coordinates": [ -81.369626, 13.386914 ] } },
+{ "type": "Feature", "properties": { "NOMBRE_GEO": "Evans Point", "CODIGO_NOM": "8431", "PROYECTO": null, "SYMBOL": "1", "FECHA": null, "GLOBALID": "{522EC713-F82C-4F3D-8AB8-9ACB04E35515}" }, "geometry": { "type": "Point", "coordinates": [ -81.73211, 12.554818 ] } },
+{ "type": "Feature", "properties": { "NOMBRE_GEO": "Big Black Point", "CODIGO_NOM": "8431", "PROYECTO": null, "SYMBOL": "1", "FECHA": null, "GLOBALID": "{E4370275-BEC1-4F4E-A683-59ACE9588D5F}" }, "geometry": { "type": "Point", "coordinates": [ -81.391895, 13.329127 ] } },
+{ "type": "Feature", "properties": { "NOMBRE_GEO": "Fox Point", "CODIGO_NOM": "8431", "PROYECTO": null, "SYMBOL": "1", "FECHA": null, "GLOBALID": "{A6A01600-F082-4C30-A874-B00CC4905069}" }, "geometry": { "type": "Point", "coordinates": [ -81.395067, 13.343466 ] } },
+{ "type": "Feature", "properties": { "NOMBRE_GEO": "German Point", "CODIGO_NOM": "8431", "PROYECTO": null, "SYMBOL": "1", "FECHA": null, "GLOBALID": "{44FDB545-A4A4-49CB-9966-D5C37EA4BA70}" }, "geometry": { "type": "Point", "coordinates": [ -81.702509, 12.592969 ] } },
+{ "type": "Feature", "properties": { "NOMBRE_GEO": "Evans Point", "CODIGO_NOM": "8431", "PROYECTO": null, "SYMBOL": "1", "FECHA": null, "GLOBALID": "{A00606DB-1C3C-4DC5-A503-03001480420D}" }, "geometry": { "type": "Point", "coordinates": [ -81.735471, 12.530931 ] } }
+]
+}

@@ -1,0 +1,25 @@
+{
+"type": "FeatureCollection",
+"name": "Construccion_P",
+"xy_coordinate_resolution": 1e-06,
+"features": [
+{ "type": "Feature", "properties": { "NOMBRE_GEO": "Piedritas", "CODIGO_USO": "4101", "PROYECTO": null, "SYMBOL": "1", "FECHA": null, "ESCALA": 1, "GLOBALID": "{D0660F22-7555-42A2-A09B-D1BA8FDAF086}" }, "geometry": { "type": "Point", "coordinates": [ -76.484497, 1.959477 ] } },
+{ "type": "Feature", "properties": { "NOMBRE_GEO": "Chontillal", "CODIGO_USO": "4101", "PROYECTO": null, "SYMBOL": "1", "FECHA": null, "ESCALA": 1, "GLOBALID": "{36A08815-5848-4164-8503-C80CA499CDEE}" }, "geometry": { "type": "Point", "coordinates": [ -76.385835, 1.938043 ] } },
+{ "type": "Feature", "properties": { "NOMBRE_GEO": "Pencil", "CODIGO_USO": "4101", "PROYECTO": null, "SYMBOL": "1", "FECHA": null, "ESCALA": 1, "GLOBALID": "{E6DAA35F-110C-4B3B-A026-2986B4BB86EE}" }, "geometry": { "type": "Point", "coordinates": [ -76.200399, 1.73521 ] } },
+{ "type": "Feature", "properties": { "NOMBRE_GEO": "Belén", "CODIGO_USO": "4101", "PROYECTO": null, "SYMBOL": "1", "FECHA": null, "ESCALA": 1, "GLOBALID": "{B7C1C72F-4665-4BCB-A4EA-DB90F3B23BEE}" }, "geometry": { "type": "Point", "coordinates": [ -76.170373, 1.898262 ] } },
+{ "type": "Feature", "properties": { "NOMBRE_GEO": "La Castellana", "CODIGO_USO": "4101", "PROYECTO": null, "SYMBOL": "1", "FECHA": null, "ESCALA": 1, "GLOBALID": "{107976C3-C711-4044-B084-60B846C72592}" }, "geometry": { "type": "Point", "coordinates": [ -76.331031, 1.798093 ] } },
+{ "type": "Feature", "properties": { "NOMBRE_GEO": "Los Pinos", "CODIGO_USO": "4101", "PROYECTO": null, "SYMBOL": "1", "FECHA": null, "ESCALA": 1, "GLOBALID": "{3AD802AF-B0A5-4570-BEB8-CAFF6F285A94}" }, "geometry": { "type": "Point", "coordinates": [ -75.689766, 2.011774 ] } },
+{ "type": "Feature", "properties": { "NOMBRE_GEO": "El Horizonte", "CODIGO_USO": "4101", "PROYECTO": null, "SYMBOL": "1", "FECHA": null, "ESCALA": 1, "GLOBALID": "{D43B6FE6-E768-40CD-9F4C-F514D3436652}" }, "geometry": { "type": "Point", "coordinates": [ -75.76809, 1.864417 ] } },
+{ "type": "Feature", "properties": { "NOMBRE_GEO": "El Vergel", "CODIGO_USO": "4101", "PROYECTO": null, "SYMBOL": "1", "FECHA": null, "ESCALA": 1, "GLOBALID": "{C39A6356-0212-44DE-8106-9AA3D82C58C2}" }, "geometry": { "type": "Point", "coordinates": [ -75.806435, 1.806631 ] } },
+{ "type": "Feature", "properties": { "NOMBRE_GEO": "La Pradera", "CODIGO_USO": "4101", "PROYECTO": null, "SYMBOL": "1", "FECHA": null, "ESCALA": 1, "GLOBALID": "{31FBE45B-D8AA-459C-BC36-A0D9AAE3CB8C}" }, "geometry": { "type": "Point", "coordinates": [ -76.152865, 1.671263 ] } },
+{ "type": "Feature", "properties": { "NOMBRE_GEO": "La Mensuda", "CODIGO_USO": "4101", "PROYECTO": null, "SYMBOL": "1", "FECHA": null, "ESCALA": 1, "GLOBALID": "{E960F470-0B2C-416B-B6AE-B196AC862F3B}" }, "geometry": { "type": "Point", "coordinates": [ -76.10402, 1.68184 ] } },
+{ "type": "Feature", "properties": { "NOMBRE_GEO": "El Cedro", "CODIGO_USO": "4101", "PROYECTO": null, "SYMBOL": "1", "FECHA": null, "ESCALA": 1, "GLOBALID": "{B9C7975F-36EF-430C-8630-DB3B3C90773D}" }, "geometry": { "type": "Point", "coordinates": [ -76.207968, 1.691014 ] } },
+{ "type": "Feature", "properties": { "NOMBRE_GEO": null, "CODIGO_USO": "4101", "PROYECTO": null, "SYMBOL": "1", "FECHA": null, "ESCALA": 1, "GLOBALID": "{D68B7817-F5A0-4B70-A2FF-A48232E25158}" }, "geometry": { "type": "Point", "coordinates": [ -75.486666, 3.116913 ] } },
+{ "type": "Feature", "properties": { "NOMBRE_GEO": "Buenavista", "CODIGO_USO": "4101", "PROYECTO": null, "SYMBOL": "1", "FECHA": null, "ESCALA": 1, "GLOBALID": "{BC2D0316-2CE6-41BD-9FD1-DD976BF7847D}" }, "geometry": { "type": "Point", "coordinates": [ -75.280613, 2.614904 ] } },
+{ "type": "Feature", "properties": { "NOMBRE_GEO": "San Carlos", "CODIGO_USO": "4101", "PROYECTO": null, "SYMBOL": "1", "FECHA": null, "ESCALA": 1, "GLOBALID": "{A5CB6BD1-354C-4FC6-8783-37A9DD5F9260}" }, "geometry": { "type": "Point", "coordinates": [ -75.415434, 2.624891 ] } },
+{ "type": "Feature", "properties": { "NOMBRE_GEO": "Miraflores", "CODIGO_USO": "4101", "PROYECTO": null, "SYMBOL": "1", "FECHA": null, "ESCALA": 1, "GLOBALID": "{3111E085-3245-4E47-859B-EFEE6C70384A}" }, "geometry": { "type": "Point", "coordinates": [ -75.282277, 2.640981 ] } },
+{ "type": "Feature", "properties": { "NOMBRE_GEO": "El Tabor", "CODIGO_USO": "4101", "PROYECTO": null, "SYMBOL": "1", "FECHA": null, "ESCALA": 1, "GLOBALID": "{0B656D6A-CD03-4149-A2B7-241EEEB8BC4F}" }, "geometry": { "type": "Point", "coordinates": [ -75.261194, 2.657625 ] } },
+{ "type": "Feature", "properties": { "NOMBRE_GEO": "El Tambillo", "CODIGO_USO": "4101", "PROYECTO": null, "SYMBOL": "1", "FECHA": null, "ESCALA": 1, "GLOBALID": "{22E8784B-17D8-462C-A41F-B256B3AE8FCE}" }, "geometry": { "type": "Point", "coordinates": [ -75.207931, 2.726423 ] } },
+{ "type": "Feature", "properties": { "NOMBRE_GEO": "El Tabor", "CODIGO_USO": "4101", "PROYECTO": null, "SYMBOL": "1", "FECHA": null, "ESCALA": 1, "GLOBALID": "{19BCF385-F20C-4D28-8CCE-1C59A523BF45}" }, "geometry": { "type": "Point", "coordinates": [ -75.202076, 2.791439 ] } }
+]
+}

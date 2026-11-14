@@ -1,0 +1,25 @@
+{
+"type": "FeatureCollection",
+"name": "Construccion_P",
+"xy_coordinate_resolution": 1e-06,
+"features": [
+{ "type": "Feature", "properties": { "NOMBRE_GEO": "Martha", "CODIGO_USO": "4165", "PROYECTO": null, "SYMBOL": "1", "FECHA": null, "ESCALA": 0, "GLOBALID": "{67581C89-06A3-47CC-95F1-F6C576E5FAF7}" }, "geometry": { "type": "Point", "coordinates": [ -77.182525, 3.047273 ] } },
+{ "type": "Feature", "properties": { "NOMBRE_GEO": null, "CODIGO_USO": "2302", "PROYECTO": null, "SYMBOL": "1", "FECHA": null, "ESCALA": 1, "GLOBALID": "{F6AF188E-5465-45E6-BACF-FAE118E58310}" }, "geometry": { "type": "Point", "coordinates": [ -77.578596, 2.684515 ] } },
+{ "type": "Feature", "properties": { "NOMBRE_GEO": "El Silencio", "CODIGO_USO": "4101", "PROYECTO": null, "SYMBOL": "1", "FECHA": null, "ESCALA": 1, "GLOBALID": "{E923272D-81D6-484E-B982-529C3F181133}" }, "geometry": { "type": "Point", "coordinates": [ -77.012849, 1.738508 ] } },
+{ "type": "Feature", "properties": { "NOMBRE_GEO": "Chopiloma", "CODIGO_USO": "4101", "PROYECTO": null, "SYMBOL": "1", "FECHA": null, "ESCALA": 1, "GLOBALID": "{62D668DC-652E-4A32-B465-4E1AF3838154}" }, "geometry": { "type": "Point", "coordinates": [ -76.888091, 1.723146 ] } },
+{ "type": "Feature", "properties": { "NOMBRE_GEO": "Campo Alegre", "CODIGO_USO": "4101", "PROYECTO": null, "SYMBOL": "1", "FECHA": null, "ESCALA": 1, "GLOBALID": "{73614F2F-E0B9-4F96-AC60-259D21D2E063}" }, "geometry": { "type": "Point", "coordinates": [ -76.390575, 0.986286 ] } },
+{ "type": "Feature", "properties": { "NOMBRE_GEO": "La Primavera", "CODIGO_USO": "4101", "PROYECTO": null, "SYMBOL": "1", "FECHA": null, "ESCALA": 1, "GLOBALID": "{5E199BC5-7E34-4D2B-BF3B-ACE840649EBC}" }, "geometry": { "type": "Point", "coordinates": [ -76.536441, 1.54871 ] } },
+{ "type": "Feature", "properties": { "NOMBRE_GEO": "El Encanto", "CODIGO_USO": "4101", "PROYECTO": null, "SYMBOL": "1", "FECHA": null, "ESCALA": 1, "GLOBALID": "{9A07B3F9-2A7F-4298-A297-272715DA677E}" }, "geometry": { "type": "Point", "coordinates": [ -76.524953, 1.574811 ] } },
+{ "type": "Feature", "properties": { "NOMBRE_GEO": "El Vergel", "CODIGO_USO": "4101", "PROYECTO": null, "SYMBOL": "1", "FECHA": null, "ESCALA": 1, "GLOBALID": "{BD3E94BD-9F2E-4723-BB5F-B32E8130F7CF}" }, "geometry": { "type": "Point", "coordinates": [ -76.406541, 1.479605 ] } },
+{ "type": "Feature", "properties": { "NOMBRE_GEO": "El Porvenir", "CODIGO_USO": "4101", "PROYECTO": null, "SYMBOL": "1", "FECHA": null, "ESCALA": 1, "GLOBALID": "{5DC3C77B-D133-499D-B524-3E8A57F379BA}" }, "geometry": { "type": "Point", "coordinates": [ -76.140546, 1.086284 ] } },
+{ "type": "Feature", "properties": { "NOMBRE_GEO": "El Diamante", "CODIGO_USO": "4101", "PROYECTO": null, "SYMBOL": "1", "FECHA": null, "ESCALA": 1, "GLOBALID": "{49A15DE2-CFF2-4DFC-80FE-EC08CCA5F9FA}" }, "geometry": { "type": "Point", "coordinates": [ -76.129356, 1.060129 ] } },
+{ "type": "Feature", "properties": { "NOMBRE_GEO": "La Primavera", "CODIGO_USO": "4101", "PROYECTO": null, "SYMBOL": "1", "FECHA": null, "ESCALA": 1, "GLOBALID": "{8C99A186-85E3-499A-9B30-B09B37D3BE3F}" }, "geometry": { "type": "Point", "coordinates": [ -76.509641, 1.043092 ] } },
+{ "type": "Feature", "properties": { "NOMBRE_GEO": null, "CODIGO_USO": "2302", "PROYECTO": null, "SYMBOL": "1", "FECHA": null, "ESCALA": 1, "GLOBALID": "{E416B726-B958-4179-9306-47CA95854F8B}" }, "geometry": { "type": "Point", "coordinates": [ -76.666795, 3.061906 ] } },
+{ "type": "Feature", "properties": { "NOMBRE_GEO": null, "CODIGO_USO": "2302", "PROYECTO": null, "SYMBOL": "1", "FECHA": null, "ESCALA": 1, "GLOBALID": "{787CFAF3-CF2E-4A25-91C6-D9F4B3101A42}" }, "geometry": { "type": "Point", "coordinates": [ -76.612366, 2.966663 ] } },
+{ "type": "Feature", "properties": { "NOMBRE_GEO": null, "CODIGO_USO": "2302", "PROYECTO": null, "SYMBOL": "1", "FECHA": null, "ESCALA": 1, "GLOBALID": "{521E8D23-6CE3-42B2-9B5A-4EEBBD9AC62D}" }, "geometry": { "type": "Point", "coordinates": [ -76.7242, 2.927938 ] } },
+{ "type": "Feature", "properties": { "NOMBRE_GEO": null, "CODIGO_USO": "2302", "PROYECTO": null, "SYMBOL": "1", "FECHA": null, "ESCALA": 1, "GLOBALID": "{C6524801-2B8E-4BBB-AFCF-232EA571CBC5}" }, "geometry": { "type": "Point", "coordinates": [ -77.653488, 2.726104 ] } },
+{ "type": "Feature", "properties": { "NOMBRE_GEO": null, "CODIGO_USO": "2302", "PROYECTO": null, "SYMBOL": "1", "FECHA": null, "ESCALA": 1, "GLOBALID": "{1E2ADA60-B822-4B93-A020-8A88590377A4}" }, "geometry": { "type": "Point", "coordinates": [ -76.848088, 2.528523 ] } },
+{ "type": "Feature", "properties": { "NOMBRE_GEO": null, "CODIGO_USO": "2302", "PROYECTO": null, "SYMBOL": "1", "FECHA": null, "ESCALA": 1, "GLOBALID": "{99989B03-E2FA-4103-9425-21DCDA3365BA}" }, "geometry": { "type": "Point", "coordinates": [ -76.917367, 2.499713 ] } },
+{ "type": "Feature", "properties": { "NOMBRE_GEO": "Puerto Miranda", "CODIGO_USO": "4101", "PROYECTO": null, "SYMBOL": "1", "FECHA": null, "ESCALA": 0, "GLOBALID": "{014CCC40-7DE0-4184-B8C1-28DD0D2CC435}" }, "geometry": { "type": "Point", "coordinates": [ -76.21587, 1.012847 ] } }
+]
+}

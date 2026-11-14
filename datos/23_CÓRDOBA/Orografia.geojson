@@ -1,0 +1,20 @@
+{
+"type": "FeatureCollection",
+"name": "Orografia",
+"xy_coordinate_resolution": 1e-06,
+"features": [
+{ "type": "Feature", "properties": { "NOMBRE_GEO": "Filo El Venado", "CODIGO_NOM": "8110", "PROYECTO": null, "SYMBOL": "1", "FECHA": null, "GLOBALID": "{7C4A346E-DDE7-4CED-820A-994318F389CE}" }, "geometry": { "type": "Point", "coordinates": [ -76.367024, 7.840331 ] } },
+{ "type": "Feature", "properties": { "NOMBRE_GEO": "Altos de Quimari", "CODIGO_NOM": "8115", "PROYECTO": null, "SYMBOL": "1", "FECHA": null, "GLOBALID": "{C6C01165-F419-4212-AD1B-1DCD0BA134A5}" }, "geometry": { "type": "Point", "coordinates": [ -76.334319, 8.173732 ] } },
+{ "type": "Feature", "properties": { "NOMBRE_GEO": "Cerro Solo Dios", "CODIGO_NOM": "8106", "PROYECTO": null, "SYMBOL": "1", "FECHA": null, "GLOBALID": "{CF09F34D-26F7-43E0-A52E-AF2B99C37BBF}" }, "geometry": { "type": "Point", "coordinates": [ -75.937641, 7.949195 ] } },
+{ "type": "Feature", "properties": { "NOMBRE_GEO": "Loma Sabana de Corozal", "CODIGO_NOM": "8115", "PROYECTO": null, "SYMBOL": "1", "FECHA": null, "GLOBALID": "{8417EDF0-68FF-4566-B2CA-504A25EE6ACB}" }, "geometry": { "type": "Point", "coordinates": [ -75.698623, 8.234249 ] } },
+{ "type": "Feature", "properties": { "NOMBRE_GEO": "Cerro Sombrerito", "CODIGO_NOM": "8106", "PROYECTO": null, "SYMBOL": "1", "FECHA": null, "GLOBALID": "{6037F587-796B-4A04-84C6-BD82428AE04C}" }, "geometry": { "type": "Point", "coordinates": [ -75.830438, 7.573706 ] } },
+{ "type": "Feature", "properties": { "NOMBRE_GEO": "Alto El Almendro", "CODIGO_NOM": "8115", "PROYECTO": null, "SYMBOL": "1", "FECHA": null, "GLOBALID": "{EEAD5268-2FA4-4134-BC0E-4CE74DAABF5C}" }, "geometry": { "type": "Point", "coordinates": [ -75.770436, 7.668734 ] } },
+{ "type": "Feature", "properties": { "NOMBRE_GEO": "PARAMILLO", "CODIGO_NOM": "8135", "PROYECTO": null, "SYMBOL": "1", "FECHA": null, "GLOBALID": "{5555FC86-94D5-4840-8597-64D190036C4A}" }, "geometry": { "type": "Point", "coordinates": [ -76.290342, 7.498992 ] } },
+{ "type": "Feature", "properties": { "NOMBRE_GEO": "SERRANÍA DE SAN GERÓNIMO", "CODIGO_NOM": "8128", "PROYECTO": null, "SYMBOL": "1", "FECHA": null, "GLOBALID": "{AA6072FE-623B-4EAB-A21B-F13DE1DE22B9}" }, "geometry": { "type": "Point", "coordinates": [ -75.983241, 7.537887 ] } },
+{ "type": "Feature", "properties": { "NOMBRE_GEO": "Cerro Murrucucú", "CODIGO_NOM": "8106", "PROYECTO": null, "SYMBOL": "1", "FECHA": null, "GLOBALID": "{B4D2A922-22E6-4AEE-8F25-C5D1DC98B1F7}" }, "geometry": { "type": "Point", "coordinates": [ -76.073828, 7.920362 ] } },
+{ "type": "Feature", "properties": { "NOMBRE_GEO": "SERRANÍA DE SAN GERÓNIMO", "CODIGO_NOM": "8128", "PROYECTO": null, "SYMBOL": "1", "FECHA": null, "GLOBALID": "{E9EDE371-5781-4F3A-B2C5-5E925701A510}" }, "geometry": { "type": "Point", "coordinates": [ -75.987068, 7.797576 ] } },
+{ "type": "Feature", "properties": { "NOMBRE_GEO": "Alto Madre de Dios", "CODIGO_NOM": "8115", "PROYECTO": null, "SYMBOL": "1", "FECHA": null, "GLOBALID": "{CFCE4815-F2BF-4619-A6C1-0275E244CC3F}" }, "geometry": { "type": "Point", "coordinates": [ -76.072495, 7.473763 ] } },
+{ "type": "Feature", "properties": { "NOMBRE_GEO": "Cerro\r\nMatoso", "CODIGO_NOM": "8106", "PROYECTO": null, "SYMBOL": "1", "FECHA": null, "GLOBALID": "{AB02287C-C70E-4CB7-A153-65D97476C5F3}" }, "geometry": { "type": "Point", "coordinates": [ -75.533516, 7.886388 ] } },
+{ "type": "Feature", "properties": { "NOMBRE_GEO": "Cerro Matoso", "CODIGO_NOM": "8106", "PROYECTO": null, "SYMBOL": "1", "FECHA": null, "GLOBALID": "{B59B041B-64B5-4EED-8EE8-EAE1EF6C3CB7}" }, "geometry": { "type": "Point", "coordinates": [ -75.552065, 7.92045 ] } }
+]
+}

@@ -1,0 +1,17 @@
+{
+"type": "FeatureCollection",
+"name": "Aeropuerto_P",
+"xy_coordinate_resolution": 1e-06,
+"features": [
+{ "type": "Feature", "properties": { "NOMBRE_GEO": "PUERTO WILCHES", "PROYECTO": null, "SYMBOL": null, "FECHA": null, "ESCALA": 0, "GLOBALID": "{CA6F1A4B-0F25-4959-B3B7-FBB16309F1B7}" }, "geometry": { "type": "Point", "coordinates": [ -75.148068, 8.325577 ] } },
+{ "type": "Feature", "properties": { "NOMBRE_GEO": "Los Garzones", "PROYECTO": null, "SYMBOL": "1", "FECHA": "2008-08-21", "ESCALA": 0, "GLOBALID": "{032DB6D6-B26B-4C71-BDE2-B43E57B20F54}" }, "geometry": { "type": "Point", "coordinates": [ -75.808086, 8.83294 ] } },
+{ "type": "Feature", "properties": { "NOMBRE_GEO": "MONTECITOS OESTE", "PROYECTO": null, "SYMBOL": null, "FECHA": null, "ESCALA": 0, "GLOBALID": "{DF757DAD-6469-4AD5-8FAE-7785A473774F}" }, "geometry": { "type": "Point", "coordinates": [ -75.431985, 7.972482 ] } },
+{ "type": "Feature", "properties": { "NOMBRE_GEO": "Berástegui", "PROYECTO": null, "SYMBOL": "1", "FECHA": null, "ESCALA": 0, "GLOBALID": "{B30B0B1B-4B7F-482C-9D8C-AE57F106E6B9}" }, "geometry": { "type": "Point", "coordinates": [ -75.68333, 8.8833 ] } },
+{ "type": "Feature", "properties": { "NOMBRE_GEO": "Lorica", "PROYECTO": null, "SYMBOL": "1", "FECHA": null, "ESCALA": 1, "GLOBALID": "{EAA6CC1A-B1FB-46C2-A94C-59019D9AAA37}" }, "geometry": { "type": "Point", "coordinates": [ -75.825356, 9.270135 ] } },
+{ "type": "Feature", "properties": { "NOMBRE_GEO": "San Bernardo Del Viento", "PROYECTO": null, "SYMBOL": "1", "FECHA": null, "ESCALA": 1, "GLOBALID": "{66F4B947-7E10-41F9-9B06-EC39F631748A}" }, "geometry": { "type": "Point", "coordinates": [ -75.897446, 9.305779 ] } },
+{ "type": "Feature", "properties": { "NOMBRE_GEO": "Momil", "PROYECTO": null, "SYMBOL": "1", "FECHA": null, "ESCALA": 1, "GLOBALID": "{2FD48CBF-9970-4394-AF22-E295454DFA1B}" }, "geometry": { "type": "Point", "coordinates": [ -75.677536, 9.247533 ] } },
+{ "type": "Feature", "properties": { "NOMBRE_GEO": "Rabo Pelado Oeste", "PROYECTO": null, "SYMBOL": "1", "FECHA": null, "ESCALA": 1, "GLOBALID": "{0F6AC038-6C62-4F8D-87FF-0F5A49C0BFF2}" }, "geometry": { "type": "Point", "coordinates": [ -76.09935, 9.108333 ] } },
+{ "type": "Feature", "properties": { "NOMBRE_GEO": "Brasilia", "PROYECTO": null, "SYMBOL": "1", "FECHA": null, "ESCALA": 1, "GLOBALID": "{98662BA7-756B-49AA-BC99-3023C27F5B31}" }, "geometry": { "type": "Point", "coordinates": [ -76.237877, 8.73727 ] } },
+{ "type": "Feature", "properties": { "NOMBRE_GEO": "San José Sur", "PROYECTO": null, "SYMBOL": "1", "FECHA": null, "ESCALA": 1, "GLOBALID": "{5090F56A-728C-499B-9134-49ED26034BEB}" }, "geometry": { "type": "Point", "coordinates": [ -76.256059, 8.933876 ] } }
+]
+}

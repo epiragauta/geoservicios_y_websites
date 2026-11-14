@@ -1,0 +1,22 @@
+{
+"type": "FeatureCollection",
+"name": "Orografia",
+"xy_coordinate_resolution": 1e-06,
+"features": [
+{ "type": "Feature", "properties": { "NOMBRE_GEO": "Cerro De La Cruz", "CODIGO_NOM": "8106", "PROYECTO": null, "SYMBOL": "1", "FECHA": null, "GLOBALID": "{89754EC1-F619-4447-B1AD-038A7FD58A57}" }, "geometry": { "type": "Point", "coordinates": [ -77.838954, 1.022087 ] } },
+{ "type": "Feature", "properties": { "NOMBRE_GEO": "Cerro Mirador", "CODIGO_NOM": "8106", "PROYECTO": null, "SYMBOL": "1", "FECHA": null, "GLOBALID": "{AD74D6AB-FEAF-41DC-87D8-58DCF7534783}" }, "geometry": { "type": "Point", "coordinates": [ -77.498914, 0.776376 ] } },
+{ "type": "Feature", "properties": { "NOMBRE_GEO": "Cerro Chimanoy", "CODIGO_NOM": "8106", "PROYECTO": null, "SYMBOL": "1", "FECHA": null, "GLOBALID": "{618214A5-808A-4F0E-89E9-D7AD3758FD89}" }, "geometry": { "type": "Point", "coordinates": [ -76.991225, 1.545277 ] } },
+{ "type": "Feature", "properties": { "NOMBRE_GEO": "Páramo De Bordoncillo", "CODIGO_NOM": "8135", "PROYECTO": null, "SYMBOL": "1", "FECHA": null, "GLOBALID": "{D2DB42DB-E977-4130-AE8F-38C11DC5CC0B}" }, "geometry": { "type": "Point", "coordinates": [ -77.108552, 1.228052 ] } },
+{ "type": "Feature", "properties": { "NOMBRE_GEO": "Cuchilla Naranjal", "CODIGO_NOM": "8110", "PROYECTO": null, "SYMBOL": "1", "FECHA": null, "GLOBALID": "{91198E75-5565-4207-8689-67C2792BBBB8}" }, "geometry": { "type": "Point", "coordinates": [ -77.126327, 1.037384 ] } },
+{ "type": "Feature", "properties": { "NOMBRE_GEO": "Volcán Nevado de Cumbal", "CODIGO_NOM": "8136", "PROYECTO": null, "SYMBOL": "1", "FECHA": null, "GLOBALID": "{CD032C9A-AA16-422B-AA54-3B1848A7E939}" }, "geometry": { "type": "Point", "coordinates": [ -77.890991, 0.952338 ] } },
+{ "type": "Feature", "properties": { "NOMBRE_GEO": "Volcán Galeras", "CODIGO_NOM": "8136", "PROYECTO": null, "SYMBOL": "1", "FECHA": null, "GLOBALID": "{6B9A41D3-B18C-4FA4-AB9E-7B7EDE034506}" }, "geometry": { "type": "Point", "coordinates": [ -77.366615, 1.19863 ] } },
+{ "type": "Feature", "properties": { "NOMBRE_GEO": "Cuchilla La Belleza", "CODIGO_NOM": "8110", "PROYECTO": null, "SYMBOL": "1", "FECHA": null, "GLOBALID": "{DF214359-1BB2-47D0-BD3B-2F6926B103EA}" }, "geometry": { "type": "Point", "coordinates": [ -77.380293, 2.258818 ] } },
+{ "type": "Feature", "properties": { "NOMBRE_GEO": "Cerro Negro", "CODIGO_NOM": "8106", "PROYECTO": null, "SYMBOL": "1", "FECHA": null, "GLOBALID": "{08993547-F8F4-4E2E-A26F-8CEC6479DE5F}" }, "geometry": { "type": "Point", "coordinates": [ -77.346906, 0.871645 ] } },
+{ "type": "Feature", "properties": { "NOMBRE_GEO": "Cerro San Francisco", "CODIGO_NOM": "8106", "PROYECTO": null, "SYMBOL": "1", "FECHA": null, "GLOBALID": "{66B7AA3C-2526-4CE6-8686-F416B004D49E}" }, "geometry": { "type": "Point", "coordinates": [ -77.428832, 0.816698 ] } },
+{ "type": "Feature", "properties": { "NOMBRE_GEO": "Cerro La Campana", "CODIGO_NOM": "8106", "PROYECTO": null, "SYMBOL": "1", "FECHA": null, "GLOBALID": "{B370C4D9-0084-4C85-89AC-C8A4FDA46040}" }, "geometry": { "type": "Point", "coordinates": [ -76.960388, 1.702041 ] } },
+{ "type": "Feature", "properties": { "NOMBRE_GEO": "Páramo de Peñas Blancas", "CODIGO_NOM": "8135", "PROYECTO": null, "SYMBOL": "1", "FECHA": null, "GLOBALID": "{5DC49481-F089-4452-832B-ED521A2EB08F}" }, "geometry": { "type": "Point", "coordinates": [ -77.187496, 0.915718 ] } },
+{ "type": "Feature", "properties": { "NOMBRE_GEO": "Cerro Gordo", "CODIGO_NOM": "8106", "PROYECTO": null, "SYMBOL": "1", "FECHA": null, "GLOBALID": "{E9D3A27C-536B-4A92-9861-DDD447F4E3D4}" }, "geometry": { "type": "Point", "coordinates": [ -77.670769, 0.928212 ] } },
+{ "type": "Feature", "properties": { "NOMBRE_GEO": "Volcán Nevado Chiles", "CODIGO_NOM": "8136", "PROYECTO": null, "SYMBOL": "1", "FECHA": null, "GLOBALID": "{ABF17F98-A9E1-44F7-A246-60EE40FCF92E}" }, "geometry": { "type": "Point", "coordinates": [ -77.93607, 0.817144 ] } },
+{ "type": "Feature", "properties": { "NOMBRE_GEO": "Volcán Azufral", "CODIGO_NOM": "8136", "PROYECTO": null, "SYMBOL": "1", "FECHA": null, "GLOBALID": "{3990B279-6B53-46FD-B653-3588345D94EE}" }, "geometry": { "type": "Point", "coordinates": [ -77.714589, 1.09944 ] } }
+]
+}
