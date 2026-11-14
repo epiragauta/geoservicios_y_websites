@@ -1,4 +1,4 @@
-// Crear el mapa centrado en el departamento de La Guajira
+// Crear el mapa centrado en el departamento de Córdoba
 const map = L.map('map').setView([11.35, -72.5], 8);
 
 // Agregar capa base de OpenStreetMap
@@ -10,12 +10,12 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 // URL del servicio WMS de GeoServer
 const geoserverUrl = 'https://geoportal.dane.gov.co/mparcgis/services/MGN2024/Serv_CapasMGN_2024/MapServer/WMSServer';
 
-// Código DANE del departamento a mostrar: La Guajira
+// Código DANE del departamento a mostrar:CÓRDOBA
 const CORDOBA_CCDGO = '23';
 
 // Agregar capa WMS de departamentos
 // Nota: el servicio es un ArcGIS MapServer WMS y no admite filtros por atributo (CQL),
-// por lo que se restringe la carga de teselas a la extensión de La Guajira mediante 'bounds'.
+// por lo que se restringe la carga de teselas a la extensión de Córdoba mediante 'bounds'.
 const departamentosWMS = L.tileLayer.wms(geoserverUrl, {
     layers: '8',
     format: 'image/png',
@@ -308,7 +308,70 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-// Marcador de Riohacha (capital de La Guajira)
-const monteriaMarker = L.marker([8.75081, -75.87823])
+// Marcador de Monteria (capital de La Córdoba)
+const MonteriaMarker = L.marker([8.75081, -75.87823])
     .addTo(map)
     .bindPopup('<b>monteria</b><br>Capital de cordoba');
+    // Lee las capas WMS que están activas en el mapa y pide su leyenda al servicio
+// (GetLegendGraphic). Se actualiza sola al activar/desactivar capas.
+(function () {
+  // CSS propio de la leyenda
+  const css = document.createElement('style');
+  css.textContent = `
+    .leyenda-wms{background:#fff;padding:8px 10px;border-radius:6px;box-shadow:0 1px 8px rgba(0,0,0,.3);
+      font:13px/1.4 Arial,sans-serif;max-width:260px;max-height:55vh;overflow:auto}
+    .leyenda-wms h4{margin:0 0 6px;font-size:14px;cursor:pointer}
+    .leyenda-wms .capa{margin:6px 0}
+    .leyenda-wms .capa b{display:block;margin-bottom:2px}
+    .leyenda-wms img{max-width:100%}
+    .leyenda-wms.cerrada .cuerpo{display:none}
+    @media(max-width:600px){.leyenda-wms{font-size:12px;max-width:170px;max-height:40vh}}`;
+  document.head.appendChild(css);
+
+  // Intenta encontrar el control de capas para usar los nombres que ya definiste
+  function nombresDeCapas() {
+    const mapa = new Map();
+    const ctrls = [];
+    ['controlLayer', 'controlCapas', 'controlLayers', 'layersControl'].forEach(n => {
+      try { const c = eval(n); if (c && c._layers) ctrls.push(c); } catch (e) {}
+    });
+    ctrls.forEach(c => c._layers.forEach(l => mapa.set(l.layer, l.name)));
+    return mapa;
+  }
+
+  const control = L.control({ position: 'bottomright' });
+  control.onAdd = function () {
+    this._div = L.DomUtil.create('div', 'leyenda-wms');
+    L.DomEvent.disableClickPropagation(this._div);
+    L.DomEvent.disableScrollPropagation(this._div);
+    this.actualizar();
+    return this._div;
+  };
+
+  control.actualizar = function () {
+    const nombres = nombresDeCapas();
+    let html = '<h4 title="Mostrar / ocultar">Leyenda ▾</h4><div class="cuerpo">';
+    let hay = false;
+    map.eachLayer(function (layer) {
+      if (!(layer instanceof L.TileLayer.WMS)) return;
+      const id = layer.wmsParams.layers;
+      const nombre = nombres.get(layer) || 'Capa ' + id;
+      const url = layer._url + (layer._url.includes('?') ? '&' : '?') +
+        'service=WMS&version=1.3.0&request=GetLegendGraphic&format=image/png&layer=' +
+        encodeURIComponent(id) + '&sld_version=1.1.0';
+      hay = true;
+      html += '<div class="capa"><b>' + nombre + '</b>' +
+        '<img src="' + url + '" alt="Leyenda de ' + nombre + '" ' +
+        'onerror="this.replaceWith(Object.assign(document.createElement(\'small\'),{textContent:\'(sin leyenda disponible)\'}))"></div>';
+    });
+    if (!hay) html += '<small>No hay capas WMS activas.</small>';
+    this._div.innerHTML = html + '</div>';
+    this._div.querySelector('h4').onclick = () => this._div.classList.toggle('cerrada');
+  };
+
+  control.addTo(map);
+  map.on('overlayadd overlayremove layeradd layerremove', function (e) {
+    if (e.layer instanceof L.TileLayer.WMS) control.actualizar();
+  });
+  setTimeout(() => control.actualizar(), 500);
+})();
