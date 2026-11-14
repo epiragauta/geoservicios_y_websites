@@ -1,161 +1,314 @@
-// ===================== CONFIGURACIÓN =====================
-const CONFIG = {
-  // WMS (el del DANE u otro). Reemplaza URL y nombres de capa por los tuyos.
-  wmsUrl: 'https://geoportal.dane.gov.co/mparcgis/services/MGN2024/Serv_CapasMGN_2024/MapServer/WMSServer',
-  wmsDepartamentos: '8',
-  wmsMunicipios: '7',
-  wmsAtribucion: 'DANE - Departamento Administrativo Nacional de Estadística',
+// Crear el mapa centrado en el departamento de La Guajira
+const map = L.map('map').setView([11.35, -72.5], 8);
 
-  // "WFS": GeoJSON de departamentos. Con un archivo local funciona
-  // también cuando la app está desplegada en línea.
-  wfsUrl: 'datos/departamentos.geojson',
-  // Si usas un WFS real, pon aquí su URL con outputFormat=application/json.
-
-  // Posibles nombres de los atributos (se usa el primero que exista)
-  camposNombre: ['dpto_cnmbr', 'DPTO_CNMBR', 'nombre', 'NOMBRE', 'name'],
-  camposCodigo: ['dpto_ccdgo', 'DPTO_CCDGO', 'codigo', 'CODIGO', 'id']
-};
-
-const prop = (p, campos) => {
-  for (const c of campos) if (p && p[c] !== undefined && p[c] !== null) return p[c];
-  return '';
-};
-const nombreDe = p => prop(p, CONFIG.camposNombre);
-const codigoDe = p => prop(p, CONFIG.camposCodigo);
-
-// ===================== MAPA Y CAPAS BASE =====================
-const map = L.map('map', { zoomControl: true }).setView([4.5709, -74.2973], 6);
-
-const osm = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-  attribution: '&copy; OpenStreetMap contributors', maxZoom: 19
+// Agregar capa base de OpenStreetMap
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+    maxZoom: 19
 }).addTo(map);
 
-const satelite = L.tileLayer(
-  'https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}',
-  { attribution: 'Tiles &copy; Esri', maxZoom: 19 });
+// URL del servicio WMS de GeoServer
+const geoserverUrl = 'https://geoportal.dane.gov.co/mparcgis/services/MGN2024/Serv_CapasMGN_2024/MapServer/WMSServer';
 
-// ===================== WMS =====================
-const wmsOpts = { format: 'image/png', transparent: true, attribution: CONFIG.wmsAtribucion };
+// Código DANE del departamento a mostrar: La Guajira
+const CORDOBA_CCDGO = '23';
 
-const departamentosWMS = L.tileLayer.wms(CONFIG.wmsUrl,
-  { ...wmsOpts, layers: CONFIG.wmsDepartamentos });
-const municipiosWMS = L.tileLayer.wms(CONFIG.wmsUrl,
-  { ...wmsOpts, layers: CONFIG.wmsMunicipios });
+// Agregar capa WMS de departamentos
+// Nota: el servicio es un ArcGIS MapServer WMS y no admite filtros por atributo (CQL),
+// por lo que se restringe la carga de teselas a la extensión de La Guajira mediante 'bounds'.
+const departamentosWMS = L.tileLayer.wms(geoserverUrl, {
+    layers: '8',
+    format: 'image/png',
+    transparent: true,
+    attribution: 'DANE - Departamento Administrativo Nacional de Estadística'
+}).addTo(map);
 
-municipiosWMS.addTo(map);
-departamentosWMS.addTo(map);
+// URL del servicio WFS
+const departamentosWFSUrl = 'datos/departamentos.geojson'; // Cambia esto a la URL de tu servicio WFS
+let departamentosGeoJSON; // Variable para almacenar la capa GeoJSON
 
-// ===================== "WFS" (GeoJSON interactivo) =====================
-const estiloBase = { color: '#232323', weight: 2, fillColor: '#e8f881', fillOpacity: 0.35 };
-const estiloHover = { weight: 4, color: '#666', fillOpacity: 0.6 };
-const estiloSel = { weight: 4, color: '#b34700', fillColor: '#ff8c00', fillOpacity: 0.55 };
+// Cargar y mostrar departamentos como GeoJSON
+fetch(departamentosWFSUrl)
+    .then(response => response.json())
+    .then(data => {
+        // Crear capa GeoJSON (solo La Guajira)
+        departamentosGeoJSON = L.geoJSON(data, {
+            filter: feature => feature.properties.dpto_ccdgo === GUAJIRA_CCDGO,
+            style: {
+                color: '#232323',
+                weight: 2,
+                fillColor: '#e8f881',
+                fillOpacity: 0.5
+            },
+            onEachFeature: onEachFeature
+        });
 
-let capaWFS = null;
-let seleccionada = null;
+        // Agregar al mapa
+        departamentosGeoJSON.addTo(map);
+        controlLayer.addOverlay(departamentosGeoJSON, "Departamentos (WFS)"); // Agregar al control de capas
 
-const info = L.control({ position: 'topleft' });
-info.onAdd = function () {
-  this._div = L.DomUtil.create('div', 'panel info');
-  this.update();
-  return this._div;
+        // Extensión de Cordoba
+        const CordobaBounds = departamentosGeoJSON.getBounds();
+
+        // Restringir las teselas de ambos WMS a la extensión de cordoba
+        departamentosWMS.options.bounds = CordobaBounds;
+        departamentosWMS.redraw();
+        municipiosWMS.options.bounds = CordobaBounds;
+
+        // Centrar la vista en el departamento de cordoba
+        map.fitBounds(CordobaBounds);
+    })
+    .catch(error => console.error('Error cargando WFS:', error));
+
+// Agregar capa WMS de municipios
+const municipiosWMS = L.tileLayer.wms(geoserverUrl, {
+    layers: '7',
+    format: 'image/png',
+    transparent: true,
+    attribution: 'DANE - Departamento Administrativo Nacional de Estadística'
+});
+
+// Capas base
+const baseMaps = {
+    "OpenStreetMap": L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; OpenStreetMap contributors'
+    }),
+    "Satellite": L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
+        attribution: 'Tiles &copy; Esri'
+    })
 };
-info.update = function (props) {
-  this._div.innerHTML = '<h4>Colombia - Servicios Geográficos</h4>' + (props
-    ? `<div class="nombre">${nombreDe(props)}</div>Código: ${codigoDe(props)}`
-    : 'Pasa el cursor sobre un departamento o toca uno para ver su información.') +
-    '<br><small>Datos: DANE | Servicio WMS: geoportal DANE</small>';
+
+// Capas superpuestas
+let overlayMaps = {
+    "Departamentos": departamentosWMS,    
+    "Municipios": municipiosWMS
 };
-info.addTo(map);
+
+// Agregar control de capas
+const controlLayer = L.control.layers(baseMaps, overlayMaps, {
+    collapsed: false
+}).addTo(map);
+
+// Agregar capa base por defecto
+baseMaps["OpenStreetMap"].addTo(map);
+
+// ============================================================
+// Capas detalladas de cordoba (cartografía base IGAC/DANE)
+// Datos recortados por departamento en datos/23_CORDOBA/.
+// Se cargan de forma diferida (lazy): solo se descarga el GeoJSON
+// cuando el usuario activa la capa en el control, porque algunas
+// (Drenaje, Curvas de Nivel, Vías) pesan varios MB.
+// ============================================================
+const CordobaDataDir = 'https://epiragauta.github.io/geoservicios_y_websites/webapp/datos/23_CÓRDOBA/';
+
+const capascordoba = [
+    {
+        file: 'Administrativo_P.geojson', label: 'Topónimos administrativos',
+        tipo: 'punto', color: '#c62828', radio: 4
+    },
+    {
+        file: 'Construccion_P.geojson', label: 'Construcciones',
+        tipo: 'punto', color: '#6d4c41', radio: 3
+    },
+    {
+        file: 'Costero_Insular.geojson', label: 'Costero / insular',
+        tipo: 'punto', color: '#00838f', radio: 4
+    },
+    {
+        file: 'Via.geojson', label: 'Vías',
+        tipo: 'linea', estilo: { color: '#e65100', weight: 1.5 }
+    },
+    {
+        file: 'Drenaje_Sencillo.geojson', label: 'Drenaje sencillo',
+        tipo: 'linea', estilo: { color: '#1e88e5', weight: 1 }
+    },
+    {
+        file: 'Curva_Nivel.geojson', label: 'Curvas de nivel',
+        tipo: 'linea', estilo: { color: '#8d6e63', weight: 0.8 }
+    },
+    {
+        file: 'Laguna.geojson', label: 'Lagunas',
+        tipo: 'poligono', estilo: { color: '#0277bd', weight: 1, fillColor: '#4fc3f7', fillOpacity: 0.5 }
+    },
+    {
+        file: 'Bosque.geojson', label: 'Bosques',
+        tipo: 'poligono', estilo: { color: '#1b5e20', weight: 1, fillColor: '#66bb6a', fillOpacity: 0.4 }
+    }
+];
+
+// Construye el contenido del popup a partir de los atributos más relevantes
+function popupCordoba(props) {
+    const campos = [
+        ['NOMBRE_GEO', 'Nombre'],
+        ['TIPO_VIA', 'Tipo de vía'],
+        ['ESTADO_SUP', 'Estado superficie'],
+        ['ESTADO_DRE', 'Estado drenaje'],
+        ['ALTURA_SOB', 'Altura (m)'],
+        ['TIPO_CURVA', 'Tipo de curva'],
+        ['CODIGO_USO', 'Código de uso'],
+        ['CODIGO_NOM', 'Código']
+    ];
+    const filas = campos
+        .filter(([k]) => props[k] !== undefined && props[k] !== null && props[k] !== '')
+        .map(([k, etiqueta]) => `<p style="margin:2px 0"><strong>${etiqueta}:</strong> ${props[k]}</p>`);
+    return filas.length ? `<div>${filas.join('')}</div>` : '<div>Sin atributos</div>';
+}
+
+// Carga (una sola vez) el GeoJSON de una capa dentro de su layerGroup
+function cargarCapaCordoba(cfg) {
+    fetch(CordobaDataDir + cfg.file)
+        .then(response => response.json())
+        .then(data => {
+            const capa = L.geoJSON(data, {
+                style: cfg.estilo,
+                pointToLayer: (feature, latlng) => L.circleMarker(latlng, {
+                    radius: cfg.radio || 4,
+                    color: cfg.color,
+                    fillColor: cfg.color,
+                    weight: 1,
+                    fillOpacity: 0.8
+                }),
+                onEachFeature: (feature, layer) => {
+                    if (feature.properties) {
+                        layer.bindPopup(popupGuajira(feature.properties));
+                    }
+                }
+            });
+            capa.addTo(cfg._group);
+        })
+        .catch(error => console.error('Error cargando capa ' + cfg.file + ':', error));
+}
+
+// Registrar cada capa como overlay con carga diferida
+capascordoba.forEach(cfg => {
+    cfg._group = L.layerGroup();
+    cfg._loaded = false;
+    controlLayer.addOverlay(cfg._group, cfg.label);
+});
+
+// Al activar una capa por primera vez, descargar su GeoJSON
+map.on('overlayadd', function (e) {
+    const cfg = capascordoba.find(c => c._group === e.layer);
+    if (cfg && !cfg._loaded) {
+        cfg._loaded = true;
+        cargarCapaCordoba(cfg);
+    }
+});
 
 function onEachFeature(feature, layer) {
-  const p = feature.properties;
-  layer.bindPopup(`<strong>${nombreDe(p)}</strong><br>Código: ${codigoDe(p)}`);
-  layer.on({
-    mouseover: e => { if (e.target !== seleccionada) e.target.setStyle(estiloHover); info.update(p); },
-    mouseout: e => { if (e.target !== seleccionada) capaWFS.resetStyle(e.target); info.update(seleccionada ? seleccionada.feature.properties : undefined); },
-    click: e => seleccionar(e.target)
-  });
+    // Popup al hacer clic
+    if (feature.properties) {
+        const popupContent = `
+            <div style="text-align: center;">
+                <h3>${feature.properties.dpto_cnmbr}</h3>
+                <p><strong>Código:</strong> ${feature.properties.dpto_ccdgo}</p>
+            </div>
+        `;
+        layer.bindPopup(popupContent);
+    }
+
+    // Highlight al pasar el mouse
+    layer.on({
+        mouseover: highlightFeature,
+        mouseout: resetHighlight,
+        click: zoomToFeature
+    });
 }
 
-function seleccionar(layer) {
-  if (seleccionada) capaWFS.resetStyle(seleccionada);
-  seleccionada = layer;
-  layer.setStyle(estiloSel);
-  info.update(layer.feature.properties);
-  map.fitBounds(layer.getBounds(), { padding: [20, 20] });
+function highlightFeature(e) {
+    const layer = e.target;
+
+    layer.setStyle({
+        weight: 5,
+        color: '#666',
+        fillOpacity: 0.7
+    });
+
+    layer.bringToFront();
 }
 
-fetch(CONFIG.wfsUrl)
-  .then(r => { if (!r.ok) throw new Error('HTTP ' + r.status); return r.json(); })
-  .then(data => {
-    capaWFS = L.geoJSON(data, { style: estiloBase, onEachFeature }).addTo(map);
-    controlCapas.addOverlay(capaWFS, 'Departamentos (WFS)');
-    poblarBuscador(data);
-  })
-  .catch(err => {
-    console.error('Error cargando departamentos:', err);
-    info._div.insertAdjacentHTML('beforeend',
-      '<br><span style="color:#b00020">No se pudieron cargar los departamentos.</span>');
-  });
+function resetHighlight(e) {
+    const layer = e.target;
+    layer.setStyle({
+        weight: 2,
+        color: '#232323',
+        fillOpacity: 0.5
+    });
+}
 
-// ===================== CONTROLES =====================
-const controlCapas = L.control.layers(
-  { 'OpenStreetMap': osm, 'Satélite': satelite },
-  { 'Municipios': municipiosWMS, 'Departamentos': departamentosWMS },
-  { collapsed: window.innerWidth < 600 }
-).addTo(map);
+function zoomToFeature(e) {
+    map.fitBounds(e.target.getBounds());
+}
 
-L.control.scale({ position: 'bottomleft', metric: true, imperial: false }).addTo(map);
+// Control de escala
+L.control.scale({
+    position: 'bottomleft',
+    metric: true,
+    imperial: false
+}).addTo(map);
 
-// Leyenda
-const leyenda = L.control({ position: 'bottomright' });
-leyenda.onAdd = function () {
-  const div = L.DomUtil.create('div', 'panel legend');
-  div.innerHTML = `
-    <button class="legend-toggle" type="button">Leyenda</button>
-    <div class="legend-body">
-      <h4>Leyenda</h4>
-      <div><i class="dep"></i>Departamentos</div>
-      <div><i class="mun"></i>Municipios</div>
-      <div><i class="sel"></i>Departamento seleccionado</div>
-    </div>`;
-  div.querySelector('.legend-toggle').addEventListener('click', () => div.classList.toggle('open'));
-  L.DomEvent.disableClickPropagation(div);
-  return div;
+// Panel de información
+const info = L.control({position: 'topleft'});
+
+info.onAdd = function (map) {
+    this._div = L.DomUtil.create('div', 'info');
+    this._div.innerHTML = `
+        <h4> Cordoba - Servicios Geográficos</h4>
+        <p>Visualización del departamento y sus municipios</p>
+        <p><small>Datos: DANE | Servidor: GeoServer</small></p>
+    `;
+    return this._div;
 };
-leyenda.addTo(map);
 
-// Búsqueda con autocompletado
-const buscador = L.control({ position: 'topright' });
-buscador.onAdd = function () {
-  const div = L.DomUtil.create('div', 'panel search');
-  div.innerHTML = `
-    <input id="q" type="text" list="lista-dptos" placeholder="Buscar departamento..." autocomplete="off">
-    <datalist id="lista-dptos"></datalist>
-    <button id="btn-buscar" type="button">Buscar</button>`;
-  L.DomEvent.disableClickPropagation(div);
-  L.DomEvent.disableScrollPropagation(div);
-  return div;
+info.addTo(map);
+
+// Crear control de búsqueda
+const searchControl = L.control({position: 'topright'});
+
+searchControl.onAdd = function (map) {
+    const div = L.DomUtil.create('div', 'search-control');
+    div.innerHTML = `
+        <input type="text" id="search-input" placeholder="Buscar departamento...">
+        <button id="search-button">Buscar</button>
+    `;
+    L.DomEvent.disableClickPropagation(div);
+    return div;
 };
-buscador.addTo(map);
 
-const quitarTildes = s => s.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase();
+searchControl.addTo(map);
 
-function poblarBuscador(data) {
-  const lista = document.getElementById('lista-dptos');
-  data.features.map(f => nombreDe(f.properties)).filter(Boolean).sort()
-    .forEach(n => { const o = document.createElement('option'); o.value = n; lista.appendChild(o); });
-}
+// Función de búsqueda
+document.addEventListener('DOMContentLoaded', function() {
+    const searchButton = document.getElementById('search-button');
+    const searchInput = document.getElementById('search-input');
 
-function buscar() {
-  const q = quitarTildes(document.getElementById('q').value.trim());
-  if (!q || !capaWFS) return;
-  let encontrada = null;
-  capaWFS.eachLayer(l => {
-    if (!encontrada && quitarTildes(String(nombreDe(l.feature.properties))).includes(q)) encontrada = l;
-  });
-  if (encontrada) { seleccionar(encontrada); encontrada.openPopup(); }
-  else alert('No se encontró ningún departamento con ese nombre.');
-}
-document.getElementById('btn-buscar').addEventListener('click', buscar);
-document.getElementById('q').addEventListener('keydown', e => { if (e.key === 'Enter') buscar(); });
+    function buscar() {
+        const searchText = searchInput.value.trim().toLowerCase();
+        if (!searchText || !departamentosGeoJSON) return;
+
+        let encontrado = null;
+        departamentosGeoJSON.eachLayer(function(layer) {
+            const nombre = layer.feature.properties.dpto_cnmbr.toLowerCase();
+            if (!encontrado && nombre.includes(searchText)) {
+                encontrado = layer;
+            }
+        });
+
+        if (encontrado) {
+            map.fitBounds(encontrado.getBounds());
+            encontrado.openPopup();
+        } else {
+            alert('No se encontró el departamento: ' + searchInput.value);
+        }
+    }
+
+    searchButton.addEventListener('click', buscar);
+    searchInput.addEventListener('keydown', function(e) {
+        if (e.key === 'Enter') buscar();
+    });
+});
+
+// Marcador de Riohacha (capital de La Guajira)
+const monteriaMarker = L.marker([8.75081, -75.87823])
+    .addTo(map)
+    .bindPopup('<b>monteria</b><br>Capital de cordoba');
